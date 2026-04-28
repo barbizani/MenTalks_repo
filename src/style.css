@@ -290,4 +290,62 @@ section {
   .hero-actions {
     flex-direction: column;
   }
+
+  .deck-nav {
+    display: none;
+  }
+
+  .deck-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+  }
+
+  .deck-slide {
+    min-width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding: 100px 20px 40px !important;
+  }
+
+  .deck-slide > div {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 40px !important;
+  }
+
+  .logo-right {
+    display: none !important;
+  }
+
+  .floating-brand-icon {
+    left: 20px !important;
+    top: 20px !important;
+  }
+
+  .floating-brand-icon img {
+    width: 60px !important;
+  }
 }
+
+.floating-brand-icon {
+  position: fixed;
+  top: 40px;
+  left: 60px; /* Aligned with standard container padding/gutters */
+  z-index: 1000;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.floating-brand-icon img {
+  width: 100px;
+  height: auto;
+  filter: invert(1);
+}
+
+.logo-right {
+  transition: var(--transition);
+}
+
