@@ -9,226 +9,250 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        .contents-list { list-style: none; padding: 0; }
-        .contents-list li { display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px dotted #ccc; padding-bottom: 4px; }
-        .contents-list li span:last-child { font-weight: 600; color: var(--doc-purple); }
-        .grid-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .obj-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--doc-purple); }
-        .obj-card h4 { color: var(--doc-navy); margin-top: 0; font-size: 15px; margin-bottom: 10px; }
-        .obj-card p { font-size: 13px; color: #444; line-height: 1.5; margin: 0; }
-        .quote-block { font-style: italic; color: var(--doc-purple); margin: 20px 0; padding-left: 20px; border-left: 2px solid #eee; }
-        .bullet-list { padding-left: 20px; margin: 15px 0; }
-        .bullet-list li { margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
-        .section-subtitle { font-weight: 700; color: var(--doc-navy); margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; }
+        body { overflow: hidden; }
+        .doc-body { padding: 80px 120px; max-width: 1200px; margin: 0 auto; }
+        .slide-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .full-text { font-size: 16px; line-height: 1.8; color: var(--doc-text); }
+        .full-text p { margin-bottom: 24px; }
+        .slide-header { padding: 40px 120px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .slide-header h3 { font-family: var(--font-heading); color: var(--doc-purple); margin: 0; font-size: 24px; }
+        .quote-designed { font-family: var(--font-body); font-style: italic; font-size: 28px; color: var(--doc-purple); line-height: 1.4; border-left: 8px solid var(--doc-purple); padding-left: 40px; margin: 60px 0; }
     </style>
 </head>
 <body>
-    <div class="doc-page">
-        <header class="doc-header">
-            <div class="logo-container" style="margin-bottom: 40px;">
-                <img src="./assets/logos/mentalks_TLCS_white (2).png" alt="Men Talks Logo" style="height: 80px; width: auto;">
+    <div class="deck-container" id="deck">
+        <!-- SLIDE 0: COVER -->
+        <section class="doc-page slide" id="slide-0">
+            <header class="doc-header" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+                <div class="logo-container" style="margin-bottom: 60px;">
+                    <img src="./assets/logos/mentalks_TLCS_white (2).png" alt="Men Talks Logo" style="height: 100px; width: auto;">
+                </div>
+                <span class="tag">Relatório Institucional — Versão Integral — 2025</span>
+                <h1 style="font-size: 80px;">relatório de <br>atividades <br>2025</h1>
+                <p style="font-size: 20px; max-width: 600px; opacity: 0.8;">Análise detalhada das intervenções sociais, projetos educativos e impacto comunitário realizado pela Associação Men Talks durante o último ano.</p>
+                <div style="margin-top: 60px; display: flex; gap: 40px; font-size: 14px; opacity: 0.6; text-transform: uppercase; letter-spacing: 2px;">
+                    <span>Lisboa, Portugal</span>
+                    <span>•</span>
+                    <span>Associação Men Talks</span>
+                </div>
+            </header>
+        </section>
+
+        <!-- SLIDE 1: INTRODUÇÃO (PARTE 1) -->
+        <section class="doc-page slide" id="slide-1">
+            <div class="slide-header">
+                <h3>01. introdução</h3>
+                <span style="font-size: 12px; color: #999;">Impacto Institucional 2025</span>
             </div>
-            <span class="tag">Relatório Institucional — Verbatim — 2025</span>
-            <h1>relatório de <br>atividades <br>2025</h1>
-            <p>Análise detalhada das intervenções sociais, projetos educativos e impacto comunitário realizado pela Associação Men Talks durante o último ano.</p>
-        </header>
-
-        <div class="doc-meta">
-            <div><span>Ano de Referência</span><b>2025</b></div>
-            <div><span>Tipo de Documento</span><b>Relatório de Atividades</b></div>
-            <div><span>Entidade</span><b>Associação Men Talks</b></div>
-        </div>
-
-        <div class="doc-body">
-            <!-- INTRODUÇÃO -->
-            <section class="doc-section">
-                <span class="doc-section-number">01</span>
-                <h2>introdução</h2>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                
-                <div style="display: flex; gap: 40px; margin-bottom: 40px;">
-                    <div style="flex: 2;">
-                        <p style="font-size: 18px; line-height: 1.5; color: var(--doc-navy); font-weight: 500;">2025 foi um ano de expansão consciente e consolidação do papel da Men Talks na sociedade portuguesa.</p>
-                        <p>A associação consolidou o seu papel como espaço de questionamento, escuta e transformação, levando a reflexão sobre masculinidades a contextos cada vez mais diversos — de escolas a prisões, de empresas a espaços comunitários.</p>
-                    </div>
-                    <div class="sidebar-note" style="flex: 1; margin: 0;">
-                        <h4 style="margin-top: 0; color: var(--doc-purple); font-size: 12px; text-transform: uppercase;">O Propósito</h4>
-                        <p style="margin-bottom: 0;">Colocar a experiência humana no centro do diálogo para reconstruir o que significa ser homem hoje.</p>
+                <div class="full-text">
+                    <p><strong>2025 foi um ano de expansão consciente.</strong></p>
+                    <p>A Associação Men Talks consolidou o seu papel como espaço de questionamento, escuta e transformação, levando a reflexão sobre masculinidades a contextos cada vez mais diversos — de escolas a prisões, de empresas a espaços comunitários, de Portugal ao contexto internacional.</p>
+                    <p>Num tempo em que repensar o que significa “ser homem” se torna urgente, a Men Talks continuou a criar lugares onde essa pergunta pode existir sem pressa, sem máscaras e sem respostas fechadas.</p>
+                    <div class="quote-designed">“To be loving, we willingly hear the other’s truth.” — bell hooks</div>
+                    <p>O ano de 2025 afirmou-se como um período de consolidação, crescimento e transformação para a Associação Men Talks. Num contexto social em mudança, a associação reforçou o seu compromisso com a promoção da igualdade de género e com a criação de espaços de reflexão crítica sobre masculinidades — espaços onde é possível questionar, escutar e reconstruir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: INTRODUÇÃO (PARTE 2) -->
+        <section class="doc-page slide" id="slide-2">
+            <div class="slide-header">
+                <h3>01. introdução (cont.)</h3>
+                <span style="font-size: 12px; color: #999;">Impacto Institucional 2025</span>
+            </div>
+            <div class="doc-body">
+                <div class="full-text">
+                    <p>Ao longo do ano, a Men Talks desenvolveu um conjunto diversificado de iniciativas em múltiplos contextos — comunitário, educativo, institucional, empresarial e prisional — envolvendo públicos distintos, desde jovens em contexto escolar a homens adultos, profissionais e pessoas privadas de liberdade. Entre rodas de conversa, ações de sensibilização, sessões formativas e participação em eventos nacionais e internacionais, destacou-se uma abordagem consistente: colocar a experiência humana no centro do diálogo.</p>
+                    <p>Um dos momentos mais marcantes do ano foi a realização do III Fórum “Masculinidades em Perspectiva”, em Coimbra, dedicado ao tema “Masculinidades, Juventude e Cuidado”. Este encontro constituiu um ponto alto na trajetória da associação, reunindo vozes nacionais e internacionais e promovendo um espaço alargado de partilha, escuta e pensamento crítico. A forte adesão evidenciou não só a atualidade do tema, mas também o papel crescente da Men Talks na dinamização do debate público sobre masculinidades em Portugal.</p>
+                    <p>Ao longo de 2025, destacou-se igualmente o reforço da intervenção em contextos institucionais, através de parcerias com câmaras municipais, escolas, empresas e estabelecimentos prisionais. Estas colaborações permitiram ampliar o alcance das ações e aprofundar o impacto do trabalho desenvolvido.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: INTRODUÇÃO (PARTE 3) -->
+        <section class="doc-page slide" id="slide-3">
+            <div class="slide-header">
+                <h3>01. introdução (final)</h3>
+                <span style="font-size: 12px; color: #999;">Impacto Institucional 2025</span>
+            </div>
+            <div class="doc-body">
+                <div class="full-text">
+                    <p>Este foi também um ano de fortalecimento interno, marcado não só pela consolidação organizacional e pela procura de sustentabilidade, mas também por um investimento claro na melhoria da comunicação — interna e externa — e na organização digital da associação, através da adoção de novas ferramentas e processos que reforçam a eficiência, a coerência e a capacidade de resposta.</p>
+                    <p>O presente relatório reúne, de forma sistematizada, as principais atividades e projetos desenvolvidos ao longo de 2025, refletindo o percurso da Men Talks na construção de uma sociedade mais consciente, mais igualitária — e mais capaz de repensar o que significa ser homem.</p>
+                    <div class="sidebar-note" style="margin-top: 40px; background: var(--doc-accent-1);">
+                        <p style="margin: 0; font-weight: 600; color: var(--doc-navy);">O foco de 2025 foi a profundidade: não apenas chegar a mais pessoas, mas chegar de forma mais significativa.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="highlight-box" style="background: var(--doc-accent-1); color: var(--doc-navy); border-radius: 20px;">
-                    <p style="font-style: italic; font-size: 20px; margin: 0;">“To be loving, we willingly hear the other’s truth.” — bell hooks</p>
-                </div>
-            </section>
-
-            <!-- NÚMEROS -->
-            <section class="doc-section">
-                <span class="doc-section-number">02</span>
-                <h2>2025 em números</h2>
+        <!-- SLIDE 4: 2025 EM NÚMEROS -->
+        <section class="doc-page slide" id="slide-4">
+            <div class="slide-header">
+                <h3>02. 2025 em números</h3>
+                <span style="font-size: 12px; color: #999;">Métricas de Impacto</span>
+            </div>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                
-                <div class="stats-grid">
+                <div class="stats-grid" style="margin-bottom: 60px;">
                     <div class="stat-item">
-                        <div class="icon-box" style="margin: 0 auto 15px;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        </div>
+                        <div class="icon-box" style="margin: 0 auto 15px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
                         <span class="stat-number">960+</span>
-                        <span class="stat-label">Pessoas Alcançadas</span>
+                        <span class="stat-label">Participantes Diretos</span>
                     </div>
                     <div class="stat-item">
-                        <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-2); color: #166534;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                        </div>
+                        <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-2); color: #166534;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
                         <span class="stat-number">35+</span>
-                        <span class="stat-label">Atividades Totais</span>
+                        <span class="stat-label">Atividades Realizadas</span>
                     </div>
                     <div class="stat-item">
-                        <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-3); color: #9a3412;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
+                        <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-3); color: #9a3412;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path></svg></div>
                         <span class="stat-number">7</span>
-                        <span class="stat-label">Contextos Distintos</span>
+                        <span class="stat-label">Contextos de Atuação</span>
                     </div>
                 </div>
-
-                <div style="margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                    <div>
-                        <h3 style="font-family: var(--font-heading); font-size: 24px; color: var(--doc-navy);">Diversidade de Atuação</h3>
-                        <p>O nosso trabalho ramifica-se em sete eixos estratégicos, garantindo que a conversa sobre masculinidades chegue a todos os estratos da sociedade.</p>
-                    </div>
-                    <div style="background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                        <div class="chart-row">
-                            <span class="chart-label">Educação — 35%</span>
-                            <div class="chart-bar-container"><div class="bar-purple" style="width: 35%;"></div></div>
-                        </div>
-                        <div class="chart-row">
-                            <span class="chart-label">Comunitário — 25%</span>
-                            <div class="chart-bar-container"><div class="bar-purple" style="width: 25%; opacity: 0.8;"></div></div>
-                        </div>
-                        <div class="chart-row">
-                            <span class="chart-label">Empresarial — 20%</span>
-                            <div class="chart-bar-container"><div class="bar-purple" style="width: 20%; opacity: 0.6;"></div></div>
-                        </div>
-                        <div class="chart-row">
-                            <span class="chart-label">Prisional — 10%</span>
-                            <div class="chart-bar-container"><div class="bar-purple" style="width: 10%; opacity: 0.4;"></div></div>
-                        </div>
-                    <!-- DESTAQUES -->
-            <section class="doc-section">
-                <span class="doc-section-number">03</span>
-                <h2>destaques do ano</h2>
-                <div class="visual-divider"></div>
-                
-                <div class="feature-grid">
-                    <div class="feature-item bg-purple">
-                        <div class="icon-box" style="background: #fff;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                        <h4>Fórum Masculinidades</h4>
-                        <p>Realizado em Coimbra com 100 participantes. O maior momento público de 2025, focado em "Juventude e Cuidado".</p>
-                    </div>
-                    <div class="feature-item bg-green">
-                        <div class="icon-box" style="background: #fff; color: #16a34a;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-                        <h4>Expansão Internacional</h4>
-                        <p>Presença ativa em Zagreb (Croácia) e Cáceres (Espanha), integrando redes europeias de transformação social.</p>
-                    </div>
-                    <div class="feature-item bg-orange">
-                        <div class="icon-box" style="background: #fff; color: #ea580c;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg></div>
-                        <h4>Contexto Prisional</h4>
-                        <p>Intervenções em Vale de Judeus e Alcoentre, envolvendo 42 homens em reflexões profundas sobre identidade.</p>
-                    </div>
-                    <div class="feature-item bg-pink">
-                        <div class="icon-box" style="background: #fff; color: #db2777;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
-                        <h4>Impacto Escolar</h4>
-                        <p>Mais de 240 jovens envolvidos em sessões sobre consentimento, pressão social e saúde mental.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- IMPACTO QUALITATIVO -->
-            <section class="doc-section">
-                <span class="doc-section-number">04</span>
-                <h2>impacto qualitativo</h2>
-                <div class="visual-divider"></div>
-                
-                <p>Para além dos números, a Men Talks mede o seu sucesso pela profundidade das transformações individuais e coletivas.</p>
-                
-                <div style="background: #fff; border: 1px solid #eee; padding: 40px; border-radius: 20px; margin: 40px 0;">
-                    <ul class="topic-list">
-                        <li class="topic-item">
-                            <span class="topic-bullet"></span>
-                            <div>
-                                <b>Necessidade de Espaços Seguros</b>
-                                <p style="font-size: 14px; margin-top: 4px;">Confirmamos uma procura crescente por lugares onde os homens podem ser vulneráveis sem julgamento.</p>
-                            </div>
-                        </li>
-                        <li class="topic-item">
-                            <span class="topic-bullet"></span>
-                            <div>
-                                <b>Autenticidade e Presença</b>
-                                <p style="font-size: 14px; margin-top: 4px;">A mudança real acontece quando há tempo para a escuta ativa e para a partilha de histórias de vida.</p>
-                            </div>
-                        </li>
-                        <li class="topic-item">
-                            <span class="topic-bullet"></span>
-                            <div>
-                                <b>Poder da Pergunta</b>
-                                <p style="font-size: 14px; margin-top: 4px;">As sessões mais impactantes são aquelas que geram novas perguntas, não apenas respostas prontas.</p>
-                            </div>
-                        </li>
+                <div class="full-text">
+                    <ul class="topic-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <li class="topic-item"><span class="topic-bullet"></span>Intervenções em Portugal, Espanha e Croácia</li>
+                        <li class="topic-item"><span class="topic-bullet"></span>4 sessões em contexto prisional (42 participantes)</li>
+                        <li class="topic-item"><span class="topic-bullet"></span>+200 jovens em escolas e universidades</li>
+                        <li class="topic-item"><span class="topic-bullet"></span>2 eventos internacionais</li>
+                        <li class="topic-item"><span class="topic-bullet"></span>1 fórum nacional com 100 participantes</li>
                     </ul>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- REFLEXÕES -->
-            <section class="doc-section">
-                <span class="doc-section-number">05</span>
-                <h2>reflexões</h2>
+        <!-- SLIDE 5: DESTAQUES DO ANO -->
+        <section class="doc-page slide" id="slide-5">
+            <div class="slide-header">
+                <h3>03. destaques do ano</h3>
+                <span style="font-size: 12px; color: #999;">Projetos e Iniciativas</span>
+            </div>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px;">
-                    <div>
-                        <p>2025 confirmou uma tensão central entre o modelo tradicional de masculinidade e a necessidade emergente de formas mais conscientes de existir.</p>
-                        <p>A Men Talks posiciona-se nesse espaço — não como uma solução final, mas como um processo contínuo de aprendizagem e desaprendizagem.</p>
+                <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item bg-purple">
+                        <h4>Fórum Masculinidades</h4>
+                        <p>Cerca de 100 participantes em Coimbra. Maior momento público, focado em "Juventude e Cuidado".</p>
                     </div>
-                    <div style="background: var(--doc-navy); color: #fff; padding: 30px; border-radius: 20px;">
-                        <h4 style="color: var(--doc-accent-1); margin-top: 0;">Aprendizagens</h4>
-                        <ul style="padding-left: 20px; font-size: 13px;">
-                            <li>Jovens estão mais abertos à mudança</li>
-                            <li>Silêncio é a maior barreira</li>
-                            <li>Vulnerabilidade gera ligação profunda</li>
-                        </ul>
+                    <div class="feature-item bg-green">
+                        <h4>Expansão Internacional</h4>
+                        <p>Participação no “Beyond the Box” (Zagreb) e II Foro de Masculinidades (Cáceres).</p>
+                    </div>
+                    <div class="feature-item bg-pink">
+                        <h4>Trabalho com Jovens</h4>
+                        <p>240+ jovens em escolas. Temas: Consentimento, Pressão Social, Saúde Mental e Igualdade.</p>
+                    </div>
+                    <div class="feature-item bg-orange">
+                        <h4>Contexto Prisional</h4>
+                        <p>Sessões em Vale de Judeus e Alcoentre. Questionamento de padrões e novas narrativas de identidade.</p>
+                    </div>
+                    <div class="feature-item bg-purple">
+                        <h4>Empresas e Instituições</h4>
+                        <p>Hitachi Rail, VGP e municípios (Loures, Vila Franca de Xira, Oeiras). Mudança de mentalidade organizacional.</p>
+                    </div>
+                    <div class="feature-item bg-green">
+                        <h4>Espaços de Diálogo</h4>
+                        <p>Conversas “8 minutos” e rodas de conversa. Núcleo intimista de partilha sem julgamento.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- DESAFIOS E CONCLUSÃO -->
-            <section class="doc-section">
-                <span class="doc-section-number">06</span>
-                <h2>desafios e conclusão</h2>
+        <!-- SLIDE 6: IMPACTO E REFLEXÕES -->
+        <section class="doc-page slide" id="slide-6">
+            <div class="slide-header">
+                <h3>04. impacto e reflexões</h3>
+                <span style="font-size: 12px; color: #999;">Aprendizagens e Pensamento</span>
+            </div>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                
-                <div class="grid-cards">
-                    <div class="obj-card" style="border-left: 4px solid #ef4444;">
-                        <h4>Sustentabilidade</h4>
-                        <p>O maior desafio continua a ser a garantia de financiamento contínuo para manter a estrutura operacional.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                    <div class="full-text">
+                        <p><strong>Impacto Qualitativo:</strong> Tornou-se evidente que há uma necessidade real de espaços seguros. Os participantes valorizam experiências autênticas e vulneráveis. A mudança acontece quando há tempo, escuta e presença.</p>
+                        <div class="quote-designed" style="font-size: 20px; margin: 30px 0;">“Rarely, if ever, are any of us healed in isolation.” — bell hooks</div>
                     </div>
-                    <div class="obj-card" style="border-left: 4px solid #3b82f6;">
-                        <h4>Escalabilidade</h4>
-                        <p>Como crescer para mais regiões mantendo a profundidade e a qualidade humana das sessões.</p>
+                    <div class="full-text">
+                        <p><strong>Reflexões:</strong> 2025 confirmou a tensão entre o modelo tradicional de masculinidade e formas mais conscientes de existir. Os jovens estão disponíveis para a mudança, mas o silêncio continua a ser a maior barreira.</p>
+                        <p>A Men Talks contribuiu para o pensamento crítico com temas sobre a relação com o pai, violência "brincadeira" e educação para imaginar mundos melhores.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="highlight-box" style="margin-top: 60px; border-radius: 24px; padding: 60px; text-align: center;">
-                    <h3 style="color: #fff; font-size: 32px; margin-bottom: 20px;">Rumo a 2026</h3>
-                    <p style="font-size: 18px; opacity: 0.9;">O foco será claro: aprofundar impacto, não apenas aumentar números. Continuar a criar espaço para que os homens possam, finalmente, ser humanos.</p>
-            </section>
-        </div>
-
-        <footer class="doc-footer" style="padding-top: 40px; border-top: 1px solid #eee; margin-top: 60px; font-size: 12px; color: #888; display: flex; justify-content: space-between;">
-            <span>Men Talks Association</span>
-            <span>Relatório Anual — 2025</span>
-            <span>Lisboa, Portugal</span>
-        </footer>
+        <!-- SLIDE 7: DESAFIOS E FUTURO -->
+        <section class="doc-page slide" id="slide-7">
+            <div class="slide-header">
+                <h3>05. desafios e futuro</h3>
+                <span style="font-size: 12px; color: #999;">Conclusão e 2026</span>
+            </div>
+            <div class="doc-body">
+                <div class="visual-divider"></div>
+                <div class="grid-cards" style="margin-bottom: 60px;">
+                    <div class="obj-card">
+                        <h4>Desafios Estruturais</h4>
+                        <p>Sustentabilidade financeira, capacidade de escalar mantendo qualidade e continuidade dos processos com participantes.</p>
+                    </div>
+                    <div class="obj-card">
+                        <h4>Olhando para 2026</h4>
+                        <p>Projetos em continuidade (MATCH), maior reconhecimento e novas oportunidades (Gulbenkian). Foco: aprofundar impacto.</p>
+                    </div>
+                </div>
+                <div class="full-text">
+                    <p><strong>Conclusão:</strong> 2025 não foi apenas um ano de atividade. Foi um ano de construção de sentido. Num mundo onde os modelos de masculinidade estão em transformação, a Men Talks continua a fazer algo simples e radical: criar espaço para que os homens possam, finalmente, ser humanos.</p>
+                    <div class="quote-designed" style="font-size: 20px; margin: 30px 0;">“Knowing how to be solitary is central to the art of loving.” — bell hooks</div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!-- NAVIGATION DECK -->
+    <nav class="deck-nav">
+        <button onclick="scrollToSlide(0)" id="nav-0" class="active">capa</button>
+        <button onclick="scrollToSlide(1)" id="nav-1">intro</button>
+        <button onclick="scrollToSlide(4)" id="nav-4">números</button>
+        <button onclick="scrollToSlide(5)" id="nav-5">destaques</button>
+        <button onclick="scrollToSlide(6)" id="nav-6">reflexões</button>
+        <button onclick="scrollToSlide(7)" id="nav-7">futuro</button>
+    </nav>
+
+    <script>
+        const deck = document.getElementById('deck');
+        const buttons = document.querySelectorAll('.deck-nav button');
+
+        function scrollToSlide(index) {
+            const slide = document.getElementById(`slide-${index}`);
+            deck.scrollTo({
+                left: slide.offsetLeft,
+                behavior: 'smooth'
+            });
+            updateActiveNav(index);
+        }
+
+        function updateActiveNav(index) {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Find the closest nav button for the given slide index
+            const navBtn = document.getElementById(`nav-${index}`) || findClosestNav(index);
+            if (navBtn) navBtn.classList.add('active');
+        }
+
+        function findClosestNav(index) {
+            const indices = [0, 1, 4, 5, 6, 7];
+            const closest = indices.reduce((prev, curr) => {
+                return (Math.abs(curr - index) < Math.abs(prev - index) ? curr : prev);
+            });
+            return document.getElementById(`nav-${closest}`);
+        }
+
+        deck.addEventListener('scroll', () => {
+            const scrollLeft = deck.scrollLeft;
+            const slideWidth = window.innerWidth;
+            const activeIndex = Math.round(scrollLeft / slideWidth);
+            updateActiveNav(activeIndex);
+        });
+    </script>
 </body>
 </html>

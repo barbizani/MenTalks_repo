@@ -9,112 +9,87 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        .contents-list { list-style: none; padding: 0; }
-        .contents-list li { display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px dotted #ccc; }
-        .grid-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .obj-card { background: #f9f9f9; padding: 20px; border: 1px solid #eee; }
-        .obj-card h4 { color: var(--doc-purple); margin-top: 0; font-size: 14px; text-transform: uppercase; }
-        .obj-card p { font-size: 12px; color: var(--doc-muted); }
-        .challenges-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-        .challenge-item { display: flex; gap: 20px; align-items: flex-start; }
-        .challenge-num { font-family: var(--font-heading); font-size: 32px; color: var(--doc-purple); }
+        body { overflow: hidden; }
+        .doc-body { padding: 80px 120px; max-width: 1200px; margin: 0 auto; }
+        .full-text { font-size: 16px; line-height: 1.8; color: var(--doc-text); }
+        .full-text p { margin-bottom: 24px; }
+        .slide-header { padding: 40px 120px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .slide-header h3 { font-family: var(--font-heading); color: var(--doc-purple); margin: 0; font-size: 24px; }
     </style>
 </head>
 <body>
-    <div class="doc-page">
-        <header class="doc-header">
-            <div class="logo-container" style="margin-bottom: 40px;">
-                <img src="./assets/logos/mentalks_TLCS_white (2).png" alt="Men Talks Logo" style="height: 80px; width: auto;">
+    <div class="deck-container" id="deck">
+        <!-- SLIDE 0: COVER -->
+        <section class="doc-page slide" id="slide-0">
+            <header class="doc-header" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+                <div class="logo-container" style="margin-bottom: 60px;">
+                    <img src="./assets/logos/mentalks_TLCS_white (2).png" alt="Men Talks Logo" style="height: 100px; width: auto;">
+                </div>
+                <span class="tag">Compromisso Institucional — 2026-2029</span>
+                <h1 style="font-size: 70px;">plano para a <br>igualdade <br>de género</h1>
+                <p style="font-size: 20px; max-width: 600px; opacity: 0.8;">Estratégia para a promoção da equidade, conciliação e prevenção de violência no seio da Associação Men Talks.</p>
+                <div style="margin-top: 60px; display: flex; gap: 40px; font-size: 14px; opacity: 0.6; text-transform: uppercase; letter-spacing: 2px;">
+                    <span>Políticas Internas</span>
+                    <span>•</span>
+                    <span>Men Talks Association</span>
+                </div>
+            </header>
+        </section>
+
+        <!-- SLIDE 1: INTRODUÇÃO -->
+        <section class="doc-page slide" id="slide-1">
+            <div class="slide-header">
+                <h3>01. introdução</h3>
+                <span style="font-size: 12px; color: #999;">Visão Estratégica</span>
             </div>
-            <span class="tag">Documento Institucional — Versão 3.0 — 2026</span>
-            <h1>plano para a <br>igualdade de <br>género</h1>
-            <p>Compromissos, áreas de ação e metas da Associação Men Talks para promover relações equitativas, masculinidades não violentas e uma cultura organizacional inclusiva — dentro e fora da Associação.</p>
-        </header>
-
-        <div class="doc-meta">
-            <div><span>Aprovado em</span><b>Janeiro de 2026</b></div>
-            <div><span>Vigência</span><b>2026 — 2029</b></div>
-            <div><span>Responsável</span><b>Direção — Men Talks</b></div>
-        </div>
-
-        <div class="doc-body">
-            <!-- ÍNDICE -->
-            <section class="doc-section">
-                <h2>Conteúdos</h2>
-                <ul class="contents-list">
-                    <li><span>01 Introdução</span><span>p. 04</span></li>
-                    <li><span>02 Contexto Atual</span><span>p. 07</span></li>
-                    <li><span>03 Áreas de Ação e Objetivos Estratégicos</span><span>p. 12</span></li>
-                    <li><span>04 Metas 2026 — 2029</span><span>p. 16</span></li>
-                    <li><span>05 Plano de Ação</span><span>p. 18</span></li>
-                    <li><span>06 Implementação e Monitorização</span><span>p. 22</span></li>
-                </ul>
-            </section>
-
-            <!-- 01 INTRODUÇÃO -->
-            <section class="doc-section">
-                <span class="doc-section-number">01</span>
-                <h2>introdução</h2>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
-                    <div>
-                        <p style="font-size: 18px; line-height: 1.5; color: var(--doc-navy); font-weight: 500;">A Men Talks é dedicada à promoção da igualdade de género através do envolvimento ativo de homens e rapazes.</p>
-                        <p>A nossa missão é criar espaços de reflexão sobre masculinidades, prevenir a violência e promover relações justas e empáticas. Este Plano formaliza o nosso compromisso com a igualdade como condição para comunidades mais saudáveis.</p>
-                    </div>
-                    <div class="sidebar-note" style="margin: 0;">
-                        <b style="display:block; margin-bottom:10px; color: var(--doc-purple); text-transform: uppercase; font-size: 12px;">Marcos</b>
-                        <p style="font-size: 12px; margin-bottom: 8px;"><strong>2020</strong> — Fundação</p>
-                        <p style="font-size: 12px; margin-bottom: 8px;"><strong>2022</strong> — Escolas</p>
-                        <p style="font-size: 12px; margin-bottom: 0;"><strong>2024</strong> — Fórum Nacional</p>
-                    </div>
+                <div class="full-text">
+                    <p style="font-size: 20px; color: var(--doc-navy); font-weight: 500;">A Men Talks é dedicada à promoção da igualdade de género através do envolvimento ativo de homens e rapazes.</p>
+                    <p>A nossa missão é criar espaços de reflexão sobre masculinidades, prevenir a violência e promover relações justas e empáticas. A promoção da igualdade de género não é apenas o nosso objeto de trabalho; é também um compromisso com a forma como nos organizamos internamente, como tomamos decisões e como construímos parcerias.</p>
+                    <p>Este Plano formaliza esse compromisso e define ações concretas para os próximos três anos (2026-2029), assegurando que a Men Talks aplique internamente aquilo que promove externamente: relações equitativas, escuta ativa e responsabilidade partilhada.</p>
                 </div>
-                <div class="highlight-box" style="background: var(--doc-accent-1); color: var(--doc-navy); border-radius: 20px; margin-top: 40px;">
-                    <p style="font-style: italic; font-size: 18px; margin: 0;">"Envolver homens na conversa sobre igualdade é uma condição necessária para a transformação social."</p>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- 02 CONTEXTO ATUAL -->
-            <section class="doc-section">
-                <span class="doc-section-number">02</span>
-                <h2>contexto atual</h2>
+        <!-- SLIDE 2: CONTEXTO E DADOS -->
+        <section class="doc-page slide" id="slide-2">
+            <div class="slide-header">
+                <h3>02. contexto atual</h3>
+                <span style="font-size: 12px; color: #999;">Diagnóstico de Género</span>
+            </div>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                <div class="stats-grid">
+                <div class="stats-grid" style="margin-bottom: 60px;">
                     <div class="stat-item">
-                        <div class="icon-box" style="margin: 0 auto 15px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg></div>
-                        <span class="stat-number">42</span>
-                        <span class="stat-label">Pessoas Envolvidas</span>
+                        <span class="stat-number">67%</span>
+                        <span class="stat-label">Homens na Direção</span>
                     </div>
                     <div class="stat-item">
-                        <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-2); color: #16a34a;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-                        <span class="stat-number">18</span>
-                        <span class="stat-label">Iniciativas Ativas</span>
+                        <span class="stat-number">58%</span>
+                        <span class="stat-label">Equipa Operacional M</span>
                     </div>
                     <div class="stat-item">
-                        <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-4); color: #db2777;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
-                        <span class="stat-number">2.1k</span>
-                        <span class="stat-label">Alcance Total</span>
+                        <span class="stat-number">71%</span>
+                        <span class="stat-label">Rede de Formadores M</span>
                     </div>
                 </div>
-
-                <div style="margin-top: 60px;">
-                    <h3 style="font-family: var(--font-heading); font-size: 20px; color: var(--doc-navy); margin-bottom: 30px;">Distribuição por Género</h3>
-                    <div class="chart-row">
-                        <span class="chart-label">Direção (67% M / 33% F)</span>
-                        <div class="chart-bar-container"><div class="bar-purple" style="width: 67%;"></div><div class="bar-pink" style="width: 33%;"></div></div>
-                    </div>
-                    <div class="chart-row">
-                        <span class="chart-label">Equipa Operacional (58% M / 42% F)</span>
-                        <div class="chart-bar-container"><div class="bar-purple" style="width: 58%;"></div><div class="bar-pink" style="width: 42%;"></div></div>
-                    </div>
+                <div class="full-text">
+                    <p>O diagnóstico efetuado em 2025 revelou uma predominância masculina em todos os órgãos, o que é coerente com o foco da associação (Homens e Masculinidades), mas exige um esforço deliberado para garantir que a perspetiva feminina e não-binária esteja presente na tomada de decisão estratégica.</p>
+                    <p><strong>Principais Desafios:</strong> Conciliação vida-trabalho, equilíbrio na tomada de decisão, integração da perspetiva de género em projetos técnicos e prevenção de assédio.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- 03 ÁREAS DE AÇÃO -->
-            <section class="doc-section">
-                <span class="doc-section-number">03</span>
-                <h2>áreas de ação e objetivos</h2>
+        <!-- SLIDE 3: ÁREAS DE AÇÃO -->
+        <section class="doc-page slide" id="slide-3">
+            <div class="slide-header">
+                <h3>03. áreas de ação</h3>
+                <span style="font-size: 12px; color: #999;">Metas e Objetivos</span>
+            </div>
+            <div class="doc-body">
                 <div class="visual-divider"></div>
-                <div class="feature-grid">
+                <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
                     <div class="feature-item bg-purple">
                         <h4>01 Conciliação</h4>
                         <p>Clarificar direitos parentais e reduzir o impacto da atividade no envolvimento ativo dos homens no cuidado.</p>
@@ -132,60 +107,43 @@
                         <p>Combater desvantagens intersecionais e prevenir assédio através de um Código de Conduta robusto.</p>
                     </div>
                 </div>
-            </section>
-
-            <!-- 04 METAS -->
-            <section class="doc-section">
-                <span class="doc-section-number">04</span>
-                <h2>metas 2026 — 2029</h2>
-                <table class="doc-table">
-                    <thead>
-                        <tr><th>Cód.</th><th>Meta</th><th>Situação Inicial</th><th>Meta 2029</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1.1</td><td>Equipa informada sobre direitos parentais</td><td>Sem dados</td><td>100%</td></tr>
-                        <tr><td>2.1</td><td>Regras internas para trabalho flexível</td><td>Não existe</td><td>Aprovado</td></tr>
-                        <tr><td>3.1</td><td>Mínimo de 40% de cada género em órgãos de decisão</td><td>23% F</td><td>40% — 60%</td></tr>
-                        <tr><td>3.2</td><td>Plano para a igualdade institucionalizado</td><td>Em elaboração</td><td>Aprovado</td></tr>
-                        <tr><td>4.1</td><td>Dados de género em relatórios de atividade</td><td>Parcial</td><td>Implementado</td></tr>
-                        <tr><td>5.1</td><td>Mecanismos de denúncia e apoio em vigor</td><td>Não existe</td><td>100%</td></tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- 05 PLANO DE AÇÃO -->
-            <section class="doc-section">
-                <span class="doc-section-number">05</span>
-                <h2>plano de ação</h2>
-                <table class="doc-table">
-                    <thead>
-                        <tr><th>Cód.</th><th>Ação</th><th>Calendário</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1.1</td><td>Sistematizar regulamentação sobre direitos parentais</td><td>2026</td></tr>
-                        <tr><td>2.1</td><td>Regras internas para trabalho remoto e flexível</td><td>2026-2027</td></tr>
-                        <tr><td>3.1</td><td>Adaptar ferramentas de recolha de dados (indicadores)</td><td>2026</td></tr>
-                        <tr><td>4.1</td><td>Formação contínua da equipa em perspetiva de género</td><td>2026-2028</td></tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- 06 MONITORIZAÇÃO -->
-            <section class="doc-section">
-                <span class="doc-section-number">06</span>
-                <h2>implementação e monitorização</h2>
-                <p>A implementação deste plano será coordenada por um Grupo de Trabalho para a Igualdade de Género, composto por membros da direção e da equipa operacional. Este grupo terá como missão inicial assegurar a transversalidade da igualdade de género em todas as áreas.</p>
-                <div class="highlight-box" style="background: var(--doc-navy);">
-                    <p style="font-size: 18px; font-weight: 500;">A Men Talks publicará anualmente um relatório de acompanhamento deste Plano, com indicadores e progressos, acessível a toda a comunidade.</p>
-                </div>
-            </section>
-        </div>
-
-        <footer class="doc-footer">
-            <span>Men Talks Association</span>
-            <span>Política de Igualdade — v1.0</span>
-            <span>Funchal — 2026</span>
-        </footer>
+            </div>
+        </section>
     </div>
+
+    <!-- NAVIGATION DECK -->
+    <nav class="deck-nav">
+        <button onclick="scrollToSlide(0)" id="nav-0" class="active">capa</button>
+        <button onclick="scrollToSlide(1)" id="nav-1">missão</button>
+        <button onclick="scrollToSlide(2)" id="nav-2">dados</button>
+        <button onclick="scrollToSlide(3)" id="nav-3">metas</button>
+    </nav>
+
+    <script>
+        const deck = document.getElementById('deck');
+        const buttons = document.querySelectorAll('.deck-nav button');
+
+        function scrollToSlide(index) {
+            const slide = document.getElementById(`slide-${index}`);
+            deck.scrollTo({
+                left: slide.offsetLeft,
+                behavior: 'smooth'
+            });
+            updateActiveNav(index);
+        }
+
+        function updateActiveNav(index) {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            const navBtn = document.getElementById(`nav-${index}`);
+            if (navBtn) navBtn.classList.add('active');
+        }
+
+        deck.addEventListener('scroll', () => {
+            const scrollLeft = deck.scrollLeft;
+            const slideWidth = window.innerWidth;
+            const activeIndex = Math.round(scrollLeft / slideWidth);
+            updateActiveNav(activeIndex);
+        });
+    </script>
 </body>
 </html>

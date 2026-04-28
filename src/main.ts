@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   document.querySelectorAll('section, .glass-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+    const htmlEl = el as HTMLElement;
+    htmlEl.style.opacity = '0';
+    htmlEl.style.transform = 'translateY(20px)';
+    htmlEl.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
     observer.observe(el);
   });
 

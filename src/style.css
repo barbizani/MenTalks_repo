@@ -60,6 +60,72 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.deck-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  background: var(--bg);
+  scrollbar-width: none;
+}
+
+.deck-container::-webkit-scrollbar {
+  display: none;
+}
+
+.deck-slide {
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 80px 0;
+}
+
+.deck-nav {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  padding: 12px 24px;
+  border-radius: 40px;
+  border: 1px solid var(--glass-border);
+}
+
+.deck-nav button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.deck-nav button:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.deck-nav button.active {
+  opacity: 1;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 {
