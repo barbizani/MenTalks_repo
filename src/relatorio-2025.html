@@ -10,17 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         body { overflow: hidden; }
-        .doc-body { padding: 80px 120px; max-width: 1200px; margin: 0 auto; }
-        .slide-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .doc-body { padding: 60px 100px; max-width: 1300px; margin: 0 auto; overflow-y: auto; height: calc(100vh - 120px); }
         .full-text { font-size: 16px; line-height: 1.8; color: var(--doc-text); }
-        .full-text p { margin-bottom: 24px; }
-        .slide-header { padding: 40px 120px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
-        .slide-header h3 { font-family: var(--font-heading); color: var(--doc-purple); margin: 0; font-size: 24px; }
-        .quote-designed { font-family: var(--font-body); font-style: italic; font-size: 28px; color: var(--doc-purple); line-height: 1.4; border-left: 8px solid var(--doc-purple); padding-left: 40px; margin: 60px 0; }
+        .full-text p { margin-bottom: 20px; }
+        .slide-header { padding: 30px 100px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; background: rgba(15, 16, 26, 0.5); backdrop-filter: blur(10px); }
+        .slide-header h3 { font-family: var(--font-heading); color: var(--doc-purple); margin: 0; font-size: 20px; text-transform: lowercase; }
+        .quote-designed { font-family: var(--font-body); font-style: italic; font-size: 24px; color: var(--doc-purple); line-height: 1.4; border-left: 6px solid var(--doc-purple); padding-left: 30px; margin: 40px 0; }
+        
+        /* Timeline Styles */
+        .timeline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+        .month-box { background: rgba(255,255,255,0.03); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .month-box:hover { border-color: var(--doc-purple); background: rgba(255,255,255,0.05); }
+        .month-title { font-family: var(--font-heading); color: var(--doc-purple); font-size: 18px; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .month-activity { font-size: 13px; line-height: 1.5; margin-bottom: 10px; padding-left: 15px; position: relative; }
+        .month-activity::before { content: '•'; position: absolute; left: 0; color: var(--doc-purple); }
+        
+        /* Grid Layouts */
+        .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
     </style>
 </head>
 <body>
     <div class="deck-container" id="deck">
+        
         <!-- SLIDE 0: COVER -->
         <section class="doc-page slide" id="slide-0">
             <header class="doc-header" style="height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 120px;">
@@ -28,9 +39,9 @@
                     <div class="logo-container" style="margin-bottom: 60px;">
                         <img src="./assets/logos/mentalks_TLCS_white (2).png" alt="Men Talks Logo" style="height: 60px; width: auto;">
                     </div>
-                    <span class="tag">Relatório Institucional — Versão Integral — 2025</span>
+                    <span class="tag">Relatório de Atividades — Versão Integral — 2025</span>
                     <h1 style="font-size: clamp(40px, 6vw, 80px); line-height: 1; margin: 20px 0;">relatório de <br>atividades <br>2025</h1>
-                    <p style="font-size: 20px; opacity: 0.8; margin-top: 40px;">Análise detalhada das intervenções sociais, projetos educativos e impacto comunitário realizado pela Associação Men Talks durante o último ano.</p>
+                    <p style="font-size: 20px; opacity: 0.8; margin-top: 40px;">Análise detalhada das intervenções sociais, projetos educativos e impacto comunitário realizado pela Associação Men Talks.</p>
                     <div style="margin-top: 60px; display: flex; gap: 40px; font-size: 14px; opacity: 0.6; text-transform: uppercase; letter-spacing: 2px;">
                         <span>Lisboa, Portugal</span>
                         <span>•</span>
@@ -69,9 +80,9 @@
             </div>
             <div class="doc-body">
                 <div class="full-text">
-                    <p>Ao longo do ano, a Men Talks desenvolveu um conjunto diversificado de iniciativas em múltiplos contextos — comunitário, educativo, institucional, empresarial e prisional — envolvendo públicos distintos, desde jovens em contexto escolar a homens adultos, profissionais e pessoas privadas de liberdade. Entre rodas de conversa, ações de sensibilização, sessões formativas e participação em eventos nacionais e internacionais, destacou-se uma abordagem consistente: colocar a experiência humana no centro do diálogo.</p>
-                    <p>Um dos momentos mais marcantes do ano foi a realização do III Fórum “Masculinidades em Perspectiva”, em Coimbra, dedicado ao tema “Masculinidades, Juventude e Cuidado”. Este encontro constituiu um ponto alto na trajetória da associação, reunindo vozes nacionais e internacionais e promovendo um espaço alargado de partilha, escuta e pensamento crítico. A forte adesão evidenciou não só a atualidade do tema, mas também o papel crescente da Men Talks na dinamização do debate público sobre masculinidades em Portugal.</p>
-                    <p>Ao longo de 2025, destacou-se igualmente o reforço da intervenção em contextos institucionais, através de parcerias com câmaras municipais, escolas, empresas e estabelecimentos prisionais. Estas colaborações permitiram ampliar o alcance das ações e aprofundar o impacto do trabalho desenvolvido.</p>
+                    <p>Ao longo do ano, a Men Talks desenvolveu um conjunto diversificado de iniciativas em múltiplos contextos — envolvendo públicos distintos, desde jovens em contexto escolar a homens adultos, profissionais e pessoas privadas de liberdade. Destacou-se uma abordagem consistente: colocar a experiência humana no centro do diálogo.</p>
+                    <p>Um dos momentos mais marcantes do ano foi a realização do III Fórum “Masculinidades em Perspectiva”, em Coimbra, dedicado ao tema “Masculinidades, Juventude e Cuidado”. Este encontro reuniu vozes nacionais e internacionais e promoveu um espaço alargado de partilha, escuta e pensamento crítico. A forte adesão evidenciou o papel crescente da Men Talks na dinamização do debate público sobre masculinidades em Portugal.</p>
+                    <p>Ao longo de 2025, destacou-se igualmente o reforço da intervenção institucional através de parcerias com câmaras municipais, escolas, empresas e estabelecimentos prisionais. Estas colaborações permitiram ampliar o alcance das ações e aprofundar o impacto do trabalho desenvolvido. Em paralelo, a associação continuou a investir na criação de espaços seguros de diálogo, sustentados numa abordagem participativa e centrada nas vivências dos participantes.</p>
                 </div>
             </div>
         </section>
@@ -84,7 +95,7 @@
             </div>
             <div class="doc-body">
                 <div class="full-text">
-                    <p>Este foi também um ano de fortalecimento interno, marcado não só pela consolidação organizacional e pela procura de sustentabilidade, mas também por um investimento claro na melhoria da comunicação — interna e externa — e na organização digital da associação, através da adoção de novas ferramentas e processos que reforçam a eficiência, a coerência e a capacidade de resposta.</p>
+                    <p>Este foi também um ano de fortalecimento interno, marcado pela consolidação organizacional, procura de sustentabilidade e um investimento claro na melhoria da comunicação interna e externa. A adoção de novas ferramentas e processos reforçou a nossa coerência e capacidade de resposta.</p>
                     <p>O presente relatório reúne, de forma sistematizada, as principais atividades e projetos desenvolvidos ao longo de 2025, refletindo o percurso da Men Talks na construção de uma sociedade mais consciente, mais igualitária — e mais capaz de repensar o que significa ser homem.</p>
                     <div class="sidebar-note" style="margin-top: 40px; background: var(--doc-accent-1);">
                         <p style="margin: 0; font-weight: 600; color: var(--doc-navy);">O foco de 2025 foi a profundidade: não apenas chegar a mais pessoas, mas chegar de forma mais significativa.</p>
@@ -104,12 +115,12 @@
                 <div class="stats-grid" style="margin-bottom: 60px;">
                     <div class="stat-item">
                         <div class="icon-box" style="margin: 0 auto 15px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
-                        <span class="stat-number">960+</span>
+                        <span class="stat-number">+960</span>
                         <span class="stat-label">Participantes Diretos</span>
                     </div>
                     <div class="stat-item">
                         <div class="icon-box" style="margin: 0 auto 15px; background: var(--doc-accent-2); color: #166534;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                        <span class="stat-number">35+</span>
+                        <span class="stat-number">+35</span>
                         <span class="stat-label">Atividades Realizadas</span>
                     </div>
                     <div class="stat-item">
@@ -118,9 +129,12 @@
                         <span class="stat-label">Contextos de Atuação</span>
                     </div>
                 </div>
-                <div class="full-text">
-                    <ul class="topic-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <li class="topic-item"><span class="topic-bullet"></span>Intervenções em Portugal, Espanha e Croácia</li>
+                <div class="full-text" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <p><strong>Contextos de Atuação:</strong> Comunitário, Escolar, Académico, Empresarial, Institucional, Prisional e Internacional.</p>
+                        <p>Intervenções em Portugal, Espanha e Croácia. Estes números representam mais do que presença — refletem a criação de espaços onde a mudança começa.</p>
+                    </div>
+                    <ul class="topic-list">
                         <li class="topic-item"><span class="topic-bullet"></span>4 sessões em contexto prisional (42 participantes)</li>
                         <li class="topic-item"><span class="topic-bullet"></span>+200 jovens em escolas e universidades</li>
                         <li class="topic-item"><span class="topic-bullet"></span>2 eventos internacionais</li>
@@ -130,7 +144,7 @@
             </div>
         </section>
 
-        <!-- SLIDE 5: DESTAQUES DO ANO -->
+        <!-- SLIDE 5: DESTAQUES (PARTE 1) -->
         <section class="doc-page slide" id="slide-5">
             <div class="slide-header">
                 <h3>03. destaques do ano</h3>
@@ -138,78 +152,243 @@
             </div>
             <div class="doc-body">
                 <div class="visual-divider"></div>
-                <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="feature-grid">
                     <div class="feature-item bg-purple">
                         <h4>Fórum Masculinidades</h4>
-                        <p>Cerca de 100 participantes em Coimbra. Maior momento público, focado em "Juventude e Cuidado".</p>
+                        <p>Coimbra (100 participantes). Maior momento público focado em "Juventude e Cuidado". Encontro de escuta e pensamento crítico.</p>
                     </div>
                     <div class="feature-item bg-green">
                         <h4>Expansão Internacional</h4>
-                        <p>Participação no “Beyond the Box” (Zagreb) e II Foro de Masculinidades (Cáceres).</p>
+                        <p>“Beyond the Box” em Zagreb (80 part.) e II Foro de Masculinidades em Cáceres (150 part.). Rede global de transformação.</p>
                     </div>
                     <div class="feature-item bg-pink">
                         <h4>Trabalho com Jovens</h4>
-                        <p>240+ jovens em escolas. Temas: Consentimento, Pressão Social, Saúde Mental e Igualdade.</p>
+                        <p>240+ jovens. Temas: Consentimento, Pressão Social, Violência, Saúde Mental e Igualdade. "Ensinar a pensar criticamente."</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: DESTAQUES (PARTE 2) -->
+        <section class="doc-page slide" id="slide-6">
+            <div class="slide-header">
+                <h3>03. destaques do ano (cont.)</h3>
+                <span style="font-size: 12px; color: #999;">Projetos e Iniciativas</span>
+            </div>
+            <div class="doc-body">
+                <div class="feature-grid">
                     <div class="feature-item bg-orange">
                         <h4>Contexto Prisional</h4>
-                        <p>Sessões em Vale de Judeus e Alcoentre. Questionamento de padrões e novas narrativas de identidade.</p>
+                        <p>Vale de Judeus e Alcoentre (42 part.). Impacto medido pela profundidade: questionamento de padrões e novas narrativas de identidade.</p>
                     </div>
                     <div class="feature-item bg-purple">
                         <h4>Empresas e Instituições</h4>
-                        <p>Hitachi Rail, VGP e municípios (Loures, Vila Franca de Xira, Oeiras). Mudança de mentalidade organizacional.</p>
+                        <p>Hitachi Rail, VGP e municípios (Loures, VFX, Oeiras). Reconhecimento crescente da importância de falar sobre masculinidades.</p>
                     </div>
                     <div class="feature-item bg-green">
                         <h4>Espaços de Diálogo</h4>
-                        <p>Conversas “8 minutos” e rodas de conversa. Núcleo intimista de partilha sem julgamento.</p>
+                        <p>Conversas “8 minutos” e rodas de conversa. Encontros intimistas, partilha sem julgamento e prática de escuta ativa.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 6: IMPACTO E REFLEXÕES -->
-        <section class="doc-page slide" id="slide-6">
+        <!-- SLIDE 7: IMPACTO E REFLEXÕES -->
+        <section class="doc-page slide" id="slide-7">
             <div class="slide-header">
                 <h3>04. impacto e reflexões</h3>
-                <span style="font-size: 12px; color: #999;">Aprendizagens e Pensamento</span>
+                <span style="font-size: 12px; color: #999;">Aprendizagens</span>
             </div>
             <div class="doc-body">
                 <div class="visual-divider"></div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div class="two-cols">
                     <div class="full-text">
-                        <p><strong>Impacto Qualitativo:</strong> Tornou-se evidente que há uma necessidade real de espaços seguros. Os participantes valorizam experiências autênticas e vulneráveis. A mudança acontece quando há tempo, escuta e presença.</p>
-                        <div class="quote-designed" style="font-size: 20px; margin: 30px 0;">“Rarely, if ever, are any of us healed in isolation.” — bell hooks</div>
+                        <p><strong>Impacto Qualitativo:</strong> Há uma necessidade real de espaços seguros. Os participantes valorizam experiências autênticas. A mudança acontece quando há tempo, escuta e presença. Muitas sessões terminam com novas perguntas.</p>
+                        <p><strong>Produção de Conteúdo:</strong> Contribuímos para o pensamento crítico com temas sobre a relação com o pai, "Boys will (not) be boys" e educar para imaginar mundos melhores.</p>
                     </div>
                     <div class="full-text">
-                        <p><strong>Reflexões:</strong> 2025 confirmou a tensão entre o modelo tradicional de masculinidade e formas mais conscientes de existir. Os jovens estão disponíveis para a mudança, mas o silêncio continua a ser a maior barreira.</p>
-                        <p>A Men Talks contribuiu para o pensamento crítico com temas sobre a relação com o pai, violência "brincadeira" e educação para imaginar mundos melhores.</p>
+                        <p><strong>Reflexões 2025:</strong> Confirmou a tensão entre o modelo tradicional e formas mais conscientes de existir. Jovens estão disponíveis para a mudança, mas o silêncio é a maior barreira.</p>
+                        <div class="quote-designed" style="font-size: 18px;">“Rarely, if ever, are any of us healed in isolation.” — bell hooks</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 7: DESAFIOS E FUTURO -->
-        <section class="doc-page slide" id="slide-7">
+        <!-- SLIDE 8: DESAFIOS E FUTURO -->
+        <section class="doc-page slide" id="slide-8">
             <div class="slide-header">
                 <h3>05. desafios e futuro</h3>
                 <span style="font-size: 12px; color: #999;">Conclusão e 2026</span>
             </div>
             <div class="doc-body">
                 <div class="visual-divider"></div>
-                <div class="grid-cards" style="margin-bottom: 60px;">
-                    <div class="obj-card">
-                        <h4>Desafios Estruturais</h4>
-                        <p>Sustentabilidade financeira, capacidade de escalar mantendo qualidade e continuidade dos processos com participantes.</p>
+                <div class="two-cols">
+                    <div class="full-text">
+                        <p><strong>Desafios:</strong> Sustentabilidade financeira, escala com qualidade e continuidade dos processos. Como crescer sem perder profundidade?</p>
+                        <p><strong>Rumo a 2026:</strong> MATCH, intervenções institucionais e candidatura Gulbenkian. O foco: aprofundar impacto, não apenas números.</p>
                     </div>
-                    <div class="obj-card">
-                        <h4>Olhando para 2026</h4>
-                        <p>Projetos em continuidade (MATCH), maior reconhecimento e novas oportunidades (Gulbenkian). Foco: aprofundar impacto.</p>
+                    <div class="full-text">
+                        <p><strong>Conclusão:</strong> 2025 foi um ano de construção de sentido. A Men Talks continua a fazer algo radical: criar espaço para que os homens possam, finalmente, ser humanos.</p>
+                        <div class="quote-designed" style="font-size: 18px;">“Knowing how to be solitary is central to the art of loving.” — bell hooks</div>
                     </div>
                 </div>
-                <div class="full-text">
-                    <p><strong>Conclusão:</strong> 2025 não foi apenas um ano de atividade. Foi um ano de construção de sentido. Num mundo onde os modelos de masculinidade estão em transformação, a Men Talks continua a fazer algo simples e radical: criar espaço para que os homens possam, finalmente, ser humanos.</p>
-                    <div class="quote-designed" style="font-size: 20px; margin: 30px 0;">“Knowing how to be solitary is central to the art of loving.” — bell hooks</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: CRONOGRAMA (Q1) -->
+        <section class="doc-page slide" id="slide-9">
+            <div class="slide-header">
+                <h3>06. cronograma anual (q1)</h3>
+                <span style="font-size: 12px; color: #999;">Janeiro — Março</span>
+            </div>
+            <div class="doc-body">
+                <div class="timeline-grid">
+                    <div class="month-box">
+                        <div class="month-title">Janeiro</div>
+                        <div class="month-activity">Roda "O prazer de consentir" (16 part.) com Bea Barbadillo.</div>
+                        <div class="month-activity">Reunião CM Vila Franca de Xira.</div>
+                        <div class="month-activity">Desenvolvimento de propostas comunitárias.</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Fevereiro</div>
+                        <div class="month-activity">Reunião CM Loures.</div>
+                        <div class="month-activity">Ação Dia do Preservativo em Vialonga (41 part.).</div>
+                        <div class="month-activity">Aniversário Men Talks (19/02).</div>
+                        <div class="month-activity">Roda "Peer Pressure" na Casa Mocambo.</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Março</div>
+                        <div class="month-activity">Reunião VGP (Formação).</div>
+                        <div class="month-activity">Rádio Movimento (Masculinidades).</div>
+                        <div class="month-activity">Sessão na Prisão de Vale de Judeus (12 part.).</div>
+                        <div class="month-activity">Assembleia Geral Anual.</div>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 10: CRONOGRAMA (Q2) -->
+        <section class="doc-page slide" id="slide-10">
+            <div class="slide-header">
+                <h3>06. cronograma anual (q2)</h3>
+                <span style="font-size: 12px; color: #999;">Abril — Junho</span>
+            </div>
+            <div class="doc-body">
+                <div class="timeline-grid">
+                    <div class="month-box">
+                        <div class="month-title">Abril</div>
+                        <div class="month-activity">Roda Saúde Mental (Inquieta).</div>
+                        <div class="month-activity">"Beyond the Box" em Zagreb.</div>
+                        <div class="month-activity">Sessão Hitachi Rail (28 part.).</div>
+                        <div class="month-activity">Sensibilização Violência Intimidade (50 part.).</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Maio</div>
+                        <div class="month-activity">Dia contra Homofobia e Transfobia (62 part.).</div>
+                        <div class="month-activity">Evento em Águeda (30 part.).</div>
+                        <div class="month-activity">Consolidação de parcerias educativas.</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Junho</div>
+                        <div class="month-activity">Sessão Menstruação e Silêncio (Nova Lisboa, 60 part.).</div>
+                        <div class="month-activity">Prisão Alcoentre (15 part.).</div>
+                        <div class="month-activity">Mind the Gap (10 part.).</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 11: CRONOGRAMA (Q3) -->
+        <section class="doc-page slide" id="slide-11">
+            <div class="slide-header">
+                <h3>06. cronograma anual (q3)</h3>
+                <span style="font-size: 12px; color: #999;">Julho — Setembro</span>
+            </div>
+            <div class="doc-body">
+                <div class="timeline-grid">
+                    <div class="month-box">
+                        <div class="month-title">Julho</div>
+                        <div class="month-activity">Continuidade na Prisão de Alcoentre (15 part.).</div>
+                        <div class="month-activity">Manutenção de intervenções comunitárias.</div>
+                    </div>
+                    <div class="month-box" style="opacity: 0.7;">
+                        <div class="month-title">Agosto</div>
+                        <div class="month-activity">Planeamento estratégico e candidaturas.</div>
+                        <div class="month-activity">Organização financeira interna.</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Setembro</div>
+                        <div class="month-activity">Desenvolvimento de conteúdos digitais.</div>
+                        <div class="month-activity">Planeamento do Q4.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 12: CRONOGRAMA (Q4) -->
+        <section class="doc-page slide" id="slide-12">
+            <div class="slide-header">
+                <h3>06. cronograma anual (q4)</h3>
+                <span style="font-size: 12px; color: #999;">Outubro — Dezembro</span>
+            </div>
+            <div class="doc-body">
+                <div class="timeline-grid">
+                    <div class="month-box">
+                        <div class="month-title">Outubro</div>
+                        <div class="month-activity">Formação Formadores MATCH.</div>
+                        <div class="month-activity">Formação EquiChampions.</div>
+                        <div class="month-activity">Início do Projeto MATCH (Escolas Gil Vicente e Marquesa).</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Novembro</div>
+                        <div class="month-activity">III Fórum “Masculinidades em Perspectiva” em Coimbra (60 part.).</div>
+                        <div class="month-activity">Continuidade do MATCH nas escolas.</div>
+                    </div>
+                    <div class="month-box">
+                        <div class="month-title">Dezembro</div>
+                        <div class="month-activity">Apuramento Candidatura Gulbenkian Empregar.</div>
+                        <div class="month-activity">Avaliação e Fecho Anual.</div>
+                        <div class="month-activity">Planeamento 2026.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 13: PARCERIAS E REDE -->
+        <section class="doc-page slide" id="slide-13">
+            <div class="slide-header">
+                <h3>07. parcerias e rede</h3>
+                <span style="font-size: 12px; color: #999;">Ecossistema de Colaboração</span>
+            </div>
+            <div class="doc-body">
+                <div class="visual-divider"></div>
+                <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr);">
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">CM Loures</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">CM Vila Franca Xira</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">Hitachi Rail</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">Fundação BipZip</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">Universidade Nova</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">Casa Mocambo</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">Inquieta Livraria</h5>
+                    </div>
+                    <div class="month-box" style="text-align: center;">
+                        <h5 style="margin: 0; font-size: 12px;">VGP</h5>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 40px; opacity: 0.6; font-size: 14px;">A Men Talks agradece a todos os parceiros que tornam este trabalho possível.</p>
             </div>
         </section>
     </div>
@@ -220,8 +399,9 @@
         <button onclick="scrollToSlide(1)" id="nav-1">intro</button>
         <button onclick="scrollToSlide(4)" id="nav-4">números</button>
         <button onclick="scrollToSlide(5)" id="nav-5">destaques</button>
-        <button onclick="scrollToSlide(6)" id="nav-6">reflexões</button>
-        <button onclick="scrollToSlide(7)" id="nav-7">futuro</button>
+        <button onclick="scrollToSlide(7)" id="nav-7">impacto</button>
+        <button onclick="scrollToSlide(9)" id="nav-9">timeline</button>
+        <button onclick="scrollToSlide(13)" id="nav-13">parcerias</button>
     </nav>
 
     <script>
@@ -239,13 +419,12 @@
 
         function updateActiveNav(index) {
             buttons.forEach(btn => btn.classList.remove('active'));
-            // Find the closest nav button for the given slide index
             const navBtn = document.getElementById(`nav-${index}`) || findClosestNav(index);
             if (navBtn) navBtn.classList.add('active');
         }
 
         function findClosestNav(index) {
-            const indices = [0, 1, 4, 5, 6, 7];
+            const indices = [0, 1, 4, 5, 7, 9, 13];
             const closest = indices.reduce((prev, curr) => {
                 return (Math.abs(curr - index) < Math.abs(prev - index) ? curr : prev);
             });
