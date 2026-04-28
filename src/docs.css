@@ -1,0 +1,331 @@
+/* Document Template Styling - Men Talks */
+@font-face {
+  font-family: 'All Round Gothic';
+  src: url('./assets/fonts/AllRoundGothic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'All Round Gothic';
+  src: url('./assets/fonts/AllRoundGothic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --doc-bg: #ffffff;
+  --doc-navy: #1e1f32;
+  --doc-purple: #814dd5;
+  --doc-text: #333333;
+  --doc-muted: #666666;
+  --doc-light: #f5f5f7;
+  --doc-accent-1: #e9d5ff;
+  --doc-accent-2: #dcfce7;
+  --doc-accent-3: #ffedd5;
+  --doc-accent-4: #fce7f3;
+  --font-heading: 'All Round Gothic', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+.doc-page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--doc-bg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--doc-text);
+  line-height: 1.6;
+}
+
+/* Header Section */
+.doc-header {
+  background-color: var(--doc-navy);
+  color: #fff;
+  padding: 100px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.doc-header::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(129, 77, 213, 0.4) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.doc-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, rgba(88, 30, 221, 0.1), transparent);
+  z-index: 1;
+}
+
+.doc-header * {
+  position: relative;
+  z-index: 2;
+}
+
+.doc-header .tag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  display: block;
+  opacity: 0.8;
+}
+
+.doc-header h1 {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  line-height: 1;
+  text-transform: lowercase;
+  margin-bottom: 32px;
+}
+
+.doc-header p {
+  max-width: 500px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.doc-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px 60px;
+  background: var(--doc-light);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.doc-meta div span {
+  display: block;
+  color: var(--doc-muted);
+  margin-bottom: 4px;
+}
+
+.doc-meta div b {
+  color: var(--doc-navy);
+}
+
+/* Section Content */
+.doc-body {
+  padding: 60px;
+}
+
+.doc-section {
+  margin-bottom: 80px;
+}
+
+.doc-section-number {
+  font-family: var(--font-heading);
+  font-size: 80px;
+  color: var(--doc-purple);
+  line-height: 0.8;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.doc-section h2 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--doc-navy);
+  margin-bottom: 24px;
+}
+
+.doc-callout {
+  border-left: 6px solid var(--doc-purple);
+  padding: 40px;
+  background: var(--doc-light);
+  margin: 60px 0;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--doc-navy);
+}
+
+/* Stats and Charts */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  color: var(--doc-navy);
+  display: block;
+}
+
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--doc-muted);
+}
+
+.chart-row {
+  margin-bottom: 16px;
+}
+
+.chart-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.chart-bar-container {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.bar-pink { background: #d395c3; height: 100%; }
+.bar-purple { background: #814dd5; height: 100%; }
+
+/* Tables */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 11px;
+}
+
+.doc-table th {
+  text-align: left;
+  padding: 12px;
+  background: var(--doc-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--doc-navy);
+}
+
+.doc-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.doc-table tr:nth-child(even) {
+  background: #fcfcfc;
+}
+
+.highlight-box {
+  background: var(--doc-purple);
+  color: #fff;
+  padding: 40px;
+  margin: 40px 0;
+}
+
+/* Footer */
+.doc-footer {
+  padding: 40px 60px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--doc-muted);
+  text-transform: uppercase;
+}
+
+/* New Visual Elements */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: var(--doc-accent-1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--doc-purple);
+}
+
+.icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.feature-item {
+  padding: 30px;
+  border-radius: 20px;
+  transition: transform 0.2s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.bg-purple { background: var(--doc-accent-1); color: var(--doc-navy); }
+.bg-green { background: var(--doc-accent-2); color: var(--doc-navy); }
+.bg-orange { background: var(--doc-accent-3); color: var(--doc-navy); }
+.bg-pink { background: var(--doc-accent-4); color: var(--doc-navy); }
+
+.topic-list {
+  list-style: none;
+  padding: 0;
+}
+
+.topic-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.topic-bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--doc-purple);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.visual-divider {
+  height: 4px;
+  width: 60px;
+  background: var(--doc-purple);
+  margin: 32px 0;
+  border-radius: 2px;
+}
+
+.sidebar-note {
+  border-left: 4px solid var(--doc-purple);
+  padding: 20px;
+  margin: 30px 0;
+  background: #fdfbff;
+  font-size: 14px;
+}
+
+@media print {
+  .doc-page {
+    margin: 0;
+    box-shadow: none;
+  }
+}
