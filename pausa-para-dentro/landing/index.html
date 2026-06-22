@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pausa para Dentro · 3.ª Edição · 24 Outubro 2026</title>
+<meta name="description" content="Um dia para parar, respirar e voltar a sentir. Para quem educa, cuida e acompanha — e raramente tem tempo para si. 24 de outubro de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #F6F2EC;
+    --linen: #EAE6DF;
+    --bone: #D9D1C7;
+    --charcoal: #232220;
+    --charcoal-mid: #3D3D3D;
+    --muted: #6f6a62;
+    --faint: #a09a8f;
+
+    --sage: #8F9B8A;
+    --terracotta: #C58B72;
+
+    --coral: #E96F4C;
+    --teal: #1E7E8C;
+    --green: #4E9A6B;
+    --amber: #E7A33C;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
+    --display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--charcoal); font-family: var(--body); overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    height: 60px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px;
+    background: rgba(246,242,236,0); backdrop-filter: blur(0);
+    transition: background .4s, backdrop-filter .4s, border-bottom .4s;
+    border-bottom: 1px solid transparent;
+  }
+  nav.scrolled {
+    background: rgba(246,242,236,.94);
+    backdrop-filter: blur(12px);
+    border-bottom-color: var(--bone);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-wordmark {
+    font-family: var(--display); font-weight: 700; font-size: 15px;
+    letter-spacing: -0.02em; color: var(--charcoal);
+  }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; text-decoration: none;
+    color: var(--muted); transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-cta {
+    background: var(--charcoal); color: var(--cream) !important;
+    padding: 9px 20px; border-radius: 2px; letter-spacing: 0.12em !important;
+  }
+  .nav-cta:hover { background: var(--charcoal-mid); color: var(--cream) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 120px 48px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: var(--charcoal);
+  }
+  .hero-bg-noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.06;
+  }
+  .hero-orb {
+    position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none;
+  }
+  .hero-orb-1 { width: 500px; height: 500px; background: rgba(78,154,107,.15); top: -100px; right: -100px; }
+  .hero-orb-2 { width: 400px; height: 400px; background: rgba(231,163,60,.1); bottom: -80px; left: -80px; }
+  .hero-orb-3 { width: 300px; height: 300px; background: rgba(233,111,76,.08); top: 40%; left: 30%; }
+
+  .hero-content { position: relative; z-index: 1; text-align: center; max-width: 900px; }
+  .hero-kicker {
+    font-family: var(--sans); font-size: 10px; letter-spacing: 0.36em;
+    text-transform: uppercase; color: rgba(255,255,255,.4);
+    margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .hero-kicker::before, .hero-kicker::after {
+    content: ''; display: block; width: 32px; height: 1px; background: rgba(255,255,255,.2);
+  }
+
+  .hero-logo-mark {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+    margin-bottom: 48px;
+  }
+  .hero-word-pausa {
+    display: flex; align-items: baseline;
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(72px, 10vw, 128px);
+    line-height: 1; letter-spacing: -0.04em; color: #F6F2EC;
+  }
+  .hero-word-para-dentro {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: clamp(40px, 6vw, 76px);
+    line-height: 1; color: var(--green); margin-top: -4px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero-arc {
+    flex: none; height: clamp(56px, 8vw, 100px);
+  }
+
+  .hero-tagline {
+    font-family: var(--sans); font-size: clamp(14px, 1.5vw, 17px); font-weight: 300;
+    line-height: 1.7; color: rgba(255,255,255,.55);
+    max-width: 560px; margin: 0 auto 48px;
+  }
+  .hero-tagline strong { color: rgba(255,255,255,.8); font-weight: 500; }
+
+  .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    font-family: var(--sans); font-weight: 600; font-size: 13px;
+    letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    background: var(--amber); color: var(--charcoal);
+    padding: 16px 36px; border-radius: 2px;
+    transition: background .2s, transform .2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #d4922e; transform: translateY(-1px); }
+  .btn-ghost {
+    font-family: var(--sans); font-weight: 500; font-size: 13px;
+    letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    color: rgba(255,255,255,.6); border: 1px solid rgba(255,255,255,.2);
+    padding: 16px 36px; border-radius: 2px;
+    transition: color .2s, border-color .2s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,.5); }
+
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    animation: float 2.5s ease-in-out infinite;
+  }
+  .hero-scroll span {
+    font-family: var(--sans); font-size: 9px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: rgba(255,255,255,.3);
+  }
+  @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ── DATE STRIP ── */
+  .date-strip {
+    background: var(--amber); padding: 20px 48px;
+    display: flex; align-items: center; justify-content: center; gap: 48px;
+    flex-wrap: wrap;
+  }
+  .date-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .date-item-label {
+    font-family: var(--body); font-size: 9px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: rgba(35,34,32,.5);
+  }
+  .date-item-value {
+    font-family: var(--display); font-weight: 700; font-size: 18px;
+    letter-spacing: -0.02em; color: var(--charcoal);
+  }
+  .date-sep { width: 1px; height: 32px; background: rgba(35,34,32,.15); }
+
+  /* ── SECTIONS ── */
+  .section { padding: 112px 48px; max-width: 1120px; margin: 0 auto; }
+  .section-label {
+    font-family: var(--body); font-size: 10px; letter-spacing: 0.34em;
+    text-transform: uppercase; color: var(--faint); margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.0; letter-spacing: -0.03em; color: var(--charcoal);
+  }
+  .section-subtitle {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: clamp(22px, 2.5vw, 30px); color: var(--green); margin-top: 8px;
+  }
+  .section-lead {
+    font-family: var(--sans); font-size: 16px; line-height: 1.8;
+    color: var(--muted); max-width: 600px; margin-top: 28px;
+  }
+
+  /* ── WHY ── */
+  .why-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    margin-top: 64px; border-radius: 4px; overflow: hidden;
+  }
+  .why-card {
+    padding: 56px 44px; background: var(--linen);
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .why-card:nth-child(1) { background: var(--charcoal); }
+  .why-card:nth-child(2) { background: var(--linen); }
+  .why-number {
+    font-family: var(--display); font-weight: 800; font-size: 64px;
+    letter-spacing: -0.05em; line-height: 1; opacity: 0.12;
+    color: inherit;
+  }
+  .why-card:nth-child(1) .why-number { color: var(--cream); }
+  .why-card:nth-child(1) .why-title { color: var(--cream); }
+  .why-card:nth-child(1) .why-body { color: rgba(255,255,255,.55); }
+  .why-title {
+    font-family: var(--display); font-weight: 700; font-size: 24px;
+    letter-spacing: -0.02em; color: var(--charcoal); line-height: 1.2;
+  }
+  .why-body {
+    font-family: var(--sans); font-size: 14.5px; line-height: 1.8; color: var(--muted);
+  }
+
+  /* ── CONCEPT ── */
+  .concept-section {
+    background: var(--charcoal); color: var(--cream);
+    padding: 112px 48px;
+  }
+  .concept-inner { max-width: 1120px; margin: 0 auto; }
+  .concept-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;
+    margin-top: 80px;
+  }
+  .concept-card { display: flex; flex-direction: column; gap: 20px; }
+  .concept-icon {
+    width: 48px; height: 48px; border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .concept-title {
+    font-family: var(--display); font-weight: 700; font-size: 22px;
+    letter-spacing: -0.02em; color: var(--cream); line-height: 1.2;
+  }
+  .concept-body {
+    font-family: var(--sans); font-size: 14.5px; line-height: 1.8;
+    color: rgba(255,255,255,.5);
+  }
+  .concept-word {
+    font-family: var(--serif); font-style: italic; font-size: 14px;
+    color: rgba(255,255,255,.3); border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 16px; margin-top: auto;
+  }
+
+  /* ── ORADORES ── */
+  .speakers-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 64px;
+  }
+  .speaker-card {
+    background: var(--linen); border-radius: 4px; overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .speaker-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.1); }
+  .speaker-photo {
+    height: 220px; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .speaker-initials {
+    font-family: var(--display); font-weight: 800; font-size: 52px;
+    letter-spacing: -0.04em; opacity: 0.15;
+  }
+  .speaker-body { padding: 28px; }
+  .speaker-name {
+    font-family: var(--display); font-weight: 700; font-size: 20px;
+    letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 4px;
+  }
+  .speaker-role {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+  }
+  .speaker-bio {
+    font-family: var(--sans); font-size: 13.5px; line-height: 1.7; color: var(--muted);
+  }
+
+  /* ── PROGRAM ── */
+  .program-section { background: var(--linen); padding: 112px 48px; }
+  .program-inner { max-width: 1120px; margin: 0 auto; }
+  .program-list {
+    display: flex; flex-direction: column; gap: 0;
+    margin-top: 64px; border-radius: 4px; overflow: hidden;
+  }
+  .program-item {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 0; background: var(--cream);
+    border-bottom: 1px solid var(--bone);
+    transition: background .2s;
+  }
+  .program-item:last-child { border-bottom: none; }
+  .program-item:hover { background: #ece8e0; }
+  .program-time {
+    padding: 28px 24px; border-right: 1px solid var(--bone);
+    font-family: var(--display); font-weight: 700; font-size: 15px;
+    color: var(--faint); display: flex; align-items: flex-start; letter-spacing: -0.01em;
+  }
+  .program-content { padding: 28px 32px; }
+  .program-title {
+    font-family: var(--display); font-weight: 600; font-size: 18px;
+    letter-spacing: -0.01em; color: var(--charcoal); margin-bottom: 6px;
+  }
+  .program-desc {
+    font-family: var(--sans); font-size: 13.5px; line-height: 1.7; color: var(--muted);
+  }
+  .program-tag {
+    display: inline-block; font-family: var(--body); font-size: 9px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 100px; border: 1px solid;
+    margin-top: 10px;
+  }
+
+  /* ── ORGS ── */
+  .orgs-section { padding: 112px 48px; max-width: 1120px; margin: 0 auto; }
+  .orgs-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    margin-top: 56px; border-radius: 4px; overflow: hidden;
+  }
+  .org-card {
+    padding: 48px 36px; display: flex; flex-direction: column; gap: 16px;
+  }
+  .org-name {
+    font-family: var(--display); font-weight: 700; font-size: 22px;
+    letter-spacing: -0.02em; color: var(--charcoal); line-height: 1.1;
+  }
+  .org-desc {
+    font-family: var(--sans); font-size: 13.5px; line-height: 1.75; color: var(--muted);
+    flex: 1;
+  }
+  .org-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex: none;
+  }
+
+  /* ── TESTIMONIAL ── */
+  .testimonial-section {
+    background: var(--charcoal); padding: 112px 48px; position: relative; overflow: hidden;
+  }
+  .testimonial-inner { max-width: 840px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+  .testimonial-quote {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 44px); line-height: 1.3; color: var(--cream);
+    margin-bottom: 40px;
+  }
+  .testimonial-quote::before { content: '\201C'; opacity: 0.3; }
+  .testimonial-quote::after { content: '\201D'; opacity: 0.3; }
+  .testimonial-attr {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: rgba(255,255,255,.35);
+  }
+  .testimonial-orb-1 { position: absolute; width:400px; height:400px; border-radius:50%; background:rgba(78,154,107,.12); filter:blur(80px); top:-100px; right:-100px; }
+  .testimonial-orb-2 { position: absolute; width:300px; height:300px; border-radius:50%; background:rgba(231,163,60,.08); filter:blur(60px); bottom:-80px; left:-80px; }
+
+  /* ── REGISTER ── */
+  .register-section { padding: 120px 48px; max-width: 1120px; margin: 0 auto; }
+  .register-card {
+    background: var(--charcoal); border-radius: 4px; overflow: hidden;
+    display: grid; grid-template-columns: 1fr 1fr;
+  }
+  .register-info { padding: 72px 56px; }
+  .register-title {
+    font-family: var(--display); font-weight: 800; font-size: clamp(36px, 4vw, 52px);
+    letter-spacing: -0.04em; line-height: 1.0; color: var(--cream); margin-bottom: 24px;
+  }
+  .register-title em {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: 0.7em; color: var(--green); display: block;
+  }
+  .register-note {
+    font-family: var(--sans); font-size: 14px; line-height: 1.8;
+    color: rgba(255,255,255,.5); margin-bottom: 40px;
+  }
+  .register-meta {
+    display: flex; flex-direction: column; gap: 14px;
+    border-top: 1px solid rgba(255,255,255,.1); padding-top: 32px; margin-top: 32px;
+  }
+  .register-meta-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .register-meta-key {
+    font-family: var(--body); font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: rgba(255,255,255,.3);
+  }
+  .register-meta-val {
+    font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--cream);
+  }
+  .register-form { padding: 72px 56px; background: var(--linen); display: flex; flex-direction: column; gap: 20px; justify-content: center; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-label {
+    font-family: var(--body); font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--faint);
+  }
+  .form-input {
+    font-family: var(--sans); font-size: 14px; color: var(--charcoal);
+    background: var(--cream); border: 1px solid var(--bone);
+    padding: 12px 16px; border-radius: 2px;
+    outline: none; transition: border-color .2s;
+    width: 100%;
+  }
+  .form-input:focus { border-color: var(--green); }
+  .form-select {
+    font-family: var(--sans); font-size: 14px; color: var(--charcoal);
+    background: var(--cream); border: 1px solid var(--bone);
+    padding: 12px 16px; border-radius: 2px;
+    outline: none; width: 100%; appearance: none;
+    cursor: pointer;
+  }
+  .btn-submit {
+    font-family: var(--display); font-weight: 700; font-size: 14px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    background: var(--charcoal); color: var(--cream);
+    border: none; padding: 16px 32px; border-radius: 2px;
+    cursor: pointer; width: 100%; transition: background .2s;
+    margin-top: 8px;
+  }
+  .btn-submit:hover { background: var(--charcoal-mid); }
+  .form-disclaimer {
+    font-family: var(--body); font-size: 11px; color: var(--faint);
+    line-height: 1.65; text-align: center;
+  }
+
+  /* ── FAQ ── */
+  .faq-section { padding: 112px 48px; max-width: 860px; margin: 0 auto; }
+  .faq-list { margin-top: 56px; display: flex; flex-direction: column; }
+  .faq-item { border-top: 1px solid var(--bone); }
+  .faq-item:last-child { border-bottom: 1px solid var(--bone); }
+  .faq-q {
+    font-family: var(--display); font-weight: 600; font-size: 18px;
+    letter-spacing: -0.01em; color: var(--charcoal);
+    padding: 28px 0; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
+  }
+  .faq-q::after { content: '+'; font-weight: 300; font-size: 24px; color: var(--faint); }
+  .faq-a {
+    font-family: var(--sans); font-size: 14.5px; line-height: 1.8;
+    color: var(--muted); padding-bottom: 28px; display: none;
+  }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal); padding: 64px 48px 48px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px;
+    max-width: 100%;
+  }
+  .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+  .footer-title {
+    font-family: var(--display); font-weight: 700; font-size: 16px;
+    letter-spacing: -0.01em; color: var(--cream);
+  }
+  .footer-sub {
+    font-family: var(--sans); font-size: 12.5px; line-height: 1.75;
+    color: rgba(255,255,255,.4);
+  }
+  .footer-col-title {
+    font-family: var(--body); font-size: 9.5px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 16px;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    font-family: var(--sans); font-size: 13.5px; color: rgba(255,255,255,.5);
+    text-decoration: none; transition: color .2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    background: rgba(0,0,0,.3); padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p {
+    font-family: var(--body); font-size: 11px; color: rgba(255,255,255,.25);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#">
+    <svg viewBox="0 0 100 110" width="20" height="22">
+      <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#4E9A6B" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#4E9A6B" stroke-width="3" stroke-linecap="round"/>
+      <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+      <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+    </svg>
+    <span class="nav-wordmark">pausa para dentro</span>
+  </a>
+  <div class="nav-links">
+    <a href="#evento">O Evento</a>
+    <a href="#programa">Programa</a>
+    <a href="#organizadores">Quem Somos</a>
+    <a href="#inscricao" class="nav-cta">Inscrever</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-noise"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-kicker">3.ª Edição &nbsp;·&nbsp; 24 de Outubro de 2026 &nbsp;·&nbsp; Educar com Amor e Consciência · Colo di Mama · Men Talks</div>
+    <div class="hero-logo-mark">
+      <div class="hero-word-pausa">
+        <span>pa</span>
+        <svg viewBox="0 0 22 34" style="display:block;margin:0 4px;align-self:center;" width="clamp(18px,2.5vw,32px)" height="clamp(28px,3.8vw,49px)">
+          <rect x="3.5" y="0" width="6" height="34" rx="3" fill="#1E7E8C"/>
+          <rect x="12" y="0" width="6" height="34" rx="3" fill="#1E7E8C"/>
+        </svg>
+        <span>sa</span>
+      </div>
+      <div class="hero-word-para-dentro">
+        <svg class="hero-arc" viewBox="0 0 36 100" style="width:auto;">
+          <path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <span>para dentro</span>
+        <svg class="hero-arc" viewBox="0 0 36 100" style="width:auto;">
+          <path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <p class="hero-tagline">
+      Um dia para <strong>parar, respirar e voltar a sentir</strong>.<br>
+      Para quem educa, cuida e acompanha — e raramente tem tempo para si.
+    </p>
+    <div class="hero-ctas">
+      <a href="#inscricao" class="btn-primary">Reservar o meu lugar</a>
+      <a href="#evento" class="btn-ghost">Saber mais</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>descobrir</span>
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+      <path d="M8 4 L8 20 M2 14 L8 20 L14 14" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- DATE STRIP -->
+<div class="date-strip">
+  <div class="date-item">
+    <span class="date-item-label">Data</span>
+    <span class="date-item-value">24 Outubro 2026</span>
+  </div>
+  <div class="date-sep"></div>
+  <div class="date-item">
+    <span class="date-item-label">Edição</span>
+    <span class="date-item-value">3.ª</span>
+  </div>
+  <div class="date-sep"></div>
+  <div class="date-item">
+    <span class="date-item-label">Formato</span>
+    <span class="date-item-value">Presencial</span>
+  </div>
+  <div class="date-sep"></div>
+  <div class="date-item">
+    <span class="date-item-label">Horário</span>
+    <span class="date-item-value">10h — 16h</span>
+  </div>
+  <div class="date-sep"></div>
+  <div class="date-item">
+    <span class="date-item-label">Local</span>
+    <span class="date-item-value">Fundação Maria Droste · Lisboa</span>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="section" id="evento">
+  <div class="section-label">01 — O que é isto</div>
+  <div class="section-title">A pausa<br>que faltava.</div>
+  <div class="section-subtitle">Para ti. Não para mais ninguém.</div>
+  <p class="section-lead">O Pausa para Dentro não é uma conferência. Não há certezas embaladas nem receitas para levar a casa. É um dia de encontro — com ideias que pesam, com pessoas que entendem, e com um silêncio que raramente nos permitimos ter.</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-number">01</span>
+      <div class="why-title">Não é coaching.<br>É conversa adulta.</div>
+      <p class="why-body">Sem entusiasmo vazio, sem "tu consegues". Há perguntas sem resposta fácil, há contradição, há o peso de cuidar de outros quando mal há energia para si.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-number">02</span>
+      <div class="why-title">Quem cuida<br>também precisa de colo.</div>
+      <p class="why-body">Pais, professores, terapeutas, educadores — os que acompanham os outros ao longo do dia raramente têm espaço para processar o que vivem. Este dia é esse espaço.</p>
+    </div>
+    <div class="why-card" style="background:#EAE6DF;">
+      <span class="why-number">03</span>
+      <div class="why-title">Três projetos.<br>Uma única intenção.</div>
+      <p class="why-body">Educar com Amor, Colo di Mama e Men Talks uniram-se porque partilham o mesmo núcleo: acreditar que o amor, a consciência e o cuidado mudam o que crescemos para ser.</p>
+    </div>
+    <div class="why-card" style="background:#EAE6DF;">
+      <span class="why-number">04</span>
+      <div class="why-title">A 3.ª edição.<br>Algo muda sempre.</div>
+      <p class="why-body">Cada edição é diferente — porque quem vem é diferente, porque o mundo mudou, porque nós mudámos. A 3.ª traz novas vozes e novos formatos. Menos palco, mais roda.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONCEPT -->
+<section class="concept-section">
+  <div class="concept-inner">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:32px;">
+      <div>
+        <div class="section-label" style="color:rgba(255,255,255,.3);">02 — O conceito</div>
+        <div style="font-family:var(--display);font-weight:700;font-size:clamp(36px,4.5vw,56px);line-height:1.0;letter-spacing:-0.03em;color:var(--cream);">O espaço<br>entre.</div>
+        <div style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(20px,2.5vw,28px);color:var(--green);margin-top:8px;">a respiração que liga duas coisas</div>
+      </div>
+      <p style="font-family:var(--sans);font-size:15px;line-height:1.8;color:rgba(255,255,255,.45);max-width:420px;">O símbolo da marca é composto por dois gestos: o sinal de pausa (‖) e os parênteses — que juntos formam um sorriso. Não por acidente. A marca acredita que parar é um ato de amor, não de fraqueza.</p>
+    </div>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-icon" style="background:rgba(231,163,60,.15);">
+          <svg viewBox="0 0 100 110" width="28" height="31">
+            <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+            <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+          </svg>
+        </div>
+        <div class="concept-title">A pausa</div>
+        <p class="concept-body">Não é ausência. É o gesto deliberado de parar — antes de transbordar, antes de perder o fio, antes de não reconhecer o próprio rosto no espelho.</p>
+        <div class="concept-word">‖ premir pausa</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-icon" style="background:rgba(233,111,76,.15);">
+          <svg viewBox="0 0 80 110" width="28" height="38">
+            <path d="M 64 8 A 52 52 0 0 0 64 102" fill="none" stroke="#E96F4C" stroke-width="5" stroke-linecap="round"/>
+            <path d="M 16 8 A 52 52 0 0 1 16 102" fill="none" stroke="#E96F4C" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="concept-title">O acolhimento</div>
+        <p class="concept-body">Os parênteses são o gesto de "ir para dentro" — abrir um espaço, acolher o que está no meio. Aquilo que carregamos sem nome.</p>
+        <div class="concept-word">( ) para dentro</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-icon" style="background:rgba(78,154,107,.15);">
+          <svg viewBox="0 0 100 110" width="28" height="31">
+            <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#4E9A6B" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#4E9A6B" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="concept-title">O sorriso</div>
+        <p class="concept-body">Os dois gestos juntos formam um sorriso — porque reiniciar por dentro não é grave. É necessário. E há algo de leveza em perceber que não estamos sozinhos nisso.</p>
+        <div class="concept-word">☻ reiniciar por dentro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMA -->
+<section class="program-section" id="programa">
+  <div class="program-inner">
+    <div class="section-label">03 — O dia</div>
+    <div class="section-title">Programa</div>
+    <div class="section-subtitle">24 de Outubro de 2026</div>
+    <p class="section-lead" style="margin-top:20px;">O programa é um equilíbrio entre escuta, conversa e silêncio. Haverá momentos de mais e momentos de menos — todos necessários.</p>
+
+    <div class="program-list">
+      <div class="program-item">
+        <div class="program-time">10h00</div>
+        <div class="program-content">
+          <div class="program-title">Chegada e Aterragem</div>
+          <div class="program-desc">Música ambiente, chá e café, silêncio leve. Um exercício curto de presença para chegar verdadeiramente antes de começar.</div>
+          <span class="program-tag" style="color:var(--sage);border-color:rgba(143,155,138,.3);">Consciência</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">10h20</div>
+        <div class="program-content">
+          <div class="program-title">Abertura Oficial</div>
+          <div class="program-desc">Por que nasce "Pausa para Dentro", o alinhamento dos três projetos e a intenção coletiva do dia. Porque estamos aqui e o que isso significa.</div>
+          <span class="program-tag" style="color:var(--sage);border-color:rgba(143,155,138,.3);">Consciência</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">10h40</div>
+        <div class="program-content">
+          <div class="program-title">Experiência 1 — Relações Conscientes</div>
+          <div class="program-desc">Comunicação emocional, escuta, parentalidade, masculinidades e conversas difíceis. 20 min de reflexão · 20 min de prática · 10 min de integração.</div>
+          <span class="program-tag" style="color:var(--teal);border-color:rgba(30,126,140,.3);">Comunicação</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">11h45</div>
+        <div class="program-content">
+          <div class="program-title">Experiência 2 — Cuidar sem Exaustão</div>
+          <div class="program-desc">Limites, micro-pausas, organização emocional, gestão de energia e prevenção de burnout. Ferramentas concretas para quem cuida.</div>
+          <span class="program-tag" style="color:var(--terracotta);border-color:rgba(197,139,114,.3);">Organização</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">12h45</div>
+        <div class="program-content">
+          <div class="program-title">Almoço Consciente</div>
+          <div class="program-desc">Mesa comum com perguntas nas mesas: "O que tens aprendido sobre cuidar?", "Que relação gostarias de transformar?". A conversa continua com mais leveza.</div>
+          <span class="program-tag" style="color:var(--amber);border-color:rgba(231,163,60,.3);">Pausa</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">14h00</div>
+        <div class="program-content">
+          <div class="program-title">Experiência 3 — O Impacto de Como Existimos</div>
+          <div class="program-desc">Exemplo, comunidade, masculinidades conscientes, transformação social e educação humanizada. Conversa viva sobre o impacto que deixamos pelo simples facto de existir.</div>
+          <span class="program-tag" style="color:var(--green);border-color:rgba(78,154,107,.3);">Liderança</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">15h00</div>
+        <div class="program-content">
+          <div class="program-title">Experiência Coletiva Final — Integração</div>
+          <div class="program-desc">"O que levas contigo? Que pequena mudança vais aplicar? O que precisas de mais consciência na tua vida?" Transformar reflexão em ação concreta.</div>
+          <span class="program-tag" style="color:var(--teal);border-color:rgba(30,126,140,.3);">Integração</span>
+        </div>
+      </div>
+      <div class="program-item">
+        <div class="program-time">15h40</div>
+        <div class="program-content">
+          <div class="program-title">Encerramento — Ritual Simples e Humano</div>
+          <div class="program-desc">Palavra final coletiva, silêncio, música, agradecimento e respiração. Porque cuidar dos outros começa por cuidar de nós.</div>
+          <span class="program-tag" style="color:var(--faint);border-color:rgba(160,154,143,.3);">Encerramento</span>
+        </div>
+      </div>
+    </div>
+    <p style="font-family:var(--body);font-size:12px;color:var(--faint);margin-top:16px;line-height:1.6;">* Programa indicativo. Sujeito a ajustes finais. Detalhes enviados por email após inscrição.</p>
+  </div>
+</section>
+
+<!-- ORGANIZADORES -->
+<div class="orgs-section" id="organizadores">
+  <div class="section-label">04 — Quem organiza</div>
+  <div class="section-title">Três projetos,<br>uma urgência.</div>
+  <p class="section-lead">Três projetos. Três olhares. Uma mesma pergunta de fundo: como continuamos humanos no meio de tanta exigência? O Pausa para Dentro nasce da convergência de três comunidades com um propósito comum — cuidar de quem educa, acompanha e transforma.</p>
+
+  <div class="orgs-grid">
+    <div class="org-card" style="background:#F0EDE6;">
+      <img src="../assets/GA_logo_transparente - cópia.png" height="56" alt="Educar com Amor e Consciência" style="object-fit:contain;object-position:left;max-width:180px;">
+      <div class="org-name">Educar com Amor e Consciência</div>
+      <p class="org-desc">Traz a educação e a parentalidade consciente. Um projeto que ao longo das suas edições tem criado espaços de reflexão e transformação para famílias, educadores e profissionais — guiado pelos quatro pilares: Consciência, Comunicação, Organização e Liderança.</p>
+    </div>
+    <div class="org-card" style="background:#EBE7DF;">
+      <img src="../assets/colodimama-logo - cópia.jpg" height="56" alt="Colo di Mama" style="object-fit:contain;object-position:left;max-width:180px;border-radius:50%;width:56px;">
+      <div class="org-name">Colo di Mama</div>
+      <p class="org-desc">Traz o cuidado, o vínculo e o acolhimento. Um espaço pensado para mães e famílias — no período perinatal e além — porque a maternidade é profunda demais para ser vivida em silêncio.</p>
+    </div>
+    <div class="org-card" style="background:#E6E2DB;">
+      <img src="../assets/2026_Mentalks_circle.svg" height="56" alt="Men Talks" style="object-fit:contain;object-position:left;max-width:180px;filter:invert(1);">
+      <div class="org-name">Associação Men Talks</div>
+      <p class="org-desc">Abre espaço às conversas que faltam sobre emoções, presença e relação. Uma plataforma que convida os homens a falar — da saúde mental, da paternidade, das masculinidades conscientes. Porque o silêncio masculino também custa.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="testimonial-orb-1"></div>
+  <div class="testimonial-orb-2"></div>
+  <div class="testimonial-inner">
+    <div style="display:flex;justify-content:center;margin-bottom:48px;">
+      <svg viewBox="0 0 100 110" width="44" height="49">
+        <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#4E9A6B" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#4E9A6B" stroke-width="2.8" stroke-linecap="round"/>
+        <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+        <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+      </svg>
+    </div>
+    <p class="testimonial-quote">Três projetos. Três olhares. Uma mesma urgência: cuidar melhor de quem cuida.</p>
+    <p class="testimonial-attr">— Manifesto Pausa para Dentro · 2026</p>
+    <div style="display:flex;gap:40px;justify-content:center;margin-top:64px;border-top:1px solid rgba(255,255,255,.08);padding-top:48px;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--display);font-weight:800;font-size:36px;letter-spacing:-0.04em;color:var(--cream);">2×</div>
+        <div style="font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">edições anteriores</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--display);font-weight:800;font-size:36px;letter-spacing:-0.04em;color:var(--cream);">3</div>
+        <div style="font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">projetos parceiros</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--display);font-weight:800;font-size:36px;letter-spacing:-0.04em;color:var(--cream);">1 dia</div>
+        <div style="font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;">para si</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSCRIÇÃO -->
+<div class="register-section" id="inscricao">
+  <div class="register-card">
+    <div class="register-info">
+      <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:24px;">05 — Inscrição</div>
+      <div class="register-title">
+        Reserva<br>o teu lugar.
+        <em>Poucos. Mesmo.</em>
+      </div>
+      <p class="register-note">O formato do Pausa para Dentro exige um número reduzido de participantes. Não por exclusividade — por qualidade de presença. Quando o espaço enche, fecha.</p>
+      <div class="register-meta">
+        <div class="register-meta-row">
+          <span class="register-meta-key">Data</span>
+          <span class="register-meta-val">24 de Outubro de 2026</span>
+        </div>
+        <div class="register-meta-row">
+          <span class="register-meta-key">Horário</span>
+          <span class="register-meta-val">10h00 — 16h00</span>
+        </div>
+        <div class="register-meta-row">
+          <span class="register-meta-key">Local</span>
+          <span class="register-meta-val">Fundação Maria Droste · Lisboa</span>
+        </div>
+        <div class="register-meta-row">
+          <span class="register-meta-key">Formato</span>
+          <span class="register-meta-val">Presencial · Intimista</span>
+        </div>
+        <div class="register-meta-row">
+          <span class="register-meta-key">Inclui</span>
+          <span class="register-meta-val">Almoço + materiais</span>
+        </div>
+      </div>
+    </div>
+    <div class="register-form">
+      <div style="font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-0.02em;color:var(--charcoal);margin-bottom:8px;">Pré-inscrição</div>
+      <p style="font-family:var(--sans);font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:8px;">Confirmaremos a disponibilidade e enviaremos todos os detalhes por email.</p>
+      <div class="form-group">
+        <label class="form-label" for="name">Nome</label>
+        <input class="form-input" id="name" type="text" placeholder="O teu nome completo">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" id="email" type="email" placeholder="email@exemplo.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="perfil">Perfil</label>
+        <select class="form-select" id="perfil">
+          <option value="">Seleciona o teu perfil</option>
+          <option value="pai-mae">Pai / Mãe</option>
+          <option value="educador">Educador / Professor</option>
+          <option value="terapeuta">Terapeuta / Psicólogo</option>
+          <option value="profissional-saude">Profissional de Saúde</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+      <button class="btn-submit" type="button">Quero o meu lugar</button>
+      <p class="form-disclaimer">Sem spam. Apenas o essencial — confirmação e detalhes do evento. Os dados não são partilhados com terceiros.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <div class="section-label">06 — Perguntas</div>
+  <div class="section-title">O que queres<br>saber.</div>
+  <div class="faq-list" id="faq">
+    <div class="faq-item">
+      <div class="faq-q">É preciso ter algum conhecimento prévio para participar?</div>
+      <div class="faq-a">Não. O único requisito é estar disposto a estar presente — com o que é, com o que carregas e com o que não sabes. Não há pré-requisitos académicos nem experiência necessária.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">O evento é só para mães e pais?</div>
+      <div class="faq-a">Não. É para qualquer adulto que cuide de outros: professores, terapeutas, educadores, voluntários, profissionais de saúde — e também para pais e mães. O fio condutor é cuidar, não o papel específico.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Vai haver gravações disponíveis?</div>
+      <div class="faq-a">Não. O Pausa para Dentro é um evento de presença — não de conteúdo para consumir mais tarde. A experiência é inseparável do estar lá. Isso é intencional.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Qual é o custo de inscrição?</div>
+      <div class="faq-a">O valor será comunicado por email após confirmação de pré-inscrição. Inclui o dia completo com almoço e materiais. Existem vagas com valor reduzido para quem tem dificuldades financeiras — pergunta-nos.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Onde é o evento exactamente?</div>
+      <div class="faq-a">O Pausa para Dentro acontece na Fundação Maria Droste, em Lisboa — um lugar onde o cuidado é uma prática diária. Os detalhes de acesso são enviados por email após inscrição confirmada.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Para quem é este evento?</div>
+      <div class="faq-a">Para pais, educadores, professores, auxiliares de ação educativa, psicólogos, estudantes e outros agentes educativos que desejam educar com mais consciência, presença e humanidade. O fio condutor é cuidar — seja qual for o teu papel.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg viewBox="0 0 100 110" width="24" height="27">
+        <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#4E9A6B" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#4E9A6B" stroke-width="3" stroke-linecap="round"/>
+        <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+        <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+      </svg>
+      <span class="footer-title">pausa para dentro</span>
+    </div>
+    <p class="footer-sub">3.ª Edição · 24 de Outubro de 2026<br>Um dia para parar, respirar e voltar a sentir.</p>
+    <p class="footer-sub" style="margin-top:8px;">Uma iniciativa de Educar com Amor,<br>Colo di Mama e Men Talks.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Navegar</div>
+    <div class="footer-links">
+      <a href="#evento">O Evento</a>
+      <a href="#programa">Programa</a>
+      <a href="#organizadores">Organizadores</a>
+      <a href="#inscricao">Inscrição</a>
+      <a href="../brand/">Manual de Marca</a>
+    </div>
+  </div>
+  <div>
+    <div class="footer-col-title">Contacto</div>
+    <div class="footer-links">
+      <a href="mailto:pausaparadentro@mentalks.pt">pausaparadentro@mentalks.pt</a>
+      <a href="#">@pausaparadentro</a>
+      <a href="#">Men Talks</a>
+      <a href="#">Educar com Amor</a>
+      <a href="#">Colo di Mama</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 Pausa para Dentro · Todos os direitos reservados</p>
+  <p>Educar com Amor e Consciência · Colo di Mama · Men Talks</p>
+</div>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

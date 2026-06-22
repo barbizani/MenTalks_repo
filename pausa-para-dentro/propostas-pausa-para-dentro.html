@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pausa para Dentro — Propostas de Logótipo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #F6F2EC;
+    --linen: #EAE6DF;
+    --bone: #D9D1C7;
+    --charcoal: #232220;
+    --mid: #3D3D3D;
+    --muted: #6f6a62;
+    --faint: #a09a8f;
+
+    --sage: #8F9B8A;
+    --terracotta: #C58B72;
+
+    --coral: #E96F4C;
+    --teal: #1E7E8C;
+    --green: #4E9A6B;
+    --amber: #E7A33C;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
+    --display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+
+    --p02: #8F9B8A;
+    --p6b: #1E7E8C;
+    --p6c: #232220;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--linen); color: var(--charcoal);
+    font-family: var(--body); min-height: 100vh;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    background: var(--charcoal); padding: 28px 56px 0;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 24px; flex-wrap: wrap; gap: 20px;
+  }
+  .header-partners {
+    display: flex; align-items: center; gap: 40px;
+  }
+  .partner-logo {
+    display: flex; flex-direction: column; align-items: center; gap: 9px;
+  }
+  .partner-sep {
+    width: 1px; height: 64px; background: rgba(255,255,255,.12);
+  }
+  .header-meta {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+  }
+  .header-title {
+    font-family: var(--display); font-weight: 700; font-size: 15px;
+    letter-spacing: -0.01em; color: var(--cream);
+  }
+  .header-sub {
+    font-family: var(--body); font-size: 9.5px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: rgba(255,255,255,.3);
+  }
+
+  /* ─── TABS ─── */
+  .tabs {
+    display: flex; gap: 0; align-items: flex-end;
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  .tab {
+    padding: 16px 32px; cursor: pointer;
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+    display: flex; align-items: center; gap: 10px;
+    white-space: nowrap; user-select: none;
+  }
+  .tab:hover { color: rgba(255,255,255,.7); }
+  .tab.active { color: var(--cream); border-bottom-color: var(--amber); }
+  .tab-num {
+    font-family: var(--display); font-weight: 700; font-size: 11px;
+    letter-spacing: 0.05em; opacity: .5;
+  }
+  .tab.active .tab-num { opacity: 1; }
+  .tab-sep {
+    width: 1px; height: 32px; background: rgba(255,255,255,.1);
+    align-self: center; margin: 0 4px;
+  }
+
+  /* ─── PANELS ─── */
+  .panel { display: none; animation: fadeIn .3s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ─── PROPOSAL LAYOUT ─── */
+  .proposal {
+    max-width: 1200px; margin: 0 auto;
+    padding: 80px 56px 120px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: start;
+  }
+  .proposal-info { position: sticky; top: 120px; }
+  .proposal-kicker {
+    font-family: var(--body); font-size: 10px; letter-spacing: 0.34em;
+    text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .proposal-num {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(72px, 8vw, 110px);
+    letter-spacing: -0.05em; line-height: 1; margin-bottom: 12px;
+  }
+  .proposal-name {
+    font-family: var(--display); font-weight: 700; font-size: 22px;
+    letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 20px;
+  }
+  .proposal-desc {
+    font-family: var(--sans); font-size: 14.5px; line-height: 1.85;
+    color: var(--muted); margin-bottom: 32px;
+  }
+  .proposal-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+  .tag {
+    font-family: var(--body); font-size: 9.5px; letter-spacing: 0.16em;
+    text-transform: uppercase; padding: 5px 12px; border-radius: 100px;
+    border: 1px solid; color: var(--muted); border-color: var(--bone);
+  }
+  .verdict {
+    padding: 24px 28px; border-radius: 4px;
+    border-left: 3px solid;
+  }
+  .verdict-label {
+    font-family: var(--body); font-size: 9.5px; letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .verdict-text {
+    font-family: var(--sans); font-size: 13.5px; line-height: 1.75;
+  }
+
+  /* ─── LOGO STAGE ─── */
+  .logo-stage { display: flex; flex-direction: column; gap: 20px; }
+  .stage-card {
+    background: var(--cream); border-radius: 4px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  }
+  .stage-card.dark { background: var(--charcoal); }
+  .stage-card.linen { background: var(--linen); }
+  .stage-inner {
+    padding: 64px 48px;
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+  }
+  .stage-inner.left { align-items: flex-start; }
+  .stage-inner.row { flex-direction: row; align-items: center; gap: 32px; }
+  .stage-label {
+    font-family: var(--body); font-size: 9px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--faint); padding: 14px 24px;
+    border-top: 1px solid var(--linen); text-align: right;
+  }
+  .stage-label.dark { color: rgba(255,255,255,.25); border-top-color: rgba(255,255,255,.06); }
+  .stage-label.linen { border-top-color: var(--bone); }
+
+  /* colour bar */
+  .colour-bar { display: flex; height: 6px; border-radius: 100px; overflow: hidden; margin-top: 28px; width: 100%; }
+  .colour-bar div { flex: 1; }
+
+  /* ─── COMPARISON ─── */
+  .comparison {
+    max-width: 1200px; margin: 0 auto;
+    padding: 80px 56px 120px;
+  }
+  .comp-header { margin-bottom: 64px; }
+  .comp-title {
+    font-family: var(--display); font-weight: 800; font-size: clamp(40px, 5vw, 64px);
+    letter-spacing: -0.04em; line-height: 1; color: var(--charcoal);
+  }
+  .comp-sub {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: 26px; color: var(--green); margin-top: 8px;
+  }
+  .comp-lead {
+    font-family: var(--sans); font-size: 15px; line-height: 1.8;
+    color: var(--muted); max-width: 620px; margin-top: 24px;
+  }
+
+  /* side-by-side logos */
+  .comp-logos {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-bottom: 64px;
+  }
+  .comp-logo-col { display: flex; flex-direction: column; gap: 8px; }
+  .comp-logo-label {
+    font-family: var(--display); font-weight: 700; font-size: 12px;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+    padding: 0 4px;
+  }
+
+  /* comparison table */
+  .comp-table {
+    width: 100%; border-collapse: collapse; border-radius: 4px; overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .comp-table th {
+    font-family: var(--body); font-size: 9.5px; letter-spacing: 0.22em;
+    text-transform: uppercase; padding: 16px 20px; text-align: left;
+    background: var(--charcoal); color: rgba(255,255,255,.4);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .comp-table th:first-child { width: 180px; }
+  .comp-table td {
+    font-family: var(--sans); font-size: 13.5px; line-height: 1.65;
+    padding: 20px; vertical-align: top; color: var(--muted);
+    background: var(--cream); border-bottom: 1px solid var(--linen);
+  }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table td:first-child {
+    font-family: var(--body); font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--faint); font-weight: 500;
+    background: var(--linen);
+  }
+  .comp-table td strong { color: var(--charcoal); font-weight: 500; }
+  .check { color: var(--green); font-weight: 600; }
+  .cross { color: var(--coral); font-weight: 600; }
+  .half { color: var(--amber); font-weight: 600; }
+
+  /* recommendation */
+  .rec-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 48px;
+  }
+  .rec-card {
+    padding: 32px; border-radius: 4px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .rec-num {
+    font-family: var(--display); font-weight: 800; font-size: 40px;
+    letter-spacing: -0.05em; line-height: 1; opacity: .15;
+  }
+  .rec-title {
+    font-family: var(--display); font-weight: 700; font-size: 18px;
+    letter-spacing: -0.02em; line-height: 1.2;
+  }
+  .rec-body {
+    font-family: var(--sans); font-size: 13px; line-height: 1.75;
+  }
+  .rec-use {
+    font-family: var(--body); font-size: 9.5px; letter-spacing: 0.18em;
+    text-transform: uppercase; margin-top: auto; padding-top: 16px;
+    border-top: 1px solid rgba(0,0,0,.08);
+  }
+
+  /* footer note */
+  .page-footer {
+    max-width: 1200px; margin: 0 auto; padding: 0 56px 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--bone); padding-top: 32px;
+  }
+  .page-footer p {
+    font-family: var(--body); font-size: 11px; color: var(--faint); line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER + TABS -->
+<header>
+  <div class="header-top">
+    <!-- Partners -->
+    <div class="header-partners">
+
+      <!-- Educar com Amor e Consciência -->
+      <div class="partner-logo">
+        <img src="assets/GA_logo_transparente - cópia.png" height="64" alt="Educar com Amor e Consciência" style="object-fit:contain;max-width:140px;">
+        <span style="font-family:var(--body);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;">Educar com Amor e Consciência</span>
+      </div>
+
+      <div class="partner-sep"></div>
+
+      <!-- Colo di Mama -->
+      <div class="partner-logo">
+        <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;background:#f5e8f0;flex-shrink:0;">
+          <img src="assets/colodimama-logo - cópia.jpg" width="64" height="64" alt="Colo di Mama" style="object-fit:cover;width:100%;height:100%;">
+        </div>
+        <span style="font-family:var(--body);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;">Colo di Mama</span>
+      </div>
+
+      <div class="partner-sep"></div>
+
+      <!-- Men Talks — SVG branco em fundo escuro, sem filtro -->
+      <div class="partner-logo">
+        <img src="assets/2026_Mentalks_circle.svg" height="64" alt="Men Talks" style="object-fit:contain;max-width:140px;">
+        <span style="font-family:var(--body);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;">Men Talks</span>
+      </div>
+    </div>
+
+    <!-- Meta -->
+    <div class="header-meta">
+      <div class="header-title">Pausa para Dentro · 3.ª Edição</div>
+      <div class="header-sub">Identidade Visual · Propostas para votação · Junho 2026</div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab active" data-tab="p01">
+      <span class="tab-num">01</span>Círculo · Cuidado
+    </div>
+    <div class="tab-sep"></div>
+    <div class="tab" data-tab="p02">
+      <span class="tab-num">02</span>Vibração · Sobreposição
+    </div>
+    <div class="tab-sep"></div>
+    <div class="tab" data-tab="p6b">
+      <span class="tab-num">6B</span>Abraço · Distribuído
+    </div>
+    <div class="tab-sep"></div>
+    <div class="tab" data-tab="p6c">
+      <span class="tab-num">6C</span>Linha · Horizontal
+    </div>
+    <div class="tab-sep"></div>
+    <div class="tab" data-tab="comp" style="margin-left:auto;">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="opacity:.5">
+        <rect x="0" y="0" width="6" height="6" rx="1" fill="currentColor"/>
+        <rect x="8" y="0" width="6" height="6" rx="1" fill="currentColor"/>
+        <rect x="0" y="8" width="6" height="6" rx="1" fill="currentColor"/>
+        <rect x="8" y="8" width="6" height="6" rx="1" fill="currentColor"/>
+      </svg>
+      Comparação
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROPOSTA 01 — CÍRCULO DE CUIDADO
+════════════════════════════════════════════════════════════ -->
+<div class="panel active" id="panel-p01">
+  <div class="proposal">
+
+    <!-- INFO -->
+    <div class="proposal-info">
+      <div class="proposal-kicker">
+        <span style="display:inline-block;width:24px;height:2px;background:#2E5564;"></span>
+        Proposta
+      </div>
+      <div class="proposal-num" style="color:#2E5564;">01</div>
+      <div class="proposal-name">Círculo<br>de Cuidado</div>
+      <p class="proposal-desc">
+        O logótipo assenta num círculo incompleto, símbolo da pausa, do espaço interior e do processo contínuo de crescimento humano. A sua forma aberta recorda-nos que não somos seres acabados, mas pessoas em constante construção, aprendizagem e transformação.
+      </p>
+      <p class="proposal-desc">
+        As três cores que o compõem representam a união dos projetos — Educar com Amor e Consciência, Colo di Mamá e MenTalks — que se encontram nesta edição em torno de um propósito comum.
+      </p>
+      <p class="proposal-desc">
+        No centro surge um símbolo de cuidado e responsabilidade partilhada. As mãos representam todos aqueles que cuidam, educam, acompanham e acolhem: pais, mães, educadores, professores, profissionais da área social e todos os que diariamente impactam a vida de outros.
+      </p>
+      <p class="proposal-desc">
+        O coração simboliza as vidas que nos são confiadas. Mais do que crianças, alunos ou utentes, representa cada pessoa que passa pelas nossas mãos e pela nossa influência. A sua posição acolhida pelas mãos recorda que educar, acompanhar e cuidar não é apenas uma função ou um cargo, mas um compromisso profundamente humano.
+      </p>
+      <p class="proposal-desc" style="font-style:italic;color:var(--charcoal);border-left:2px solid #C97E63;padding-left:12px;margin-top:4px;">
+        Em conjunto, o logótipo traduz a essência do encontro: parar, respirar, cuidar de si para melhor cuidar dos outros.
+      </p>
+
+      <div class="proposal-tags" style="margin-top:20px;">
+        <span class="tag">Cormorant Garamond</span>
+        <span class="tag">Círculo imperfeito</span>
+        <span class="tag">Mãos + coração</span>
+        <span class="tag">Alta empatia</span>
+      </div>
+      <div class="verdict" style="background:rgba(46,85,100,.07);border-color:#2E5564;">
+        <div class="verdict-label" style="color:#2E5564;">Melhor para</div>
+        <div class="verdict-text" style="color:var(--muted);">Identidade principal do evento — cartazes, save the date, crachás e redes sociais. O símbolo do cuidado é imediatamente legível e emocionalmente ressonante. Funciona em todas as escalas.</div>
+      </div>
+
+      <!-- Paleta -->
+      <div style="margin-top:32px;">
+        <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;">Paleta de cores</div>
+        <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--bone);border-radius:8px;overflow:hidden;">
+          <!-- Header -->
+          <div style="display:grid;grid-template-columns:44px 90px 1fr 1fr;gap:0;background:var(--bone);padding:8px 12px;">
+            <div></div>
+            <div style="font-family:var(--body);font-size:8px;letter-spacing:0.16em;text-transform:uppercase;color:var(--faint);">Cor</div>
+            <div style="font-family:var(--body);font-size:8px;letter-spacing:0.16em;text-transform:uppercase;color:var(--faint);">O que transmite</div>
+            <div style="font-family:var(--body);font-size:8px;letter-spacing:0.16em;text-transform:uppercase;color:var(--faint);">Aplicação no evento</div>
+          </div>
+          <!-- Verde Sálvia -->
+          <div style="display:grid;grid-template-columns:44px 90px 1fr 1fr;gap:0;padding:10px 12px;border-top:1px solid var(--bone);align-items:start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#A8B8A1;flex-shrink:0;"></div>
+            <div>
+              <div style="font-family:var(--sans);font-size:10px;font-weight:600;color:var(--charcoal);">Verde Sálvia</div>
+              <div style="font-family:var(--body);font-size:9px;color:var(--faint);margin-top:2px;">#A8B8A1</div>
+            </div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Equilíbrio, respiração, regeneração, bem-estar</div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Conversa muito bem com educação, parentalidade e desenvolvimento humano.</div>
+          </div>
+          <!-- Terracota -->
+          <div style="display:grid;grid-template-columns:44px 90px 1fr 1fr;gap:0;padding:10px 12px;border-top:1px solid var(--bone);align-items:start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#C97E63;flex-shrink:0;"></div>
+            <div>
+              <div style="font-family:var(--sans);font-size:10px;font-weight:600;color:var(--charcoal);">Terracota Suave</div>
+              <div style="font-family:var(--body);font-size:9px;color:var(--faint);margin-top:2px;">#C97E63</div>
+            </div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Humanidade, calor, ligação à terra, autenticidade</div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Ajuda a não deixar a comunicação demasiado clínica ou "zen". Relacionado com cuidado e relações humanas.</div>
+          </div>
+          <!-- Areia / Creme -->
+          <div style="display:grid;grid-template-columns:44px 90px 1fr 1fr;gap:0;padding:10px 12px;border-top:1px solid var(--bone);align-items:start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#F4EFE8;border:1px solid var(--bone);flex-shrink:0;"></div>
+            <div>
+              <div style="font-family:var(--sans);font-size:10px;font-weight:600;color:var(--charcoal);">Areia / Creme</div>
+              <div style="font-family:var(--body);font-size:9px;color:var(--faint);margin-top:2px;">#F4EFE8</div>
+            </div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Leveza, espaço, pausa, simplicidade</div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Cria sensação de respiração visual, silêncio e acolhimento, alinhada com o conceito "Pausa para Dentro".</div>
+          </div>
+          <!-- Azul Petróleo -->
+          <div style="display:grid;grid-template-columns:44px 90px 1fr 1fr;gap:0;padding:10px 12px;border-top:1px solid var(--bone);align-items:start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#2E5564;flex-shrink:0;"></div>
+            <div>
+              <div style="font-family:var(--sans);font-size:10px;font-weight:600;color:var(--charcoal);">Azul Petróleo</div>
+              <div style="font-family:var(--body);font-size:9px;color:var(--faint);margin-top:2px;">#2E5564</div>
+            </div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Reflexão, consciência, confiança</div>
+            <div style="font-family:var(--body);font-size:10px;color:var(--muted);line-height:1.5;">Acrescenta seriedade e equilíbrio à comunicação sem a tornar pesada.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nota Save The Date -->
+      <div style="margin-top:24px;padding:14px 16px;background:rgba(46,85,100,.05);border-radius:8px;border-left:2px solid #2E5564;">
+        <div style="font-family:var(--body);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#2E5564;margin-bottom:6px;">Save The Date</div>
+        <div style="font-family:var(--body);font-size:11px;color:var(--muted);line-height:1.6;">A analisar se seriam idênticos à identidade visual do evento ou mais alinhados à identidade visual de cada uma das organizações.</div>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="logo-stage">
+
+      <!-- Variante A -->
+      <div class="stage-card" style="overflow:hidden;padding:0;">
+        <img src="assets/Proposta_001-a.svg" alt="Proposta 001 — Variante A" style="width:100%;display:block;">
+        <div class="stage-label">Variante A</div>
+      </div>
+
+      <!-- Variante B -->
+      <div class="stage-card" style="overflow:hidden;padding:0;">
+        <img src="assets/Proposta_001-b.svg" alt="Proposta 001 — Variante B" style="width:100%;display:block;">
+        <div class="stage-label">Variante B</div>
+      </div>
+
+      <!-- Variante C -->
+      <div class="stage-card" style="overflow:hidden;padding:0;">
+        <img src="assets/Proposta_001-c.svg" alt="Proposta 001 — Variante C" style="width:100%;display:block;">
+        <div class="stage-label">Variante C</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROPOSTA 02 — VIBRAÇÃO · SOBREPOSIÇÃO
+════════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-p02">
+  <div class="proposal">
+
+    <!-- INFO -->
+    <div class="proposal-info">
+      <div class="proposal-kicker">
+        <span style="display:inline-block;width:24px;height:2px;background:var(--sage);"></span>
+        Proposta
+      </div>
+      <div class="proposal-num" style="color:var(--sage);">02</div>
+      <div class="proposal-name">Vibração<br>Sobreposição</div>
+      <p class="proposal-desc">
+        O símbolo são três círculos sobrepostos que geram novas cores no encontro — uma forma que remete para encontro, profundidade e calor. A paleta orgânica (Direção A) mantém sobriedade adulta sem estética de coaching.
+      </p>
+      <p class="proposal-desc">
+        A tipografia usa Cormorant Garamond em maiúsculas com tracking largo — um registo mais clássico e editorial do que as outras propostas. O símbolo é rico visualmente mas requer fundo claro para funcionar na íntegra.
+      </p>
+      <div class="proposal-tags">
+        <span class="tag">Círculos sobrepostos</span>
+        <span class="tag">Mix-blend-mode</span>
+        <span class="tag">Paleta orgânica</span>
+        <span class="tag">Cormorant Garamond</span>
+      </div>
+      <div class="verdict" style="background:rgba(143,155,138,.08);border-color:var(--sage);">
+        <div class="verdict-label" style="color:var(--sage);">Ponto forte</div>
+        <div class="verdict-text" style="color:var(--muted);">Símbolo com presença e calor. Funciona bem em cartaz grande e em contextos de acolhimento. O registo é o mais clássico das três propostas.</div>
+      </div>
+
+      <!-- Paleta -->
+      <div style="margin-top:32px;">
+        <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;">Paleta desta proposta</div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#8F9B8A;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Sálvia</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#C9805F;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Coral A</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#2E6473;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Teal A</span>
+          </div>
+          <div style="margin-left:4px;font-family:var(--sans);font-size:12px;color:var(--faint);">→ <em style="font-family:var(--serif);font-style:italic;font-size:14px;color:var(--muted);">cores de intersecção geradas</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="logo-stage">
+
+      <!-- Primary lockup -->
+      <div class="stage-card">
+        <div class="stage-inner">
+          <div style="position:relative;width:150px;height:116px;isolation:isolate;margin-bottom:36px;">
+            <div style="position:absolute;left:35px;top:0;width:80px;height:80px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+            <div style="position:absolute;left:0;top:36px;width:80px;height:80px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+            <div style="position:absolute;left:70px;top:36px;width:80px;height:80px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+          </div>
+          <div style="font-family:var(--serif);font-weight:600;font-size:36px;letter-spacing:0.04em;text-transform:uppercase;color:var(--mid);">pausa para dentro</div>
+          <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.3em;text-transform:uppercase;color:var(--faint);margin-top:14px;">educar com amor &nbsp;·&nbsp; colo di mama &nbsp;·&nbsp; men talks</div>
+        </div>
+        <div class="stage-label">Lockup principal · fundo claro</div>
+      </div>
+
+      <!-- Symbol only -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="stage-card">
+          <div class="stage-inner">
+            <div style="position:relative;width:96px;height:74px;isolation:isolate;">
+              <div style="position:absolute;left:22px;top:0;width:50px;height:50px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:22px;width:50px;height:50px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:44px;top:22px;width:50px;height:50px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+          </div>
+          <div class="stage-label linen">Símbolo isolado</div>
+        </div>
+
+        <!-- Dark variant -->
+        <div class="stage-card dark">
+          <div class="stage-inner">
+            <div style="position:relative;width:80px;height:62px;isolation:isolate;margin-bottom:16px;">
+              <div style="position:absolute;left:18px;top:0;width:42px;height:42px;border-radius:50%;background:#aeb9a6;mix-blend-mode:screen;"></div>
+              <div style="position:absolute;left:0;top:18px;width:42px;height:42px;border-radius:50%;background:#d39072;mix-blend-mode:screen;"></div>
+              <div style="position:absolute;left:38px;top:18px;width:42px;height:42px;border-radius:50%;background:#4f8b9c;mix-blend-mode:screen;"></div>
+            </div>
+            <span style="font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:0.05em;text-transform:uppercase;color:#F5F1EA;">pausa para dentro</span>
+          </div>
+          <div class="stage-label dark">Negativo · fundo escuro</div>
+        </div>
+      </div>
+
+      <!-- Colour variants -->
+      <div class="stage-card linen">
+        <div style="padding:36px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:center;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="position:relative;width:72px;height:56px;isolation:isolate;">
+              <div style="position:absolute;left:17px;top:0;width:38px;height:38px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:17px;width:38px;height:38px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:34px;top:17px;width:38px;height:38px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--faint);">Paleta A</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="position:relative;width:72px;height:56px;isolation:isolate;">
+              <div style="position:absolute;left:17px;top:0;width:38px;height:38px;border-radius:50%;background:#E96F4C;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:17px;width:38px;height:38px;border-radius:50%;background:#1E7E8C;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:34px;top:17px;width:38px;height:38px;border-radius:50%;background:#4E9A6B;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--faint);">Paleta B</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="position:relative;width:72px;height:56px;isolation:isolate;">
+              <div style="position:absolute;left:17px;top:0;width:38px;height:38px;border-radius:50%;background:#E7A33C;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:17px;width:38px;height:38px;border-radius:50%;background:#C58B72;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:34px;top:17px;width:38px;height:38px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--faint);">Âmbar + Terra</span>
+          </div>
+        </div>
+        <div class="stage-label linen">Variantes de cor do símbolo</div>
+      </div>
+
+      <!-- Size test -->
+      <div class="stage-card">
+        <div style="padding:32px 40px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="position:relative;width:100px;height:78px;isolation:isolate;">
+              <div style="position:absolute;left:23px;top:0;width:54px;height:54px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:24px;width:54px;height:54px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:46px;top:24px;width:54px;height:54px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">grande</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="position:relative;width:60px;height:46px;isolation:isolate;">
+              <div style="position:absolute;left:14px;top:0;width:32px;height:32px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:14px;width:32px;height:32px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:28px;top:14px;width:32px;height:32px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">médio</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="position:relative;width:34px;height:26px;isolation:isolate;">
+              <div style="position:absolute;left:8px;top:0;width:18px;height:18px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:16px;top:8px;width:18px;height:18px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">pequeno</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="position:relative;width:20px;height:16px;isolation:isolate;">
+              <div style="position:absolute;left:5px;top:0;width:11px;height:11px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:5px;width:11px;height:11px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:9px;top:5px;width:11px;height:11px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">favicon</span>
+          </div>
+        </div>
+        <div class="stage-label">Teste de escala</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROPOSTA 6B — ABRAÇO · DISTRIBUÍDO
+════════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-p6b">
+  <div class="proposal">
+
+    <!-- INFO -->
+    <div class="proposal-info">
+      <div class="proposal-kicker">
+        <span style="display:inline-block;width:24px;height:2px;background:var(--teal);"></span>
+        Proposta
+      </div>
+      <div class="proposal-num" style="color:var(--teal);">6B</div>
+      <div class="proposal-name">Abraço<br>Distribuído</div>
+      <p class="proposal-desc">
+        O sinal de pausa (‖) entra dentro da própria palavra "pa<strong>‖</strong>sa" — o símbolo torna-se o "u". Em baixo, os parênteses abraçam "para dentro" como um sorriso. Cada gesto tipográfico sustenta a sua palavra.
+      </p>
+      <p class="proposal-desc">
+        É a proposta mais inovadora tipograficamente. Dois sistemas gráficos distintos — grotesco e serifa itálica — comunicam a tensão entre estrutura e respiração, exactamente como o evento.
+      </p>
+      <div class="proposal-tags">
+        <span class="tag">Space Grotesk</span>
+        <span class="tag">Cormorant Garamond Italic</span>
+        <span class="tag">Símbolo integrado</span>
+        <span class="tag">Alta diferenciação</span>
+      </div>
+      <div class="verdict" style="background:rgba(30,126,140,.08);border-color:var(--teal);">
+        <div class="verdict-label" style="color:var(--teal);">Melhor para</div>
+        <div class="verdict-text" style="color:var(--muted);">Identidade principal do evento — landing page, cartazes, redes sociais, crachás. A riqueza tipográfica torna-o memorável e escalável. É o que mais conta a história da marca.</div>
+      </div>
+
+      <!-- Paleta -->
+      <div style="margin-top:32px;">
+        <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;">Paleta desta proposta</div>
+        <div style="display:flex;gap:8px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#1E7E8C;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Petróleo</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#E96F4C;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Coral</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#232220;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Carvão</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#F6F2EC;border:1px solid var(--bone);"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Creme</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="logo-stage">
+
+      <!-- Primary lockup -->
+      <div class="stage-card">
+        <div class="stage-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+            <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:62px;line-height:1;letter-spacing:-0.03em;color:var(--charcoal);">
+              <span>pa</span>
+              <svg viewBox="0 0 46 62" width="34" height="31" style="display:block;margin:0 4px;">
+                <rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/>
+                <rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/>
+              </svg>
+              <span>sa</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:18px;margin-top:12px;">
+              <svg viewBox="0 0 36 100" width="28" height="78" style="display:block;flex:none;">
+                <path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/>
+              </svg>
+              <span style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:40px;line-height:1;white-space:nowrap;color:var(--charcoal);">para dentro</span>
+              <svg viewBox="0 0 36 100" width="28" height="78" style="display:block;flex:none;">
+                <path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.26em;text-transform:uppercase;color:var(--faint);margin-top:24px;">parar · respirar · voltar a sentir</div>
+        </div>
+        <div class="stage-label">Lockup principal</div>
+      </div>
+
+      <!-- Versions grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+        <!-- Petróleo + Coral -->
+        <div class="stage-card">
+          <div class="stage-inner">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+              <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:38px;line-height:1;letter-spacing:-0.03em;color:var(--charcoal);">
+                <span>pa</span>
+                <svg viewBox="0 0 46 62" width="24" height="19" style="display:block;margin:0 3px;">
+                  <rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/>
+                  <rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/>
+                </svg>
+                <span>sa</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
+                <svg viewBox="0 0 36 100" width="17" height="48"><path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+                <span style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;white-space:nowrap;color:var(--charcoal);">para dentro</span>
+                <svg viewBox="0 0 36 100" width="17" height="48"><path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="stage-label">Petróleo + Coral</div>
+        </div>
+
+        <!-- Âmbar + Verde -->
+        <div class="stage-card linen">
+          <div class="stage-inner">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+              <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:38px;line-height:1;letter-spacing:-0.03em;color:var(--charcoal);">
+                <span>pa</span>
+                <svg viewBox="0 0 46 62" width="24" height="19" style="display:block;margin:0 3px;">
+                  <rect x="1" y="0" width="18" height="62" rx="9" fill="#E7A33C"/>
+                  <rect x="27" y="0" width="18" height="62" rx="9" fill="#E7A33C"/>
+                </svg>
+                <span>sa</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
+                <svg viewBox="0 0 36 100" width="17" height="48"><path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#4E9A6B" stroke-width="3.2" stroke-linecap="round"/></svg>
+                <span style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;white-space:nowrap;color:var(--charcoal);">para dentro</span>
+                <svg viewBox="0 0 36 100" width="17" height="48"><path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#4E9A6B" stroke-width="3.2" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="stage-label linen">Âmbar + Verde</div>
+        </div>
+      </div>
+
+      <!-- Dark -->
+      <div class="stage-card dark">
+        <div class="stage-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+            <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:50px;line-height:1;letter-spacing:-0.03em;color:#F6F2EC;">
+              <span>pa</span>
+              <svg viewBox="0 0 46 62" width="31" height="25" style="display:block;margin:0 3px;">
+                <rect x="1" y="0" width="18" height="62" rx="9" fill="#5aa6b4"/>
+                <rect x="27" y="0" width="18" height="62" rx="9" fill="#5aa6b4"/>
+              </svg>
+              <span>sa</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:8px;">
+              <svg viewBox="0 0 36 100" width="20" height="60"><path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#e8a07f" stroke-width="3.2" stroke-linecap="round"/></svg>
+              <span style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:32px;white-space:nowrap;color:#e8a07f;">para dentro</span>
+              <svg viewBox="0 0 36 100" width="20" height="60"><path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#e8a07f" stroke-width="3.2" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="stage-label dark">Negativo · fundo escuro</div>
+      </div>
+
+      <!-- Scale -->
+      <div class="stage-card">
+        <div style="padding:28px 40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+          <!-- grande -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+              <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:42px;line-height:1;letter-spacing:-0.03em;color:var(--charcoal);">
+                <span>pa</span><svg viewBox="0 0 46 62" width="16" height="21" style="display:block;margin:0 2px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/></svg><span>sa</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:7px;">
+                <svg viewBox="0 0 36 100" width="12" height="34"><path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+                <span style="font-family:var(--serif);font-style:italic;font-size:17px;white-space:nowrap;color:var(--charcoal);">para dentro</span>
+                <svg viewBox="0 0 36 100" width="12" height="34"><path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">grande</span>
+          </div>
+          <!-- médio -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+              <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:22px;line-height:1;letter-spacing:-0.03em;color:var(--charcoal);">
+                <span>pa</span><svg viewBox="0 0 46 62" width="8" height="11" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/></svg><span>sa</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:4px;">
+                <svg viewBox="0 0 36 100" width="6" height="18"><path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+                <span style="font-family:var(--serif);font-style:italic;font-size:9px;white-space:nowrap;color:var(--charcoal);">para dentro</span>
+                <svg viewBox="0 0 36 100" width="6" height="18"><path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">crachá</span>
+          </div>
+        </div>
+        <div class="stage-label">Teste de escala</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROPOSTA 6C — LINHA · HORIZONTAL
+════════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-p6c">
+  <div class="proposal">
+
+    <!-- INFO -->
+    <div class="proposal-info">
+      <div class="proposal-kicker">
+        <span style="display:inline-block;width:24px;height:2px;background:var(--charcoal);"></span>
+        Proposta
+      </div>
+      <div class="proposal-num" style="color:var(--charcoal);opacity:.15;font-size:clamp(60px,7vw,100px);">6C</div>
+      <div class="proposal-name" style="margin-top:-16px;">Linha<br>Horizontal</div>
+      <p class="proposal-desc">
+        O símbolo-sorriso à esquerda, o wordmark em duas linhas à direita — tudo numa linha horizontal. Completamente monocromático: funciona a uma tinta, em carimbo, em bordado, em gravação a laser.
+      </p>
+      <p class="proposal-desc">
+        A sobriedade é o ponto forte. Não há cor que distraia — a atenção vai toda para a forma do símbolo e para a oposição tipográfica entre "pausa" (pesado) e "para dentro" (leve).
+      </p>
+      <div class="proposal-tags">
+        <span class="tag">Monocromático</span>
+        <span class="tag">Bricolage Grotesque</span>
+        <span class="tag">Space Grotesk Light</span>
+        <span class="tag">Horizontal</span>
+        <span class="tag">1 tinta</span>
+      </div>
+      <div class="verdict" style="background:rgba(35,34,32,.06);border-color:var(--charcoal);">
+        <div class="verdict-label" style="color:var(--charcoal);">Melhor para</div>
+        <div class="verdict-text" style="color:var(--muted);">Assinaturas de email, crachás, papelaria, carimbos, bordados em vestuário, gravações. Qualquer suporte onde a cor é impossível ou desnecessária. Excelente como versão de "uso restrito".</div>
+      </div>
+
+      <!-- Paleta -->
+      <div style="margin-top:32px;">
+        <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;">Paleta desta proposta</div>
+        <div style="display:flex;gap:8px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#232220;"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Carvão</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#F6F2EC;border:1px solid var(--bone);"></div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">Creme</span>
+          </div>
+          <div style="margin-left:8px;font-family:var(--sans);font-size:12.5px;color:var(--faint);align-self:center;line-height:1.6;">→ usa cores da marca<br>quando possível</div>
+        </div>
+      </div>
+
+      <!-- Color variant note -->
+      <div style="margin-top:28px;padding:20px 24px;background:var(--linen);border-radius:4px;">
+        <div style="font-family:var(--body);font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);margin-bottom:8px;">Nota</div>
+        <p style="font-family:var(--sans);font-size:13px;line-height:1.75;color:var(--muted);">A versão a cor usa Sálvia para os arcos e Terracota para as barras — mantendo a paleta A e a personalidade mais serena.</p>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="logo-stage">
+
+      <!-- Primary -->
+      <div class="stage-card">
+        <div class="stage-inner row" style="padding:64px 48px;">
+          <svg viewBox="0 0 100 110" width="72" height="79" style="flex:none;">
+            <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+            <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+            <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+          </svg>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;">
+            <div style="font-family:var(--display);font-weight:700;font-size:48px;line-height:0.95;letter-spacing:-0.04em;color:var(--charcoal);">pausa</div>
+            <div style="font-family:var(--sans);font-weight:300;font-size:32px;line-height:1.05;letter-spacing:0.01em;color:var(--muted);">para dentro</div>
+          </div>
+        </div>
+        <div class="stage-label">Lockup principal · monocromático</div>
+      </div>
+
+      <!-- Versions -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+        <!-- Cor -->
+        <div class="stage-card linen">
+          <div class="stage-inner row" style="padding:40px 32px;">
+            <svg viewBox="0 0 100 110" width="52" height="57" style="flex:none;">
+              <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#C58B72" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#C58B72" stroke-width="2.8" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#8F9B8A"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#8F9B8A"/>
+            </svg>
+            <div>
+              <div style="font-family:var(--display);font-weight:700;font-size:28px;line-height:0.95;letter-spacing:-0.04em;color:var(--charcoal);">pausa</div>
+              <div style="font-family:var(--sans);font-weight:300;font-size:18px;color:var(--muted);">para dentro</div>
+            </div>
+          </div>
+          <div class="stage-label linen">Versão cor · Sálvia + Terracota</div>
+        </div>
+
+        <!-- Negativo -->
+        <div class="stage-card dark">
+          <div class="stage-inner row" style="padding:40px 32px;">
+            <svg viewBox="0 0 100 110" width="44" height="48" style="flex:none;">
+              <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#F6F2EC" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#F6F2EC" stroke-width="2.8" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+            </svg>
+            <div>
+              <div style="font-family:var(--display);font-weight:700;font-size:26px;line-height:0.95;letter-spacing:-0.04em;color:#F6F2EC;">pausa</div>
+              <div style="font-family:var(--sans);font-weight:300;font-size:16px;color:#b8b2a7;">para dentro</div>
+            </div>
+          </div>
+          <div class="stage-label dark">Negativo · fundo escuro</div>
+        </div>
+      </div>
+
+      <!-- Carimbo / 1 tinta -->
+      <div class="stage-card linen">
+        <div style="padding:40px 48px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;">
+          <!-- bordado/stamp look -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="border:2px solid var(--charcoal);border-radius:3px;padding:12px 16px;display:flex;align-items:center;gap:12px;">
+              <svg viewBox="0 0 100 110" width="28" height="31">
+                <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="3" stroke-linecap="round"/>
+                <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="3" stroke-linecap="round"/>
+                <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+                <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+              </svg>
+              <div>
+                <div style="font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-0.03em;color:var(--charcoal);line-height:1;">pausa</div>
+                <div style="font-family:var(--sans);font-weight:300;font-size:10px;color:var(--muted);">para dentro</div>
+              </div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">carimbo / box</span>
+          </div>
+          <!-- scale test -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="display:flex;gap:16px;align-items:center;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <svg viewBox="0 0 100 110" width="20" height="22"><path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="2.8" stroke-linecap="round"/><path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="2.8" stroke-linecap="round"/><rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/><rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/></svg>
+                <div><div style="font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:-0.03em;color:var(--charcoal);line-height:1;">pausa</div><div style="font-family:var(--sans);font-weight:300;font-size:8px;color:var(--muted);">para dentro</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;">
+                <svg viewBox="0 0 100 110" width="12" height="13"><path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="3" stroke-linecap="round"/><path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="3" stroke-linecap="round"/><rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/><rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/></svg>
+                <div><div style="font-family:var(--display);font-weight:700;font-size:7px;letter-spacing:-0.02em;color:var(--charcoal);line-height:1;">pausa</div><div style="font-family:var(--sans);font-weight:300;font-size:5px;color:var(--muted);">para dentro</div></div>
+              </div>
+            </div>
+            <span style="font-family:var(--body);font-size:8.5px;color:var(--faint);">escala</span>
+          </div>
+        </div>
+        <div class="stage-label linen">Usos especiais · 1 tinta</div>
+      </div>
+
+      <!-- Cor variantes -->
+      <div class="stage-card">
+        <div style="padding:32px 40px;display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <!-- Petróleo + Coral -->
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg viewBox="0 0 100 110" width="36" height="40" style="flex:none;">
+              <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#E96F4C" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#E96F4C" stroke-width="2.8" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#1E7E8C"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#1E7E8C"/>
+            </svg>
+            <div><div style="font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.04em;color:var(--charcoal);line-height:1;">pausa</div><div style="font-family:var(--sans);font-weight:300;font-size:12px;color:var(--muted);">para dentro</div></div>
+          </div>
+          <!-- Âmbar + Verde -->
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg viewBox="0 0 100 110" width="36" height="40" style="flex:none;">
+              <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#4E9A6B" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#4E9A6B" stroke-width="2.8" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#E7A33C"/>
+            </svg>
+            <div><div style="font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.04em;color:var(--charcoal);line-height:1;">pausa</div><div style="font-family:var(--sans);font-weight:300;font-size:12px;color:var(--muted);">para dentro</div></div>
+          </div>
+        </div>
+        <div class="stage-label">Variantes a cor</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     COMPARAÇÃO
+════════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-comp">
+  <div class="comparison">
+    <div class="comp-header">
+      <div style="font-family:var(--body);font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;">Comparação · Quatro propostas</div>
+      <div class="comp-title">01 × 02 × 6B × 6C</div>
+      <div class="comp-sub">uma identidade. qual é a vossa?</div>
+      <p class="comp-lead">Quatro propostas, um propósito comum. Cada uma tem uma personalidade distinta — da mais figurativa e emocional à mais tipográfica e minimalista. O objetivo desta página é escolher uma — a que melhor representa o evento Pausa para Dentro.</p>
+    </div>
+
+    <!-- Side-by-side logos at same size -->
+    <div class="comp-logos">
+      <div class="comp-logo-col">
+        <div class="comp-logo-label">01 · Círculo de Cuidado</div>
+        <div class="stage-card" style="flex:1;">
+          <div style="padding:48px 32px;display:flex;flex-direction:column;align-items:center;gap:16px;">
+            <svg viewBox="0 0 220 220" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M110 26 C148 24 180 50 188 88 C196 128 178 165 145 182 C112 198 72 190 50 164 C28 138 28 100 42 74 C56 48 80 30 110 26" fill="none" stroke="#2E5564" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+              <path d="M110 26 C118 24 126 25 134 28" fill="none" stroke="#C97E63" stroke-width="7" stroke-linecap="round"/>
+              <path d="M170 160 C160 175 148 184 134 190" fill="none" stroke="#A8B8A1" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+              <path d="M76 148 C68 136 66 120 72 108 C76 100 84 96 90 98 C94 92 102 88 108 92" fill="none" stroke="#2E5564" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M144 148 C152 136 154 120 148 108 C144 100 136 96 130 98 C126 92 118 88 112 92" fill="none" stroke="#2E5564" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M72 148 C80 156 100 162 110 162 C120 162 140 156 148 148" fill="none" stroke="#2E5564" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M110 118 C110 118 98 108 98 100 C98 94 104 90 110 96 C116 90 122 94 122 100 C122 108 110 118 110 118Z" fill="#C97E63" opacity="0.85"/>
+            </svg>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+              <span style="font-family:var(--serif);font-style:italic;font-size:22px;color:var(--charcoal);line-height:1;">Pausa</span>
+              <span style="font-family:var(--serif);font-style:italic;font-size:11px;letter-spacing:0.1em;color:#C97E63;">para</span>
+              <span style="font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-0.02em;color:var(--charcoal);line-height:1;">Dentro</span>
+            </div>
+          </div>
+          <div class="stage-label">Fundo claro</div>
+        </div>
+        <div class="stage-card dark">
+          <div style="padding:32px;display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <svg viewBox="0 0 220 220" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+              <path d="M110 26 C148 24 180 50 188 88 C196 128 178 165 145 182 C112 198 72 190 50 164 C28 138 28 100 42 74 C56 48 80 30 110 26" fill="none" stroke="#A8B8A1" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+              <path d="M110 26 C118 24 126 25 134 28" fill="none" stroke="#C97E63" stroke-width="7" stroke-linecap="round"/>
+              <path d="M76 148 C68 136 66 120 72 108 C76 100 84 96 90 98 C94 92 102 88 108 92" fill="none" stroke="#A8B8A1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M144 148 C152 136 154 120 148 108 C144 100 136 96 130 98 C126 92 118 88 112 92" fill="none" stroke="#A8B8A1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M72 148 C80 156 100 162 110 162 C120 162 140 156 148 148" fill="none" stroke="#A8B8A1" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M110 118 C110 118 98 108 98 100 C98 94 104 90 110 96 C116 90 122 94 122 100 C122 108 110 118 110 118Z" fill="#C97E63" opacity="0.9"/>
+            </svg>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+              <span style="font-family:var(--serif);font-style:italic;font-size:16px;color:#F5F1EA;line-height:1;">Pausa</span>
+              <span style="font-family:var(--serif);font-style:italic;font-size:9px;letter-spacing:0.1em;color:#C97E63;">para</span>
+              <span style="font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:-0.02em;color:#F5F1EA;line-height:1;">Dentro</span>
+            </div>
+          </div>
+          <div class="stage-label dark">Fundo escuro</div>
+        </div>
+      </div>
+
+      <div class="comp-logo-col">
+        <div class="comp-logo-label">02 · Sobreposição</div>
+        <div class="stage-card" style="flex:1;">
+          <div style="padding:48px 32px;display:flex;flex-direction:column;align-items:center;gap:20px;">
+            <div style="position:relative;width:110px;height:84px;isolation:isolate;">
+              <div style="position:absolute;left:26px;top:0;width:58px;height:58px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:0;top:26px;width:58px;height:58px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:52px;top:26px;width:58px;height:58px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+            <div style="font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:0.04em;text-transform:uppercase;color:var(--mid);text-align:center;">pausa para dentro</div>
+          </div>
+          <div class="stage-label">Fundo claro</div>
+        </div>
+        <div class="stage-card dark">
+          <div style="padding:32px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+            <div style="position:relative;width:70px;height:54px;isolation:isolate;">
+              <div style="position:absolute;left:16px;top:0;width:37px;height:37px;border-radius:50%;background:#aeb9a6;mix-blend-mode:screen;"></div>
+              <div style="position:absolute;left:0;top:16px;width:37px;height:37px;border-radius:50%;background:#d39072;mix-blend-mode:screen;"></div>
+              <div style="position:absolute;left:33px;top:16px;width:37px;height:37px;border-radius:50%;background:#4f8b9c;mix-blend-mode:screen;"></div>
+            </div>
+            <span style="font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:0.05em;text-transform:uppercase;color:#F5F1EA;text-align:center;">pausa para dentro</span>
+          </div>
+          <div class="stage-label dark">Fundo escuro</div>
+        </div>
+      </div>
+
+      <div class="comp-logo-col">
+        <div class="comp-logo-label" style="color:var(--teal);">6B · Abraço ★</div>
+        <div class="stage-card" style="flex:1;outline:2px solid var(--teal);outline-offset:2px;">
+          <div style="padding:48px 24px;display:flex;flex-direction:column;align-items:center;gap:0;">
+            <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:40px;line-height:1;letter-spacing:-0.03em;color:var(--charcoal);">
+              <span>pa</span>
+              <svg viewBox="0 0 46 62" width="16" height="21" style="display:block;margin:0 2px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/></svg>
+              <span>sa</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
+              <svg viewBox="0 0 36 100" width="18" height="50"><path d="M 30 8 A 52 52 0 0 0 30 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+              <span style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:26px;white-space:nowrap;color:var(--charcoal);">para dentro</span>
+              <svg viewBox="0 0 36 100" width="18" height="50"><path d="M 6 8 A 52 52 0 0 1 6 92" fill="none" stroke="#E96F4C" stroke-width="3.2" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+          <div class="stage-label">Fundo claro</div>
+        </div>
+        <div class="stage-card dark">
+          <div style="padding:32px;display:flex;flex-direction:column;align-items:center;gap:2px;">
+            <div style="display:flex;align-items:baseline;font-family:var(--sans);font-weight:700;font-size:26px;letter-spacing:-0.03em;color:#F6F2EC;">
+              <span>pa</span><svg viewBox="0 0 46 62" width="10" height="14" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#5aa6b4"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#5aa6b4"/></svg><span>sa</span>
+            </div>
+            <span style="font-family:var(--serif);font-style:italic;font-weight:500;font-size:20px;color:#e8a07f;">para dentro</span>
+          </div>
+          <div class="stage-label dark">Fundo escuro</div>
+        </div>
+      </div>
+
+      <div class="comp-logo-col">
+        <div class="comp-logo-label">6C · Linha</div>
+        <div class="stage-card" style="flex:1;">
+          <div style="padding:48px 24px;display:flex;align-items:center;justify-content:center;gap:20px;">
+            <svg viewBox="0 0 100 110" width="52" height="57" style="flex:none;">
+              <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+            </svg>
+            <div>
+              <div style="font-family:var(--display);font-weight:700;font-size:28px;line-height:0.95;letter-spacing:-0.04em;color:var(--charcoal);">pausa</div>
+              <div style="font-family:var(--sans);font-weight:300;font-size:18px;color:var(--muted);">para dentro</div>
+            </div>
+          </div>
+          <div class="stage-label">Fundo claro · mono</div>
+        </div>
+        <div class="stage-card dark">
+          <div style="padding:32px;display:flex;align-items:center;justify-content:center;gap:14px;">
+            <svg viewBox="0 0 100 110" width="34" height="37" style="flex:none;">
+              <path d="M 14 42 A 58 58 0 0 0 14 104" fill="none" stroke="#F6F2EC" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M 86 42 A 58 58 0 0 1 86 104" fill="none" stroke="#F6F2EC" stroke-width="2.8" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+            </svg>
+            <div>
+              <div style="font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.04em;color:#F6F2EC;line-height:1;">pausa</div>
+              <div style="font-family:var(--sans);font-weight:300;font-size:11px;color:#b8b2a7;">para dentro</div>
+            </div>
+          </div>
+          <div class="stage-label dark">Fundo escuro · mono</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>01 · Círculo</th>
+          <th>02 · Sobreposição</th>
+          <th>6B · Abraço</th>
+          <th>6C · Linha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reconhecimento rápido</td>
+          <td><span class="check">●</span> <strong>Símbolo universal de cuidado</strong></td>
+          <td><span class="half">◑</span> Símbolo forte, texto genérico</td>
+          <td><span class="check">●</span> <strong>Símbolo e tipografia únicos</strong></td>
+          <td><span class="check">●</span> <strong>Sorriso imediato</strong></td>
+        </tr>
+        <tr>
+          <td>Escalabilidade</td>
+          <td><span class="half">◑</span> Detalhe das mãos perde-se abaixo de 24px</td>
+          <td><span class="cross">○</span> Blend modes perdem-se em pequeno</td>
+          <td><span class="half">◑</span> Funciona, perde detalhe abaixo de 20px</td>
+          <td><span class="check">●</span> <strong>Perfeito a qualquer tamanho</strong></td>
+        </tr>
+        <tr>
+          <td>Fundo escuro</td>
+          <td><span class="check">●</span> <strong>Excelente — paleta sálvia e creme</strong></td>
+          <td><span class="half">◑</span> Screen mode — funciona mas muda</td>
+          <td><span class="check">●</span> <strong>Excelente, muda paleta</strong></td>
+          <td><span class="check">●</span> <strong>Simples e limpo</strong></td>
+        </tr>
+        <tr>
+          <td>1 tinta / carimbo</td>
+          <td><span class="half">◑</span> Possível — perde o acento de cor</td>
+          <td><span class="cross">○</span> Impossível sem blend</td>
+          <td><span class="half">◑</span> Possível mas perde profundidade</td>
+          <td><span class="check">●</span> <strong>Desenhado para isso</strong></td>
+        </tr>
+        <tr>
+          <td>Riqueza do símbolo</td>
+          <td><span class="check">●</span> <strong>Figurativo, emocional e narrativo</strong></td>
+          <td><span class="check">●</span> <strong>Cor e profundidade pela sobreposição</strong></td>
+          <td><span class="check">●</span> <strong>Símbolo integrado na tipografia</strong></td>
+          <td><span class="half">◑</span> Símbolo simples, força na tipografia</td>
+        </tr>
+        <tr>
+          <td>Impacto em cartaz grande</td>
+          <td><span class="check">●</span> <strong>Forte ligação emocional imediata</strong></td>
+          <td><span class="check">●</span> <strong>Visual rico e quente</strong></td>
+          <td><span class="check">●</span> <strong>Tipografia imponente</strong></td>
+          <td><span class="half">◑</span> Elegante, menos impactante</td>
+        </tr>
+        <tr>
+          <td>Versatilidade de cor</td>
+          <td><span class="check">●</span> <strong>3 variantes de cor validadas</strong></td>
+          <td><span class="half">◑</span> Depende do suporte (blend modes)</td>
+          <td><span class="check">●</span> <strong>4 combinações de cor validadas</strong></td>
+          <td><span class="check">●</span> <strong>Mono + cor como opção</strong></td>
+        </tr>
+        <tr>
+          <td>Diferenciação no mercado</td>
+          <td><span class="half">◑</span> Símbolo de cuidado comum, círculo distinto</td>
+          <td><span class="half">◑</span> Venn diagram comum neste espaço</td>
+          <td><span class="check">●</span> <strong>Tipografia integrada — raro</strong></td>
+          <td><span class="half">◑</span> Claro e distinto, menos ousado</td>
+        </tr>
+        <tr>
+          <td>Personalidade</td>
+          <td><strong>Empática · Humana · Calorosa</strong></td>
+          <td>Clássica · Quente · Orgânica</td>
+          <td><strong>Contemporânea · Memorável · Diferenciada</strong></td>
+          <td>Sóbria · Versátil · Funcional</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Recommendation -->
+    <div style="margin-top:64px;">
+      <div style="font-family:var(--body);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--faint);margin-bottom:28px;">Leitura · o que distingue cada proposta</div>
+      <div class="rec-grid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="rec-card" style="background:rgba(46,85,100,.07);border:1px solid rgba(46,85,100,.18);">
+          <div class="rec-num" style="color:#2E5564;">01</div>
+          <div class="rec-title" style="color:#2E5564;">Empática e calorosa</div>
+          <p class="rec-body">A proposta mais figurativa e emocional. O círculo imperfeito com mãos e coração traduz imediatamente o conceito do evento. Forte ligação afetiva — ideal para públicos de parentalidade, educação e cuidado.</p>
+          <div class="rec-use" style="color:#2E5564;border-top-color:rgba(46,85,100,.12);">Símbolo narrativo · Círculo imperfeito · Paleta terra e petróleo</div>
+        </div>
+        <div class="rec-card" style="background:#F0ECE4;">
+          <div class="rec-num">02</div>
+          <div class="rec-title">Clássica e quente</div>
+          <p class="rec-body">O registo mais orgânico e editorial. O símbolo de círculos sobrepostos tem presença e calor. Adequada para quem quer uma identidade serena, com raízes no design de conferências de referência.</p>
+          <div class="rec-use" style="color:var(--sage);">Tipografia clássica · Símbolo rico em cor · Paleta orgânica</div>
+        </div>
+        <div class="rec-card" style="background:rgba(30,126,140,.08);border:1px solid rgba(30,126,140,.2);">
+          <div class="rec-num" style="color:var(--teal);">6B</div>
+          <div class="rec-title" style="color:var(--teal);">Contemporânea e memorável</div>
+          <p class="rec-body">A proposta de maior diferenciação. O símbolo entra dentro da palavra "pausa" e os parênteses abraçam "para dentro" — dois gestos tipográficos que contam a história da marca em silêncio. Alta memorabilidade a qualquer escala.</p>
+          <div class="rec-use" style="color:var(--teal);border-top-color:rgba(30,126,140,.15);">Tipografia integrada · Dois sistemas visuais · 4 combinações de cor</div>
+        </div>
+        <div class="rec-card" style="background:#ECEAE4;">
+          <div class="rec-num">6C</div>
+          <div class="rec-title">Sóbria e versátil</div>
+          <p class="rec-body">A proposta mais funcional e neutra. O símbolo-sorriso é imediatamente legível, o lockup horizontal é limpo. Funciona a uma tinta, num carimbo ou num cartaz — sem perder identidade.</p>
+          <div class="rec-use" style="color:var(--muted);">Monocromático · Alta escalabilidade · Uso sem restrições</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <p>Pausa para Dentro · Propostas de Logótipo · Junho 2026</p>
+  <p>Educar com Amor e Consciência · Colo di Mama · Men Talks</p>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab[data-tab]');
+  const panels = { p01: 'panel-p01', p02: 'panel-p02', p6b: 'panel-p6b', p6c: 'panel-p6c', comp: 'panel-comp' };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const key = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      Object.values(panels).forEach(id => {
+        const el = document.getElementById(id);
+        el.classList.remove('active');
+      });
+      document.getElementById(panels[key]).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
