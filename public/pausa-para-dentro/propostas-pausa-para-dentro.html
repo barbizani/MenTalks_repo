@@ -557,34 +557,61 @@
     <!-- spacing guide -->
     <div style="background:#fff;border-radius:10px;padding:32px 40px;box-shadow:0 1px 6px rgba(0,0,0,.07);">
       <div style="font-family:var(--body);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:20px;">Grid de Espaçamento · Zona de Exclusão</div>
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 560 200" width="100%" style="max-width:560px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
-          <!-- background -->
-          <rect x="0" y="0" width="560" height="200" fill="#fdfbf8" rx="8"/>
-          <!-- exclusion zone dashed rect around logo+text unit -->
-          <rect x="38" y="22" width="280" height="156" fill="none" stroke="#C97E63" stroke-width="1" stroke-dasharray="5 3" rx="2"/>
-          <!-- real logo via image (centred within symbol zone, left side) -->
-          <image href="assets/Proposta_001-a.svg" x="50" y="30" width="120" height="84" preserveAspectRatio="xMidYMid meet"/>
-          <!-- min gap marker between symbol and wordmark -->
-          <line x1="176" y1="72" x2="198" y2="72" stroke="#C97E63" stroke-width="0.8" stroke-dasharray="3 2"/>
-          <!-- wordmark -->
-          <text x="202" y="80" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="20" fill="#2E5564">pausa para dentro</text>
-          <!-- top annotation: exclusion zone label -->
-          <text x="178" y="14" font-family="Inter,sans-serif" font-size="8" fill="#C97E63" text-anchor="middle">← zona de exclusão = 1× altura do símbolo →</text>
-          <!-- left annotation: 1x height -->
-          <line x1="28" y1="22" x2="28" y2="178" stroke="#C97E63" stroke-width="0.8"/>
-          <line x1="24" y1="22" x2="32" y2="22" stroke="#C97E63" stroke-width="0.8"/>
-          <line x1="24" y1="178" x2="32" y2="178" stroke="#C97E63" stroke-width="0.8"/>
-          <text x="16" y="104" font-family="Inter,sans-serif" font-size="8" fill="#C97E63" text-anchor="middle" transform="rotate(-90,16,104)">1× alt.</text>
-          <!-- rules on the right -->
-          <text x="348" y="52" font-family="Inter,sans-serif" font-size="9.5" font-weight="600" fill="#2E5564">Regras de espaçamento</text>
-          <text x="348" y="74" font-family="Inter,sans-serif" font-size="8.5" fill="#6f6a62">· Zona de exclusão = 1× altura do símbolo em todos os lados</text>
-          <text x="348" y="92" font-family="Inter,sans-serif" font-size="8.5" fill="#6f6a62">· Espaço mínimo símbolo → texto = ½× altura do símbolo</text>
-          <text x="348" y="110" font-family="Inter,sans-serif" font-size="8.5" fill="#6f6a62">· Escalar sempre como unidade indivisível</text>
-          <text x="348" y="128" font-family="Inter,sans-serif" font-size="8.5" fill="#6f6a62">· Tamanho mínimo de reprodução: 24px de altura</text>
-          <text x="348" y="158" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">Nunca separar símbolo e wordmark</text>
-          <text x="348" y="174" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">Nunca distorcer as proporções originais</text>
-        </svg>
+      <!-- spacing guide: HTML layout for precision -->
+      <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
+
+        <!-- LEFT: annotated logo unit -->
+        <div style="position:relative;padding:0 0 0 28px;flex-shrink:0;">
+
+          <!-- left bracket: 1× alt. -->
+          <div style="position:absolute;left:0;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;">
+            <div style="width:8px;height:1px;background:#C97E63;"></div>
+            <div style="flex:1;width:1px;background:#C97E63;"></div>
+            <div style="width:8px;height:1px;background:#C97E63;"></div>
+          </div>
+          <div style="position:absolute;left:-6px;top:50%;transform:translateY(-50%) rotate(-90deg);font-family:var(--body);font-size:7px;letter-spacing:.1em;color:#C97E63;white-space:nowrap;">1× alt.</div>
+
+          <!-- top annotation -->
+          <div style="font-family:var(--body);font-size:7.5px;color:#C97E63;text-align:center;margin-bottom:6px;letter-spacing:.03em;">← zona de exclusão = 1× altura do símbolo →</div>
+
+          <!-- dashed exclusion zone containing logo + wordmark -->
+          <div style="border:1px dashed #C97E63;border-radius:4px;padding:16px 20px;display:inline-flex;align-items:center;gap:0;">
+
+            <!-- Symbol -->
+            <div style="width:72px;height:72px;flex-shrink:0;overflow:hidden;">
+              <img src="assets/Proposta_001-a.svg" style="width:72px;height:72px;object-fit:cover;object-position:center;display:block;">
+            </div>
+
+            <!-- Gap label: ½× -->
+            <div style="display:flex;flex-direction:column;align-items:center;padding:0 10px;gap:3px;">
+              <div style="height:1px;width:24px;border-top:1px dashed #C97E63;opacity:.5;"></div>
+              <div style="font-family:var(--body);font-size:6.5px;color:#C97E63;letter-spacing:.05em;">½×</div>
+              <div style="height:1px;width:24px;border-top:1px dashed #C97E63;opacity:.5;"></div>
+            </div>
+
+            <!-- Wordmark -->
+            <div style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:20px;color:#2E5564;white-space:nowrap;">pausa para dentro</div>
+          </div>
+
+          <!-- bottom annotation -->
+          <div style="font-family:var(--body);font-size:7px;color:#c9c2b8;text-align:center;margin-top:6px;">Escalar sempre como unidade indivisível · mín. 24px de altura</div>
+        </div>
+
+        <!-- RIGHT: rules -->
+        <div style="flex:1;min-width:200px;">
+          <div style="font-family:var(--body);font-size:9px;font-weight:600;color:#2E5564;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;">Regras de espaçamento</div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Zona de exclusão = 1× altura do símbolo em todos os lados</div>
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Espaço mínimo símbolo → texto = ½× altura do símbolo</div>
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Escalar sempre como unidade indivisível</div>
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Tamanho mínimo de reprodução: 24px de altura</div>
+          </div>
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--bone);display:flex;flex-direction:column;gap:5px;">
+            <div style="font-family:var(--body);font-size:7.5px;color:#c9c2b8;">Nunca separar símbolo e wordmark</div>
+            <div style="font-family:var(--body);font-size:7.5px;color:#c9c2b8;">Nunca distorcer as proporções originais</div>
+          </div>
+        </div>
+
       </div>
     </div>
     <!-- dos & donts -->
