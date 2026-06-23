@@ -6,7 +6,7 @@
 <title>Pausa para Dentro — Propostas de Logótipo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -259,6 +259,48 @@
     border-top: 1px solid rgba(0,0,0,.08);
   }
 
+  /* ─── BRAND EXTENDED ─── */
+  .brand-extended{max-width:1140px;margin:0 auto;padding:0 56px 120px;display:flex;flex-direction:column;gap:72px;}
+  .brand-section{display:flex;flex-direction:column;gap:24px;}
+  .brand-sec-hdr{display:flex;align-items:center;gap:16px;padding-bottom:14px;border-bottom:2px solid var(--bone);}
+  .brand-sec-num{font-family:var(--body);font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:var(--faint);}
+  .brand-sec-ttl{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-0.02em;color:var(--charcoal);}
+  .b3col{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .b2col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .bcard{background:#fff;border-radius:10px;padding:28px;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+  .bcard-h{font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:-0.01em;color:var(--charcoal);margin-bottom:10px;}
+  .bcard-b{font-family:var(--sans);font-size:13px;line-height:1.85;color:var(--muted);}
+  .bcard-b p+p{margin-top:9px;}
+  .lcard{border-radius:10px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.09);display:flex;flex-direction:column;}
+  .lcard-inner{display:flex;justify-content:center;align-items:center;min-height:140px;}
+  .lcard-lbl{font-family:var(--body);font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);padding:10px 14px;border-top:1px solid rgba(0,0,0,.07);text-align:center;background:#fff;}
+  .ptable{border-radius:10px;overflow:hidden;border:1px solid var(--bone);}
+  .ptable-hdr{display:grid;grid-template-columns:52px 170px 1fr 1fr;gap:14px;padding:10px 18px;background:var(--bone);}
+  .ptable-row{display:grid;grid-template-columns:52px 170px 1fr 1fr;gap:14px;padding:14px 18px;border-top:1px solid var(--bone);align-items:start;}
+  .ptable-row:nth-child(odd){background:#fff;}
+  .ptable-row:nth-child(even){background:#fafaf9;}
+  .ph{font-family:var(--body);font-size:7.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);}
+  .pc{font-family:var(--body);font-size:12px;color:var(--muted);line-height:1.55;}
+  .pn{font-family:var(--sans);font-size:11px;font-weight:600;color:var(--charcoal);}
+  .px{font-family:var(--body);font-size:9.5px;color:var(--faint);margin-top:3px;}
+  .fcard{background:#fff;border-radius:10px;padding:28px;box-shadow:0 1px 6px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:12px;}
+  .ftag{font-family:var(--body);font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);}
+  .fwts{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px;}
+  .fwt{font-family:var(--body);font-size:7.5px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:var(--linen);color:var(--faint);}
+  .mcard{background:var(--linen);border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.09);display:flex;flex-direction:column;}
+  .mcard-inner{display:flex;justify-content:center;align-items:center;}
+  .mcard-lbl{font-family:var(--body);font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);padding:10px 14px;text-align:center;background:#fff;border-top:1px solid var(--bone);}
+  .ddgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .doscard{background:#EFF7F1;border:1px solid #B8DFC4;border-radius:10px;padding:24px;}
+  .dontcard{background:#FDF1EF;border:1px solid #ECC9C2;border-radius:10px;padding:24px;}
+  .dos-h{font-family:var(--display);font-weight:700;font-size:13px;color:#1E6B35;margin-bottom:12px;}
+  .dont-h{font-family:var(--display);font-weight:700;font-size:13px;color:#922B1A;margin-bottom:12px;}
+  .ruleitem{font-family:var(--body);font-size:12px;color:var(--muted);line-height:1.6;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.06);display:flex;gap:10px;align-items:flex-start;}
+  .ruleitem:last-child{border-bottom:none;}
+  .mockup-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .mockup-grid-6{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .lgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+
   /* footer note */
   .page-footer {
     max-width: 1200px; margin: 0 auto; padding: 0 56px 64px;
@@ -465,6 +507,257 @@
   </div>
 </div>
 
+<!-- ─── P01 BRAND EXTENDED ─── -->
+<div class="brand-extended">
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">01</span><span class="brand-sec-ttl">Contextualização</span></div>
+    <div class="b3col">
+      <div class="bcard">
+        <div class="bcard-h">✦ Inspiração</div>
+        <div class="bcard-b"><p>O círculo incompleto ecoa o ensō do zen budismo — símbolo de inteireza, continuidade e regresso a si mesmo. Não é perfeito, porque o ser humano não o é. Esta imperfeição é intencional: é exatamente o que o evento abraça.</p><p>Dentro do círculo, dois braços em arco envolvem um coração suspenso. O gesto é simultaneamente de partilha e receção — cuidar e ser cuidado no mesmo movimento.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">◎ Simbolismo</div>
+        <div class="bcard-b"><p>A abertura no topo do círculo representa o espaço para dentro — uma porta, não uma prisão. O arco triplo em sálvia, terracota e petróleo ecoa as três organizações fundadoras do evento em sobreposição harmoniosa.</p><p>O coração no centro não é decoração: é o eixo de toda a composição. Ele ancora o olhar e confere ao símbolo um peso emocional imediato, sem necessidade de legenda.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">→ Porquê funciona</div>
+        <div class="bcard-b"><p>A linguagem figurativa é compreendida por qualquer pessoa, em qualquer contexto, sem explicação. É empática antes de ser estética — o símbolo "sente" antes de "explicar".</p><p>Em contextos de saúde mental e parentalidade consciente, esta legibilidade emocional é uma vantagem estratégica. O logótipo conta a história do evento num único olhar.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">02</span><span class="brand-sec-ttl">Logótipo</span></div>
+    <div class="lgrid">
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F4EFE8;flex-direction:column;gap:12px;padding:28px;">
+          <svg viewBox="0 0 100 100" width="60" height="60" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#2E5564" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#C97E63" stroke-width="5" stroke-linecap="round"/><path d="M78 74C72 84 62 90 50 94" fill="none" stroke="#A8B8A1" stroke-width="4.5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:15px;color:#2E5564;text-align:center;line-height:1.3;">pausa para dentro</div>
+        </div>
+        <div class="lcard-lbl">Fundo claro · vertical</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#2E5564;flex-direction:column;gap:12px;padding:28px;">
+          <svg viewBox="0 0 100 100" width="60" height="60" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#F4EFE8" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#E8D5C4" stroke-width="5" stroke-linecap="round"/><path d="M78 74C72 84 62 90 50 94" fill="none" stroke="#A8B8A1" stroke-width="4.5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:15px;color:#F4EFE8;text-align:center;line-height:1.3;">pausa para dentro</div>
+        </div>
+        <div class="lcard-lbl" style="background:#1e3e4d;color:rgba(255,255,255,.35);border-top-color:rgba(255,255,255,.08);">Fundo escuro · vertical</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F4EFE8;flex-direction:row;gap:14px;padding:28px;">
+          <svg viewBox="0 0 100 100" width="48" height="48" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#2E5564" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#C97E63" stroke-width="5" stroke-linecap="round"/><path d="M78 74C72 84 62 90 50 94" fill="none" stroke="#A8B8A1" stroke-width="4.5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:18px;color:#2E5564;line-height:1.1;">pausa</div><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:12px;color:#6f6a62;letter-spacing:0.04em;">para dentro</div></div>
+        </div>
+        <div class="lcard-lbl">Horizontal · fundo claro</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#A8B8A1;flex-direction:column;gap:12px;padding:28px;">
+          <svg viewBox="0 0 100 100" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#F4EFE8" stroke-width="5" stroke-linecap="round"/><path d="M78 74C72 84 62 90 50 94" fill="none" stroke="#F4EFE8" stroke-width="4" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:14px;color:#fff;text-align:center;">pausa para dentro</div>
+        </div>
+        <div class="lcard-lbl">Fundo sálvia · branco</div>
+      </div>
+    </div>
+    <!-- spacing guide -->
+    <div style="background:#fff;border-radius:10px;padding:32px 40px;box-shadow:0 1px 6px rgba(0,0,0,.07);">
+      <div style="font-family:var(--body);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:20px;">Grid de Espaçamento · Zona de Exclusão</div>
+      <div style="display:flex;justify-content:center;">
+        <svg viewBox="0 0 500 180" width="500" height="180" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="480" height="160" fill="#fdfbf8" rx="6"/>
+          <rect x="52" y="28" width="196" height="124" fill="none" stroke="#C97E63" stroke-width="1" stroke-dasharray="4 3" rx="2"/>
+          <g transform="translate(78,44) scale(0.65)"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#2E5564" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#C97E63" stroke-width="5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round"/></g>
+          <text x="174" y="82" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="18" fill="#2E5564">pausa para dentro</text>
+          <text x="255" y="18" font-family="Inter,sans-serif" font-size="8" fill="#C97E63" text-anchor="middle">← zona de exclusão = 1× altura do símbolo →</text>
+          <text x="40" y="94" font-family="Inter,sans-serif" font-size="8" fill="#C97E63" text-anchor="middle" transform="rotate(-90,40,94)">1× alt.</text>
+          <text x="310" y="80" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">Espaçamento mínimo</text>
+          <text x="310" y="96" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">símbolo → texto = ½×</text>
+          <text x="310" y="120" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">Escalar sempre como</text>
+          <text x="310" y="134" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">unidade indivisível</text>
+        </svg>
+      </div>
+    </div>
+    <!-- dos & donts -->
+    <div class="ddgrid">
+      <div class="doscard">
+        <div class="dos-h">✓ Do's</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar sempre a paleta oficial — pelo menos uma cor da proposta em cada aplicação.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Respeitar a zona de exclusão equivalente a 1× a altura do símbolo em todos os lados.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar a versão negativa (creme sobre escuro) em fundos com contraste insuficiente.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Manter proporção símbolo/texto inalterada — escalar sempre como unidade.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Aplicar a versão sálvia em contextos que exijam calor e proximidade visual.</div>
+      </div>
+      <div class="dontcard">
+        <div class="dont-h">✕ Don'ts</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não distorcer, rodar ou inclinar o símbolo fora do plano original.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar cores fora da paleta aprovada — incluindo tons néon ou saturados.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não separar símbolo e texto — o logótipo é sempre uma unidade.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não aplicar sombras, contornos adicionais ou efeitos 3D ao símbolo.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não colocar o logótipo sobre fotografias sem overlay de proteção.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">03</span><span class="brand-sec-ttl">Paleta de Cores</span></div>
+    <div class="ptable">
+      <div class="ptable-hdr"><div class="ph">Cor</div><div class="ph">Nome · Hex</div><div class="ph">O que transmite</div><div class="ph">Aplicação no evento</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#2E5564;"></div><div><div class="pn">Azul Petróleo</div><div class="px">#2E5564</div></div><div class="pc">Profundidade, contenção, seriedade com calor. A cor que ancora todo o sistema visual.</div><div class="pc">Cor principal do símbolo, fundos de secção, cabeçalhos de cartazes e crachás.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#C97E63;"></div><div><div class="pn">Terracota Suave</div><div class="px">#C97E63</div></div><div class="pc">Calor humano, proximidade, acolhimento sem artificialidade. Remete a cerâmica e pele.</div><div class="pc">Accent no arco superior do símbolo, títulos secundários, call-to-action.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#A8B8A1;"></div><div><div class="pn">Verde Sálvia</div><div class="px">#A8B8A1</div></div><div class="pc">Quietude, respiração, natureza interior. A cor que "respira" no sistema visual.</div><div class="pc">Fundos suaves, variante de fundo para o logótipo, detalhes e bordas decorativas.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#F4EFE8;border:1px solid #e0d8ce;"></div><div><div class="pn">Areia / Creme</div><div class="px">#F4EFE8</div></div><div class="pc">Leveza, espaço branco quente, papel artesanal. A base neutra que deixa tudo respirar.</div><div class="pc">Fundo primário de toda a comunicação impressa, logótipo versão negativa.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#E8D5C4;border:1px solid #dccbb8;"></div><div><div class="pn">Blush Rosa</div><div class="px">#E8D5C4</div></div><div class="pc">Ternura, delicadeza, feminino sem ser frágil. Tom de transição entre terracota e creme.</div><div class="pc">Fundos alternativos, save-the-date, variante para o arco do símbolo em aplicações delicadas.</div></div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">04</span><span class="brand-sec-ttl">Fontes</span></div>
+    <div class="b3col">
+      <div class="fcard">
+        <div class="ftag">Fonte principal · Titulares &amp; Logótipo</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:30px;color:#2E5564;line-height:1.2;">Pausa para Dentro</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:16px;color:#6f6a62;">um encontro para cuidar de quem cuida</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:12px;color:#a09a8f;letter-spacing:0.12em;text-transform:uppercase;">EDUCAR COM AMOR E CONSCIÊNCIA</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Regular 400</span><span class="fwt">SemiBold 600</span><span class="fwt">Itálico</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Cormorant Garamond · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte cursiva · Destaque emocional</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:700;font-size:32px;color:#C97E63;line-height:1.2;">parar &amp; sentir</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:400;font-size:18px;color:#6f6a62;">um momento só para ti</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:600;font-size:13px;color:#a09a8f;">save the date · outubro 2026</div>
+        <div class="fwts"><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span><span class="fwt">Cursiva</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Dancing Script · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte corpo · Legibilidade</div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:14px;color:#2E5564;letter-spacing:-0.01em;text-transform:uppercase;">PROGRAMA DO DIA</div>
+        <div style="font-family:'Inter',sans-serif;font-weight:400;font-size:12.5px;color:#6f6a62;line-height:1.85;">09h30 — Abertura e boas-vindas<br>10h00 — Sessão de respiração<br>11h30 — Mesa redonda<br>14h00 — Dinâmicas em grupo</div>
+        <div style="font-family:'Inter',sans-serif;font-weight:300;font-size:11.5px;color:#a09a8f;font-style:italic;">Entrada livre. Lotação limitada. Inscrição obrigatória.</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span><span class="fwt">Itálico</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Inter · Google Fonts</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">05</span><span class="brand-sec-ttl">Aplicações</span></div>
+    <div class="mockup-grid-6">
+
+      <!-- Cartaz -->
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#F4EFE8;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#F4EFE8"/>
+            <rect x="0" y="0" width="280" height="5" fill="#2E5564"/>
+            <g transform="translate(104,30)"><svg viewBox="0 0 100 100" width="72" height="72"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#2E5564" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#C97E63" stroke-width="5" stroke-linecap="round"/><path d="M78 74C72 84 62 90 50 94" fill="none" stroke="#A8B8A1" stroke-width="4" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round"/></svg></g>
+            <line x1="48" y1="118" x2="232" y2="118" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="140" y="152" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="600" font-size="30" fill="#2E5564" text-anchor="middle">pausa</text>
+            <text x="140" y="176" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="400" font-size="17" fill="#6f6a62" text-anchor="middle">para dentro</text>
+            <rect x="44" y="198" width="192" height="52" fill="#2E5564" rx="4"/>
+            <text x="140" y="219" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.5)" letter-spacing="2.5" text-anchor="middle">SAVE THE DATE</text>
+            <text x="140" y="238" font-family="Cormorant Garamond,Georgia,serif" font-weight="500" font-size="15" fill="#F4EFE8" text-anchor="middle">24 de Outubro 2026</text>
+            <text x="140" y="278" font-family="Inter,sans-serif" font-size="7.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">UM ENCONTRO PARA CUIDAR DE QUEM CUIDA</text>
+            <line x1="44" y1="298" x2="236" y2="298" stroke="#D9D1C7" stroke-width="0.6"/>
+            <text x="140" y="314" font-family="Inter,sans-serif" font-size="7" fill="#a09a8f" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+            <rect x="0" y="355" width="280" height="5" fill="#C97E63"/>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Post / Cartaz</div>
+      </div>
+
+      <!-- Save the Date -->
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#2E5564;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#2E5564"/>
+            <rect x="0" y="0" width="280" height="4" fill="#C97E63"/>
+            <text x="140" y="54" font-family="Dancing Script,cursive" font-weight="700" font-size="32" fill="#F4EFE8" text-anchor="middle">save the date</text>
+            <line x1="44" y1="70" x2="236" y2="70" stroke="rgba(255,255,255,.15)" stroke-width="0.8"/>
+            <g transform="translate(116,90)"><svg viewBox="0 0 100 100" width="48" height="48"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#F4EFE8" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#E8D5C4" stroke-width="5" stroke-linecap="round"/><path d="M78 74C72 84 62 90 50 94" fill="none" stroke="#A8B8A1" stroke-width="4" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round"/></svg></g>
+            <text x="140" y="164" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="19" fill="#F4EFE8" text-anchor="middle">pausa para dentro</text>
+            <line x1="80" y1="180" x2="200" y2="180" stroke="rgba(255,255,255,.18)" stroke-width="0.7"/>
+            <text x="140" y="218" font-family="Cormorant Garamond,Georgia,serif" font-weight="600" font-size="26" fill="#F4EFE8" text-anchor="middle">24 Out 2026</text>
+            <text x="140" y="242" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)" text-anchor="middle" letter-spacing="1.5">FUNDAÇÃO MARIA DROSTE · 10H–16H</text>
+            <rect x="44" y="264" width="192" height="40" fill="rgba(255,255,255,.08)" rx="3"/>
+            <text x="140" y="279" font-family="Dancing Script,cursive" font-weight="600" font-size="14" fill="#E8D5C4" text-anchor="middle">um momento só para ti</text>
+            <text x="140" y="298" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.35)" text-anchor="middle">inscrições em breve</text>
+            <line x1="44" y1="328" x2="236" y2="328" stroke="rgba(255,255,255,.1)" stroke-width="0.6"/>
+            <text x="140" y="344" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.3)" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Save the Date</div>
+      </div>
+
+      <!-- Crachá -->
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#e4e4e4;padding:28px;min-height:360px;">
+          <svg viewBox="0 0 200 270" width="200" height="270" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="18" width="200" height="252" fill="#fff" rx="8" stroke="#D9D1C7" stroke-width="1"/>
+            <rect x="0" y="18" width="200" height="60" fill="#2E5564" rx="8"/>
+            <rect x="0" y="58" width="200" height="20" fill="#2E5564"/>
+            <circle cx="100" cy="9" r="7" fill="#D9D1C7"/>
+            <rect x="68" y="9" width="64" height="1.5" fill="#D9D1C7"/>
+            <g transform="translate(76,26)"><svg viewBox="0 0 100 100" width="48" height="48"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#F4EFE8" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#E8D5C4" stroke-width="5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round"/></svg></g>
+            <text x="100" y="104" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="2">PARTICIPANTE</text>
+            <text x="100" y="138" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="20" fill="#2E5564" text-anchor="middle">Nome Apelido</text>
+            <line x1="28" y1="150" x2="172" y2="150" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="100" y="172" font-family="Inter,sans-serif" font-size="9" fill="#6f6a62" text-anchor="middle">Organização</text>
+            <rect x="0" y="232" width="200" height="38" fill="#F4EFE8" rx="0"/>
+            <rect x="0" y="240" width="200" height="30" fill="#F4EFE8"/>
+            <text x="100" y="250" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">PAUSA PARA DENTRO</text>
+            <text x="100" y="262" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1">24 OUTUBRO 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Crachá / Credencial</div>
+      </div>
+
+      <!-- Garrafa -->
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#dcdcdc;padding:20px;min-height:360px;">
+          <svg viewBox="0 0 130 320" width="130" height="320" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42 56C28 66 22 88 22 118L22 268C22 292 32 308 65 308C98 308 108 292 108 268L108 118C108 88 102 66 88 56Z" fill="#E8E4DF"/>
+            <rect x="50" y="18" width="30" height="40" rx="8" fill="#D9D5CF"/>
+            <rect x="52" y="10" width="26" height="12" rx="4" fill="#2E5564"/>
+            <rect x="24" y="124" width="82" height="100" fill="#F4EFE8" rx="3"/>
+            <rect x="24" y="124" width="82" height="5" fill="#2E5564"/>
+            <rect x="24" y="219" width="82" height="5" fill="#2E5564"/>
+            <g transform="translate(41,142)"><svg viewBox="0 0 100 100" width="24" height="24"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#2E5564" stroke-width="6" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#C97E63" stroke-width="5.5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#2E5564" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#2E5564" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#2E5564" stroke-width="2.6" stroke-linecap="round"/></svg></g>
+            <text x="65" y="188" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="9" fill="#2E5564" text-anchor="middle">pausa para dentro</text>
+            <text x="65" y="204" font-family="Inter,sans-serif" font-size="6" fill="#a09a8f" text-anchor="middle" letter-spacing="1">24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Garrafa de água</div>
+      </div>
+
+      <!-- T-shirt branca -->
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#ececec;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#ffffff" stroke="#D9D1C7" stroke-width="1.2"/>
+            <g transform="translate(102,68)"><svg viewBox="0 0 100 100" width="36" height="36"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#2E5564" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#C97E63" stroke-width="5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#2E5564" stroke-width="2.4" stroke-linecap="round"/></svg></g>
+            <text x="120" y="122" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="8.5" fill="#2E5564" text-anchor="middle">pausa para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt branca</div>
+      </div>
+
+      <!-- T-shirt preta -->
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#2a2a2a;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#232220" stroke="#3a3836" stroke-width="1.2"/>
+            <g transform="translate(102,68)"><svg viewBox="0 0 100 100" width="36" height="36"><path d="M50 12C72 10 88 26 92 48C96 72 82 88 60 94C38 100 18 90 10 70C2 50 8 28 22 18C32 12 40 13 50 12" fill="none" stroke="#F4EFE8" stroke-width="5.5" stroke-linecap="round"/><path d="M50 12C57 11 63 13 68 17" fill="none" stroke="#E8D5C4" stroke-width="5" stroke-linecap="round"/><path d="M32 66C26 56 24 44 30 34C34 26 42 22 48 24C50 18 58 14 64 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 66C74 56 76 44 70 34C66 26 58 22 52 24C50 18 42 14 36 18" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 66C36 76 46 80 50 80C54 80 64 76 72 66" fill="none" stroke="#F4EFE8" stroke-width="2.4" stroke-linecap="round"/></svg></g>
+            <text x="120" y="122" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="8.5" fill="#F4EFE8" text-anchor="middle">pausa para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt preta</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <!-- ═══════════════════════════════════════════════════════
      PROPOSTA 02 — VIBRAÇÃO · SOBREPOSIÇÃO
 ════════════════════════════════════════════════════════════ -->
@@ -635,6 +928,277 @@
   </div>
 </div>
 
+<!-- ─── P02 BRAND EXTENDED ─── -->
+<div class="brand-extended">
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">01</span><span class="brand-sec-ttl">Contextualização</span></div>
+    <div class="b3col">
+      <div class="bcard">
+        <div class="bcard-h">✦ Inspiração</div>
+        <div class="bcard-b"><p>Três círculos em sobreposição. Na física óptica, quando dois feixes de luz colorida se cruzam, nasce uma cor nova — inesperada, vibrante, impossível sem o encontro. Esta proposta traduz exatamente isso: a energia que só existe quando organizações diferentes decidem trabalhar juntas.</p><p>A EAC, o Colo di Mamá e a MenTalks, cada uma com a sua identidade, criam algo único no ponto de interseção — e é nesse ponto que o evento acontece.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">◎ Simbolismo</div>
+        <div class="bcard-b"><p>Cada círculo representa uma organização. A sobreposição não é subordinação — é diálogo. As intersecções parciais mostram que cada entidade mantém a sua identidade, mas contribui para um propósito comum.</p><p>A mistura de cores nas zonas de cruzamento (modo multiply) é uma escolha técnica com significado: as cores reais emergem da mistura, não de uma decisão artificial. É colaboração na forma mais pura.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">→ Porquê funciona</div>
+        <div class="bcard-b"><p>O trio de círculos é visualmente imediato e facilmente escalável — do crachá ao cartaz de 2 metros, a forma mantém legibilidade e impacto. É moderno sem ser frio, geométrico sem ser rígido.</p><p>Para um evento que celebra a co-criação e o cuidado mútuo entre diferentes saberes, um símbolo que literalmente mostra três entidades em sobreposição harmoniosa é a metáfora mais honesta possível.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">02</span><span class="brand-sec-ttl">Logótipo</span></div>
+    <div class="lgrid">
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:column;gap:14px;padding:28px;">
+          <div style="position:relative;width:80px;height:64px;">
+            <div style="position:absolute;left:0;top:8px;width:44px;height:44px;border-radius:50%;background:#8F9B8A;opacity:0.85;mix-blend-mode:multiply;"></div>
+            <div style="position:absolute;left:18px;top:20px;width:44px;height:44px;border-radius:50%;background:#C58B72;opacity:0.85;mix-blend-mode:multiply;"></div>
+            <div style="position:absolute;left:36px;top:8px;width:44px;height:44px;border-radius:50%;background:#2E6473;opacity:0.85;mix-blend-mode:multiply;"></div>
+          </div>
+          <div style="text-align:center;"><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:15px;color:#232220;line-height:1.3;">pausa para dentro</div></div>
+        </div>
+        <div class="lcard-lbl">Fundo claro · vertical</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#232220;flex-direction:column;gap:14px;padding:28px;">
+          <div style="position:relative;width:80px;height:64px;">
+            <div style="position:absolute;left:0;top:8px;width:44px;height:44px;border-radius:50%;background:#A8B8A1;opacity:0.9;mix-blend-mode:screen;"></div>
+            <div style="position:absolute;left:18px;top:20px;width:44px;height:44px;border-radius:50%;background:#D4956A;opacity:0.9;mix-blend-mode:screen;"></div>
+            <div style="position:absolute;left:36px;top:8px;width:44px;height:44px;border-radius:50%;background:#4A8EA0;opacity:0.9;mix-blend-mode:screen;"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:15px;color:#F6F2EC;text-align:center;line-height:1.3;">pausa para dentro</div>
+        </div>
+        <div class="lcard-lbl" style="background:#1a1917;color:rgba(255,255,255,.35);border-top-color:rgba(255,255,255,.08);">Fundo escuro · vertical</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:row;gap:16px;padding:28px;">
+          <div style="position:relative;width:64px;height:52px;flex:none;">
+            <div style="position:absolute;left:0;top:4px;width:36px;height:36px;border-radius:50%;background:#8F9B8A;opacity:0.85;mix-blend-mode:multiply;"></div>
+            <div style="position:absolute;left:14px;top:16px;width:36px;height:36px;border-radius:50%;background:#C58B72;opacity:0.85;mix-blend-mode:multiply;"></div>
+            <div style="position:absolute;left:28px;top:4px;width:36px;height:36px;border-radius:50%;background:#2E6473;opacity:0.85;mix-blend-mode:multiply;"></div>
+          </div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:17px;color:#232220;line-height:1.1;">pausa</div><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:12px;color:#6f6a62;">para dentro</div></div>
+        </div>
+        <div class="lcard-lbl">Horizontal · fundo claro</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#2E6473;flex-direction:column;gap:12px;padding:28px;">
+          <div style="position:relative;width:80px;height:64px;">
+            <div style="position:absolute;left:0;top:8px;width:44px;height:44px;border-radius:50%;background:#A8C4A0;opacity:0.9;mix-blend-mode:screen;"></div>
+            <div style="position:absolute;left:18px;top:20px;width:44px;height:44px;border-radius:50%;background:#E8A885;opacity:0.9;mix-blend-mode:screen;"></div>
+            <div style="position:absolute;left:36px;top:8px;width:44px;height:44px;border-radius:50%;background:#F6F2EC;opacity:0.7;mix-blend-mode:screen;"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:14px;color:#fff;text-align:center;">pausa para dentro</div>
+        </div>
+        <div class="lcard-lbl">Fundo petróleo · screen</div>
+      </div>
+    </div>
+    <!-- spacing -->
+    <div style="background:#fff;border-radius:10px;padding:32px 40px;box-shadow:0 1px 6px rgba(0,0,0,.07);">
+      <div style="font-family:var(--body);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:20px;">Grid de Espaçamento · Zona de Exclusão</div>
+      <div style="display:flex;justify-content:center;">
+        <svg viewBox="0 0 500 160" width="500" height="160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="480" height="140" fill="#fdfbf8" rx="6"/>
+          <rect x="40" y="22" width="220" height="116" fill="none" stroke="#C58B72" stroke-width="1" stroke-dasharray="4 3" rx="2"/>
+          <circle cx="100" cy="80" r="36" fill="#8F9B8A" opacity="0.82" style="mix-blend-mode:multiply"/>
+          <circle cx="130" cy="92" r="36" fill="#C58B72" opacity="0.82" style="mix-blend-mode:multiply"/>
+          <circle cx="160" cy="80" r="36" fill="#2E6473" opacity="0.82" style="mix-blend-mode:multiply"/>
+          <text x="220" y="72" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="18" fill="#232220">pausa para dentro</text>
+          <text x="255" y="18" font-family="Inter,sans-serif" font-size="8" fill="#C58B72" text-anchor="middle">← zona de exclusão = 1× diâmetro do conjunto →</text>
+          <text x="40" y="84" font-family="Inter,sans-serif" font-size="8" fill="#C58B72" text-anchor="middle" transform="rotate(-90,40,84)">1×</text>
+          <text x="310" y="76" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">Espaçamento mín. texto:</text>
+          <text x="310" y="92" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">= ½ × diâmetro de 1 círculo</text>
+          <text x="310" y="116" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">Nunca compactar os 3 círculos</text>
+          <text x="310" y="130" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">abaixo de 24px de diâmetro</text>
+        </svg>
+      </div>
+    </div>
+    <div class="ddgrid">
+      <div class="doscard">
+        <div class="dos-h">✓ Do's</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar sempre mode multiply (fundo claro) ou screen (fundo escuro) nas sobreposições.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Manter os 3 círculos sempre com sobreposição parcial — nunca separados.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Respeitar a ordem de disposição: sálvia (esq.) · terracota (centro-baixo) · petróleo (dir.).</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Escalar os 3 círculos sempre como conjunto indivisível.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar versão screen em fundos escuros — nunca multiply sobre preto.</div>
+      </div>
+      <div class="dontcard">
+        <div class="dont-h">✕ Don'ts</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar os círculos com opacidade 100% sem blend mode — perde-se a sobreposição.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não reordenar os círculos por conveniência estética.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não substituir as cores dos círculos por cores fora da paleta.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não adicionar contornos, sombras ou gradientes aos círculos.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar o símbolo isolado sem o wordmark abaixo ou ao lado.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">03</span><span class="brand-sec-ttl">Paleta de Cores</span></div>
+    <div class="ptable">
+      <div class="ptable-hdr"><div class="ph">Cor</div><div class="ph">Nome · Hex</div><div class="ph">O que transmite</div><div class="ph">Aplicação no evento</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#8F9B8A;"></div><div><div class="pn">Verde Sálvia</div><div class="px">#8F9B8A</div></div><div class="pc">Equilíbrio, presença, quietude consciente. A cor da natureza interior e da saúde mental.</div><div class="pc">Círculo esquerdo do símbolo (EAC), fundos de secção alternativos, tags e labels.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#C58B72;"></div><div><div class="pn">Terracota</div><div class="px">#C58B72</div></div><div class="pc">Calor maternal, acolhimento, corpo e presença física. Remete ao elemento humano.</div><div class="pc">Círculo central do símbolo (CDM), call-to-action, accent em títulos, crachás.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#2E6473;"></div><div><div class="pn">Petróleo</div><div class="px">#2E6473</div></div><div class="pc">Profundidade, rigor clínico com humanidade. A cor da saúde mental profissional.</div><div class="pc">Círculo direito do símbolo (MenTalks), textos principais, cabeçalhos, fundos escuros.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#D4B896;border:1px solid #c8a880;"></div><div><div class="pn">Âmbar Suave</div><div class="px">#D4B896</div></div><div class="pc">Transição, síntese, o espaço que nasce entre os círculos. Cor da interseção.</div><div class="pc">Destaques editoriais, save-the-date, faixa decorativa em cartazes, separadores.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#F6F2EC;border:1px solid #e0d8ce;"></div><div><div class="pn">Creme</div><div class="px">#F6F2EC</div></div><div class="pc">Neutralidade quente, espaço para respirar, papel artesanal. A base do sistema.</div><div class="pc">Fundo primário de toda a comunicação impressa, logótipo versão negativa.</div></div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">04</span><span class="brand-sec-ttl">Fontes</span></div>
+    <div class="b3col">
+      <div class="fcard">
+        <div class="ftag">Fonte principal · Titulares</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:30px;color:#2E6473;line-height:1.2;">Pausa para Dentro</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:15px;color:#6f6a62;">vibração. encontro. presença.</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:11.5px;color:#a09a8f;letter-spacing:0.12em;text-transform:uppercase;">TRÊS ORGANIZAÇÕES. UM PROPÓSITO.</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Regular 400</span><span class="fwt">SemiBold 600</span><span class="fwt">Itálico</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Cormorant Garamond · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte cursiva · Emoção &amp; destaque</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:700;font-size:30px;color:#C58B72;line-height:1.2;">onde três se tornam um</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:400;font-size:17px;color:#6f6a62;margin-top:4px;">um espaço de encontro</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:600;font-size:13px;color:#a09a8f;">outubro · 2026 · lisboa</div>
+        <div class="fwts"><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span><span class="fwt">Cursiva</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Dancing Script · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte corpo · Textos e programa</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:#2E6473;letter-spacing:0.04em;text-transform:uppercase;">PROGRAMA DO EVENTO</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:12px;color:#6f6a62;line-height:1.85;margin-top:6px;">09h30 — Abertura e boas-vindas<br>10h00 — Círculos de partilha<br>11h30 — Workshop conjunto<br>14h00 — Encerramento em grupo</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:11px;color:#a09a8f;font-style:italic;margin-top:4px;">Entrada livre. Inscrição obrigatória.</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Space Grotesk · Google Fonts</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">05</span><span class="brand-sec-ttl">Aplicações</span></div>
+    <div class="mockup-grid-6">
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#F6F2EC;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#F6F2EC"/>
+            <rect x="0" y="0" width="280" height="5" fill="#2E6473"/>
+            <circle cx="106" cy="76" r="46" fill="#8F9B8A" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <circle cx="140" cy="98" r="46" fill="#C58B72" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <circle cx="174" cy="76" r="46" fill="#2E6473" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <line x1="44" y1="138" x2="236" y2="138" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="140" y="170" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="600" font-size="30" fill="#232220" text-anchor="middle">pausa</text>
+            <text x="140" y="192" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="400" font-size="16" fill="#6f6a62" text-anchor="middle">para dentro</text>
+            <rect x="44" y="212" width="192" height="52" fill="#2E6473" rx="4"/>
+            <text x="140" y="233" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.5)" letter-spacing="2.5" text-anchor="middle">SAVE THE DATE</text>
+            <text x="140" y="252" font-family="Cormorant Garamond,Georgia,serif" font-weight="500" font-size="15" fill="#F6F2EC" text-anchor="middle">24 de Outubro 2026</text>
+            <text x="140" y="292" font-family="Inter,sans-serif" font-size="7.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">UM ENCONTRO PARA CUIDAR DE QUEM CUIDA</text>
+            <line x1="44" y1="312" x2="236" y2="312" stroke="#D9D1C7" stroke-width="0.6"/>
+            <text x="140" y="328" font-family="Inter,sans-serif" font-size="7" fill="#a09a8f" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+            <rect x="0" y="355" width="280" height="5" fill="#C58B72"/>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Post / Cartaz</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#232220;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#232220"/>
+            <rect x="0" y="0" width="280" height="4" fill="#8F9B8A"/>
+            <text x="140" y="52" font-family="Dancing Script,cursive" font-weight="700" font-size="30" fill="#F6F2EC" text-anchor="middle">save the date</text>
+            <line x1="44" y1="66" x2="236" y2="66" stroke="rgba(255,255,255,.12)" stroke-width="0.7"/>
+            <circle cx="106" cy="130" r="40" fill="#A8C4A0" opacity="0.88" style="mix-blend-mode:screen"/>
+            <circle cx="140" cy="148" r="40" fill="#D4956A" opacity="0.88" style="mix-blend-mode:screen"/>
+            <circle cx="174" cy="130" r="40" fill="#4A8EA0" opacity="0.88" style="mix-blend-mode:screen"/>
+            <text x="140" y="200" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="19" fill="#F6F2EC" text-anchor="middle">pausa para dentro</text>
+            <line x1="80" y1="216" x2="200" y2="216" stroke="rgba(255,255,255,.15)" stroke-width="0.7"/>
+            <text x="140" y="250" font-family="Cormorant Garamond,Georgia,serif" font-weight="600" font-size="26" fill="#F6F2EC" text-anchor="middle">24 Out 2026</text>
+            <text x="140" y="274" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.4)" text-anchor="middle" letter-spacing="1.5">FUNDAÇÃO MARIA DROSTE · 10H–16H</text>
+            <rect x="44" y="296" width="192" height="36" fill="rgba(255,255,255,.07)" rx="3"/>
+            <text x="140" y="314" font-family="Dancing Script,cursive" font-weight="600" font-size="14" fill="#D4B896" text-anchor="middle">onde três se tornam um</text>
+            <line x1="44" y1="344" x2="236" y2="344" stroke="rgba(255,255,255,.08)" stroke-width="0.6"/>
+            <text x="140" y="356" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.25)" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Save the Date</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#e4e4e4;padding:28px;min-height:360px;">
+          <svg viewBox="0 0 200 270" width="200" height="270" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="18" width="200" height="252" fill="#fff" rx="8" stroke="#D9D1C7" stroke-width="1"/>
+            <rect x="0" y="18" width="200" height="60" fill="#232220" rx="8"/>
+            <rect x="0" y="58" width="200" height="20" fill="#232220"/>
+            <circle cx="100" cy="9" r="7" fill="#D9D1C7"/>
+            <rect x="68" y="9" width="64" height="1.5" fill="#D9D1C7"/>
+            <circle cx="78" cy="48" r="22" fill="#A8C4A0" opacity="0.9" style="mix-blend-mode:screen"/>
+            <circle cx="100" cy="58" r="22" fill="#D4956A" opacity="0.9" style="mix-blend-mode:screen"/>
+            <circle cx="122" cy="48" r="22" fill="#4A8EA0" opacity="0.9" style="mix-blend-mode:screen"/>
+            <text x="100" y="104" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="2">PARTICIPANTE</text>
+            <text x="100" y="138" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="20" fill="#232220" text-anchor="middle">Nome Apelido</text>
+            <line x1="28" y1="150" x2="172" y2="150" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="100" y="172" font-family="Space Grotesk,sans-serif" font-size="9" fill="#6f6a62" text-anchor="middle">Organização</text>
+            <rect x="0" y="234" width="200" height="36" fill="#F6F2EC"/>
+            <text x="100" y="250" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">PAUSA PARA DENTRO · 24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Crachá / Credencial</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#dcdcdc;padding:20px;min-height:360px;">
+          <svg viewBox="0 0 130 320" width="130" height="320" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42 56C28 66 22 88 22 118L22 268C22 292 32 308 65 308C98 308 108 292 108 268L108 118C108 88 102 66 88 56Z" fill="#E8E4DF"/>
+            <rect x="50" y="18" width="30" height="40" rx="8" fill="#D9D5CF"/>
+            <rect x="52" y="10" width="26" height="12" rx="4" fill="#2E6473"/>
+            <rect x="24" y="124" width="82" height="100" fill="#F6F2EC" rx="3"/>
+            <rect x="24" y="124" width="82" height="5" fill="#2E6473"/>
+            <rect x="24" y="219" width="82" height="5" fill="#2E6473"/>
+            <circle cx="44" cy="166" r="16" fill="#8F9B8A" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <circle cx="57" cy="174" r="16" fill="#C58B72" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <circle cx="70" cy="166" r="16" fill="#2E6473" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <text x="65" y="205" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="8" fill="#232220" text-anchor="middle">pausa para dentro</text>
+            <text x="65" y="215" font-family="Inter,sans-serif" font-size="6" fill="#a09a8f" text-anchor="middle" letter-spacing="1">24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Garrafa de água</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#ececec;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#ffffff" stroke="#D9D1C7" stroke-width="1.2"/>
+            <circle cx="100" cy="104" r="22" fill="#8F9B8A" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <circle cx="120" cy="116" r="22" fill="#C58B72" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <circle cx="140" cy="104" r="22" fill="#2E6473" opacity="0.82" style="mix-blend-mode:multiply"/>
+            <text x="120" y="148" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="8.5" fill="#232220" text-anchor="middle">pausa para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt branca</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#2a2a2a;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#232220" stroke="#3a3836" stroke-width="1.2"/>
+            <circle cx="100" cy="104" r="22" fill="#A8C4A0" opacity="0.9" style="mix-blend-mode:screen"/>
+            <circle cx="120" cy="116" r="22" fill="#D4956A" opacity="0.9" style="mix-blend-mode:screen"/>
+            <circle cx="140" cy="104" r="22" fill="#4A8EA0" opacity="0.9" style="mix-blend-mode:screen"/>
+            <text x="120" y="148" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="8.5" fill="#F6F2EC" text-anchor="middle">pausa para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt preta</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <!-- ═══════════════════════════════════════════════════════
      PROPOSTA 6B — ABRAÇO · DISTRIBUÍDO
 ════════════════════════════════════════════════════════════ -->
@@ -829,6 +1393,286 @@
   </div>
 </div>
 
+<!-- ─── P6B BRAND EXTENDED ─── -->
+<div class="brand-extended">
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">01</span><span class="brand-sec-ttl">Contextualização</span></div>
+    <div class="b3col">
+      <div class="bcard">
+        <div class="bcard-h">✦ Inspiração</div>
+        <div class="bcard-b"><p>A tipografia como arquitetura emocional. Esta proposta parte de uma ideia simples e poderosa: o que acontece quando uma letra é substituída por um símbolo que carrega o mesmo significado da palavra inteira?</p><p>A palavra "pausa" contém em si a sua própria instrução — e ao inserir o símbolo de pausa no lugar da letra U, o logótipo torna-se uma experiência antes de ser uma identidade.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">◎ Simbolismo</div>
+        <div class="bcard-b"><p>O símbolo ‖ no coração da palavra não é uma substituição — é uma fusão. As duas barras verticais da pausa musical habitam o espaço do U com a proporção e o peso certos, como se sempre tivessem estado ali.</p><p>O resultado é um logótipo que se lê em dois momentos: primeiro como palavra completa, depois como símbolo integrado. Esta dupla leitura cria cumplicidade com o observador — e cumplicidade é o primeiro passo para a confiança.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">→ Porquê funciona</div>
+        <div class="bcard-b"><p>É simultaneamente conceptual e acessível. O jogo tipográfico é sofisticado o suficiente para comunicar criatividade e atenção ao detalhe, mas legível o suficiente para funcionar em qualquer contexto.</p><p>A força da proposta está na economia de meios: sem ilustrações acessórias, sem formas extra — apenas a tipografia a fazer todo o trabalho de comunicação. Funciona em qualquer tamanho, em qualquer suporte.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">02</span><span class="brand-sec-ttl">Logótipo</span></div>
+    <div class="lgrid">
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:column;gap:14px;padding:28px 20px;">
+          <div style="display:flex;align-items:baseline;gap:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.04em;color:#232220;line-height:1;">
+            <span>pa</span>
+            <svg viewBox="0 0 46 62" width="17" height="23" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/></svg>
+            <span>sa</span>
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.01em;color:#6f6a62;">para dentro</div>
+        </div>
+        <div class="lcard-lbl">Fundo claro · vertical</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#232220;flex-direction:column;gap:14px;padding:28px 20px;">
+          <div style="display:flex;align-items:baseline;gap:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.04em;color:#F6F2EC;line-height:1;">
+            <span>pa</span>
+            <svg viewBox="0 0 46 62" width="17" height="23" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#4ABECE"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#4ABECE"/></svg>
+            <span>sa</span>
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.01em;color:rgba(246,242,236,.5);">para dentro</div>
+        </div>
+        <div class="lcard-lbl" style="background:#1a1917;color:rgba(255,255,255,.35);border-top-color:rgba(255,255,255,.08);">Fundo escuro · vertical</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:column;gap:6px;padding:28px 20px;">
+          <div style="display:flex;align-items:baseline;gap:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.04em;color:#232220;line-height:1;">
+            <span>pa</span>
+            <svg viewBox="0 0 46 62" width="17" height="23" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/></svg>
+            <span>sa</span>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:16px;color:#6f6a62;letter-spacing:0.04em;">para dentro</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:7.5px;letter-spacing:0.25em;text-transform:uppercase;color:#a09a8f;margin-top:4px;">24 outubro 2026</div>
+        </div>
+        <div class="lcard-lbl">Variante · serif + data</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#1E7E8C;flex-direction:column;gap:14px;padding:28px 20px;">
+          <div style="display:flex;align-items:baseline;gap:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.04em;color:#fff;line-height:1;">
+            <span>pa</span>
+            <svg viewBox="0 0 46 62" width="17" height="23" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#E96F4C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#E96F4C"/></svg>
+            <span>sa</span>
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:13px;color:rgba(255,255,255,.6);">para dentro</div>
+        </div>
+        <div class="lcard-lbl">Fundo petróleo · coral</div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;padding:32px 40px;box-shadow:0 1px 6px rgba(0,0,0,.07);">
+      <div style="font-family:var(--body);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:20px;">Grid de Espaçamento · Símbolo de Pausa</div>
+      <div style="display:flex;justify-content:center;">
+        <svg viewBox="0 0 500 160" width="500" height="160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="480" height="140" fill="#fdfbf8" rx="6"/>
+          <rect x="48" y="20" width="254" height="120" fill="none" stroke="#E96F4C" stroke-width="1" stroke-dasharray="4 3" rx="2"/>
+          <text x="72" y="110" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="64" fill="#232220" letter-spacing="-3">pa</text>
+          <rect x="175" y="42" width="18" height="62" rx="9" fill="#1E7E8C"/>
+          <rect x="201" y="42" width="18" height="62" rx="9" fill="#1E7E8C"/>
+          <text x="222" y="110" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="64" fill="#232220" letter-spacing="-3">sa</text>
+          <line x1="175" y1="34" x2="219" y2="34" stroke="#E96F4C" stroke-width="0.8"/>
+          <text x="197" y="29" font-family="Inter,sans-serif" font-size="8" fill="#E96F4C" text-anchor="middle">≈ largura do U</text>
+          <line x1="168" y1="42" x2="168" y2="104" stroke="#E96F4C" stroke-width="0.8"/>
+          <text x="158" y="76" font-family="Inter,sans-serif" font-size="8" fill="#E96F4C" text-anchor="middle" transform="rotate(-90,158,76)">x-height</text>
+          <text x="330" y="68" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">Altura das barras = x-height</text>
+          <text x="330" y="84" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">Largura total ≈ largura do U</text>
+          <text x="330" y="108" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">rx (borda arredondada)</text>
+          <text x="330" y="122" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">= metade da largura de cada barra</text>
+        </svg>
+      </div>
+    </div>
+    <div class="ddgrid">
+      <div class="doscard">
+        <div class="dos-h">✓ Do's</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar sempre Space Grotesk Bold para "pa" e "sa" — a consistência tipográfica é fundamental.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Dimensionar o símbolo de pausa para coincidir com a x-height da fonte em cada tamanho.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar a cor de accent (petróleo, coral ou âmbar) nas barras — nunca o mesmo tom do texto.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Manter letter-spacing negativo (-0.04em) para o wordmark parecer uma única unidade compacta.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar sempre "para dentro" em peso light como contraste ao bold do wordmark principal.</div>
+      </div>
+      <div class="dontcard">
+        <div class="dont-h">✕ Don'ts</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não substituir Space Grotesk por outra fonte no wordmark — a proporção das barras foi calculada para esta fonte.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar as barras na mesma cor que o texto — a distinção cromática é o que cria o jogo visual.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não escalar as barras de forma independente do texto — o conjunto é sempre proporcional.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não escrever "pausa" com U normal — o símbolo ‖ é parte integrante do nome.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar o wordmark em itálico — a força da proposta está na verticalidade e geometria.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">03</span><span class="brand-sec-ttl">Paleta de Cores</span></div>
+    <div class="ptable">
+      <div class="ptable-hdr"><div class="ph">Cor</div><div class="ph">Nome · Hex</div><div class="ph">O que transmite</div><div class="ph">Aplicação no evento</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#1E7E8C;"></div><div><div class="pn">Petróleo Vivo</div><div class="px">#1E7E8C</div></div><div class="pc">Profundidade com vivacidade. A cor que ancora o sistema sem o tornar pesado — equilíbrio entre seriedade e presença.</div><div class="pc">Barras do símbolo de pausa (versão padrão), fundos de secção, cabeçalhos, crachás.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#E96F4C;"></div><div><div class="pn">Coral Intenso</div><div class="px">#E96F4C</div></div><div class="pc">Energia, urgência positiva, vitalidade. A cor que acorda — usada com parcimónia para máximo impacto.</div><div class="pc">Barras do símbolo em variantes de destaque, call-to-action, títulos de sessão, accent em cartazes.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#E7A33C;"></div><div><div class="pn">Âmbar Dourado</div><div class="px">#E7A33C</div></div><div class="pc">Calor, esperança, luz do fim do dia. A cor mais suave do trio — traz ternura ao sistema.</div><div class="pc">Barras do símbolo em variante quente, save-the-date, faixas decorativas, borders de secção.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#232220;"></div><div><div class="pn">Carvão</div><div class="px">#232220</div></div><div class="pc">Solidez, legibilidade absoluta, autoridade discreta. A base tipográfica do sistema.</div><div class="pc">Texto do wordmark (pa + sa), corpo de texto, fundos escuros para versão negativa.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#F6F2EC;border:1px solid #e0d8ce;"></div><div><div class="pn">Creme / Areia</div><div class="px">#F6F2EC</div></div><div class="pc">Neutralidade quente, espaço de respiração, papel artesanal. Base que deixa os outros tons vibrar.</div><div class="pc">Fundo primário de comunicação impressa, logótipo versão negativa, interior de crachás.</div></div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">04</span><span class="brand-sec-ttl">Fontes</span></div>
+    <div class="b3col">
+      <div class="fcard">
+        <div class="ftag">Fonte principal · Wordmark</div>
+        <div style="display:flex;align-items:baseline;gap:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:34px;letter-spacing:-0.04em;color:#232220;line-height:1;margin-bottom:8px;">
+          <span>pa</span><svg viewBox="0 0 46 62" width="20" height="27" style="display:block;margin:0 1px;"><rect x="1" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/><rect x="27" y="0" width="18" height="62" rx="9" fill="#1E7E8C"/></svg><span>sa</span>
+        </div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:16px;color:#6f6a62;letter-spacing:0.01em;margin-bottom:4px;">para dentro</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#a09a8f;">TRÊS ORGANIZAÇÕES · UM EVENTO</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Medium 500</span><span class="fwt">Bold 700</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Space Grotesk · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte cursiva · Contraste emocional</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:700;font-size:30px;color:#E96F4C;line-height:1.2;margin-bottom:6px;">parar. respirar.<br>sentir.</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:400;font-size:16px;color:#6f6a62;margin-bottom:4px;">um momento só teu</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:600;font-size:13px;color:#a09a8f;">outubro · 2026</div>
+        <div class="fwts"><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span><span class="fwt">Cursiva</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Dancing Script · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte corpo · Informação e programa</div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:12px;color:#1E7E8C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">PROGRAMA DO DIA</div>
+        <div style="font-family:'Inter',sans-serif;font-weight:400;font-size:12px;color:#6f6a62;line-height:1.9;margin-bottom:4px;">09h30 — Abertura<br>10h00 — Respiração consciente<br>11h30 — Partilha em grupo<br>14h00 — Encerramento</div>
+        <div style="font-family:'Inter',sans-serif;font-weight:300;font-size:11px;color:#a09a8f;font-style:italic;">Lotação limitada. Inscrição obrigatória.</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span><span class="fwt">Itálico</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Inter · Google Fonts</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">05</span><span class="brand-sec-ttl">Aplicações</span></div>
+    <div class="mockup-grid-6">
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#F6F2EC;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#F6F2EC"/>
+            <rect x="0" y="0" width="280" height="5" fill="#1E7E8C"/>
+            <text x="68" y="110" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="62" fill="#232220" letter-spacing="-3">pa</text>
+            <rect x="172" y="52" width="18" height="62" rx="9" fill="#1E7E8C"/>
+            <rect x="198" y="52" width="18" height="62" rx="9" fill="#1E7E8C"/>
+            <text x="218" y="110" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="62" fill="#232220" letter-spacing="-3">sa</text>
+            <line x1="44" y1="126" x2="236" y2="126" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="140" y="152" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="22" fill="#6f6a62" text-anchor="middle" letter-spacing="0.5">para dentro</text>
+            <rect x="44" y="174" width="192" height="52" fill="#1E7E8C" rx="4"/>
+            <text x="140" y="195" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.5)" letter-spacing="2.5" text-anchor="middle">SAVE THE DATE</text>
+            <text x="140" y="214" font-family="Space Grotesk,sans-serif" font-weight="500" font-size="15" fill="#F6F2EC" text-anchor="middle">24 de Outubro 2026</text>
+            <text x="140" y="260" font-family="Inter,sans-serif" font-size="7.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">UM ENCONTRO PARA CUIDAR DE QUEM CUIDA</text>
+            <line x1="44" y1="280" x2="236" y2="280" stroke="#D9D1C7" stroke-width="0.6"/>
+            <text x="140" y="296" font-family="Inter,sans-serif" font-size="7" fill="#a09a8f" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+            <rect x="0" y="355" width="280" height="5" fill="#E96F4C"/>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Post / Cartaz</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#232220;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#232220"/>
+            <rect x="0" y="0" width="280" height="4" fill="#E96F4C"/>
+            <text x="140" y="52" font-family="Dancing Script,cursive" font-weight="700" font-size="30" fill="#F6F2EC" text-anchor="middle">save the date</text>
+            <line x1="44" y1="66" x2="236" y2="66" stroke="rgba(255,255,255,.12)" stroke-width="0.7"/>
+            <text x="52" y="148" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="54" fill="#F6F2EC" letter-spacing="-2">pa</text>
+            <rect x="149" y="94" width="15" height="54" rx="7" fill="#4ABECE"/>
+            <rect x="171" y="94" width="15" height="54" rx="7" fill="#4ABECE"/>
+            <text x="188" y="148" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="54" fill="#F6F2EC" letter-spacing="-2">sa</text>
+            <text x="140" y="176" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="18" fill="rgba(246,242,236,.5)" text-anchor="middle" letter-spacing="0.5">para dentro</text>
+            <line x1="80" y1="196" x2="200" y2="196" stroke="rgba(255,255,255,.15)" stroke-width="0.7"/>
+            <text x="140" y="234" font-family="Space Grotesk,sans-serif" font-weight="600" font-size="26" fill="#F6F2EC" text-anchor="middle">24 Out 2026</text>
+            <text x="140" y="258" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.4)" text-anchor="middle" letter-spacing="1.5">FUNDAÇÃO MARIA DROSTE · 10H–16H</text>
+            <rect x="44" y="280" width="192" height="36" fill="rgba(255,255,255,.07)" rx="3"/>
+            <text x="140" y="302" font-family="Dancing Script,cursive" font-weight="600" font-size="14" fill="#E7A33C" text-anchor="middle">um momento só para ti</text>
+            <line x1="44" y1="328" x2="236" y2="328" stroke="rgba(255,255,255,.08)" stroke-width="0.6"/>
+            <text x="140" y="344" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.25)" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Save the Date</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#e4e4e4;padding:28px;min-height:360px;">
+          <svg viewBox="0 0 200 270" width="200" height="270" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="18" width="200" height="252" fill="#fff" rx="8" stroke="#D9D1C7" stroke-width="1"/>
+            <rect x="0" y="18" width="200" height="60" fill="#1E7E8C" rx="8"/>
+            <rect x="0" y="58" width="200" height="20" fill="#1E7E8C"/>
+            <circle cx="100" cy="9" r="7" fill="#D9D1C7"/>
+            <rect x="68" y="9" width="64" height="1.5" fill="#D9D1C7"/>
+            <text x="68" y="63" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="-1">pa</text>
+            <rect x="118" y="32" width="8" height="32" rx="4" fill="#E96F4C"/>
+            <rect x="130" y="32" width="8" height="32" rx="4" fill="#E96F4C"/>
+            <text x="140" y="63" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="-1">sa</text>
+            <text x="100" y="104" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="2">PARTICIPANTE</text>
+            <text x="100" y="138" font-family="Space Grotesk,sans-serif" font-weight="500" font-size="16" fill="#232220" text-anchor="middle">Nome Apelido</text>
+            <line x1="28" y1="150" x2="172" y2="150" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="100" y="172" font-family="Inter,sans-serif" font-size="9" fill="#6f6a62" text-anchor="middle">Organização</text>
+            <rect x="0" y="234" width="200" height="36" fill="#F6F2EC"/>
+            <text x="100" y="252" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">PAUSA PARA DENTRO · 24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Crachá / Credencial</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#dcdcdc;padding:20px;min-height:360px;">
+          <svg viewBox="0 0 130 320" width="130" height="320" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42 56C28 66 22 88 22 118L22 268C22 292 32 308 65 308C98 308 108 292 108 268L108 118C108 88 102 66 88 56Z" fill="#E8E4DF"/>
+            <rect x="50" y="18" width="30" height="40" rx="8" fill="#D9D5CF"/>
+            <rect x="52" y="10" width="26" height="12" rx="4" fill="#1E7E8C"/>
+            <rect x="24" y="120" width="82" height="108" fill="#F6F2EC" rx="3"/>
+            <rect x="24" y="120" width="82" height="5" fill="#1E7E8C"/>
+            <rect x="24" y="223" width="82" height="5" fill="#1E7E8C"/>
+            <text x="30" y="162" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="18" fill="#232220" letter-spacing="-1">pa</text>
+            <rect x="62" y="144" width="5" height="22" rx="2.5" fill="#1E7E8C"/>
+            <rect x="70" y="144" width="5" height="22" rx="2.5" fill="#1E7E8C"/>
+            <text x="77" y="162" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="18" fill="#232220" letter-spacing="-1">sa</text>
+            <text x="65" y="200" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="7" fill="#6f6a62" text-anchor="middle">para dentro</text>
+            <text x="65" y="213" font-family="Inter,sans-serif" font-size="6" fill="#a09a8f" text-anchor="middle" letter-spacing="1">24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Garrafa de água</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#ececec;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#ffffff" stroke="#D9D1C7" stroke-width="1.2"/>
+            <text x="72" y="122" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="30" fill="#232220" letter-spacing="-1">pa</text>
+            <rect x="122" y="94" width="8" height="32" rx="4" fill="#1E7E8C"/>
+            <rect x="134" y="94" width="8" height="32" rx="4" fill="#1E7E8C"/>
+            <text x="144" y="122" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="30" fill="#232220" letter-spacing="-1">sa</text>
+            <text x="120" y="142" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="9" fill="#6f6a62" text-anchor="middle" letter-spacing="0.5">para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt branca</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#2a2a2a;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#232220" stroke="#3a3836" stroke-width="1.2"/>
+            <text x="72" y="122" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="30" fill="#F6F2EC" letter-spacing="-1">pa</text>
+            <rect x="122" y="94" width="8" height="32" rx="4" fill="#4ABECE"/>
+            <rect x="134" y="94" width="8" height="32" rx="4" fill="#4ABECE"/>
+            <text x="144" y="122" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="30" fill="#F6F2EC" letter-spacing="-1">sa</text>
+            <text x="120" y="142" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="9" fill="rgba(246,242,236,.5)" text-anchor="middle" letter-spacing="0.5">para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt preta</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <!-- ═══════════════════════════════════════════════════════
      PROPOSTA 6C — LINHA · HORIZONTAL
 ════════════════════════════════════════════════════════════ -->
@@ -1010,6 +1854,309 @@
   </div>
 </div>
 
+<!-- ─── P6C BRAND EXTENDED ─── -->
+<div class="brand-extended">
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">01</span><span class="brand-sec-ttl">Contextualização</span></div>
+    <div class="b3col">
+      <div class="bcard">
+        <div class="bcard-h">✦ Inspiração</div>
+        <div class="bcard-b"><p>A contenção como forma máxima de expressão. Esta proposta inspira-se na tradição do design editorial nórdico e nos grandes sistemas de identidade corporativa do século XX — onde menos é literalmente mais.</p><p>O símbolo-sorriso à esquerda (dois arcos que se fecham como braços) e o wordmark em duas linhas à direita formam um lockup horizontal de proporção áurea — equilibrado, digno, atemporal.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">◎ Simbolismo</div>
+        <div class="bcard-b"><p>O símbolo tem dupla leitura: visto de longe, é uma forma geométrica elegante. Visto de perto, são dois braços em arco que se fecham para dentro — como o gesto de quem pára, respira, e volta para si mesmo.</p><p>As duas barras verticais no centro do símbolo são a pausa musical integrada na forma. Não é adorno — é estrutura. O símbolo funciona sem legenda porque o gesto já diz tudo.</p></div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-h">→ Porquê funciona</div>
+        <div class="bcard-b"><p>O monocromatismo é a sua maior força. Um logótipo a uma tinta funciona em qualquer suporte — carimbo, bordado, gravação a laser, fotocópia, fax, parede. É democrático e resiliente.</p><p>Para um evento com orçamento e contextos de aplicação variados, ter um logótipo que nunca falha é uma vantagem operacional crítica. A versão a cor aparece quando há recursos — a versão sem cor nunca perde impacto.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">02</span><span class="brand-sec-ttl">Logótipo</span></div>
+    <div class="lgrid">
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:row;gap:16px;padding:32px 24px;">
+          <svg viewBox="0 0 100 110" width="52" height="57" style="flex:none;" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+            <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+            <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+          </svg>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:36px;line-height:0.95;letter-spacing:-0.04em;color:#232220;">pausa</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:22px;color:#6f6a62;letter-spacing:0.01em;">para dentro</div></div>
+        </div>
+        <div class="lcard-lbl">Principal · monocromático</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#232220;flex-direction:row;gap:16px;padding:32px 24px;">
+          <svg viewBox="0 0 100 110" width="46" height="50" style="flex:none;" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#F6F2EC" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#F6F2EC" stroke-width="2.6" stroke-linecap="round"/>
+            <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+            <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+          </svg>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:32px;line-height:0.95;letter-spacing:-0.04em;color:#F6F2EC;">pausa</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:20px;color:rgba(246,242,236,.5);letter-spacing:0.01em;">para dentro</div></div>
+        </div>
+        <div class="lcard-lbl" style="background:#1a1917;color:rgba(255,255,255,.35);border-top-color:rgba(255,255,255,.08);">Negativo · fundo escuro</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:row;gap:14px;padding:28px 20px;">
+          <svg viewBox="0 0 100 110" width="40" height="44" style="flex:none;" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#C58B72" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#C58B72" stroke-width="2.8" stroke-linecap="round"/>
+            <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#8F9B8A"/>
+            <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#8F9B8A"/>
+          </svg>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:26px;line-height:0.95;letter-spacing:-0.04em;color:#232220;">pausa</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:16px;color:#6f6a62;">para dentro</div></div>
+        </div>
+        <div class="lcard-lbl">Cor · sálvia + terracota</div>
+      </div>
+      <div class="lcard">
+        <div class="lcard-inner" style="background:#F6F2EC;flex-direction:column;gap:10px;padding:28px 20px;">
+          <div style="border:1.5px solid #232220;border-radius:2px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
+            <svg viewBox="0 0 100 110" width="28" height="31" style="flex:none;" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="3" stroke-linecap="round"/>
+              <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="3" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+            </svg>
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.03em;color:#232220;line-height:1;">pausa</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:10px;color:#6f6a62;">para dentro</div></div>
+          </div>
+          <div style="font-family:var(--body);font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:var(--faint);text-align:center;">carimbo / box</div>
+        </div>
+        <div class="lcard-lbl">Versão carimbo · 1 tinta</div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:10px;padding:32px 40px;box-shadow:0 1px 6px rgba(0,0,0,.07);">
+      <div style="font-family:var(--body);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:20px;">Grid de Espaçamento · Zona de Exclusão</div>
+      <div style="display:flex;justify-content:center;">
+        <svg viewBox="0 0 500 160" width="500" height="160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="480" height="140" fill="#fdfbf8" rx="6"/>
+          <rect x="40" y="24" width="250" height="112" fill="none" stroke="#C58B72" stroke-width="1" stroke-dasharray="4 3" rx="2"/>
+          <g transform="translate(54,36)">
+            <path d="M14 28 A38 38 0 0 0 14 66" fill="none" stroke="#232220" stroke-width="2" stroke-linecap="round"/>
+            <path d="M56 28 A38 38 0 0 1 56 66" fill="none" stroke="#232220" stroke-width="2" stroke-linecap="round"/>
+            <rect x="20" y="4" width="9" height="38" rx="4.5" fill="#232220"/>
+            <rect x="41" y="4" width="9" height="38" rx="4.5" fill="#232220"/>
+          </g>
+          <text x="130" y="96" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="30" fill="#232220" letter-spacing="-1">pausa</text>
+          <text x="130" y="120" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="18" fill="#6f6a62" letter-spacing="0.3">para dentro</text>
+          <text x="163" y="20" font-family="Inter,sans-serif" font-size="8" fill="#C58B72" text-anchor="middle">← zona de exclusão = 1× altura do símbolo →</text>
+          <text x="40" y="84" font-family="Inter,sans-serif" font-size="8" fill="#C58B72" text-anchor="middle" transform="rotate(-90,40,84)">1×</text>
+          <text x="310" y="68" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">Espaçamento mín. símbolo → texto:</text>
+          <text x="310" y="84" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">= ½ × altura do símbolo</text>
+          <text x="310" y="108" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">Nunca reduzir abaixo de</text>
+          <text x="310" y="122" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">28px de altura total do símbolo</text>
+        </svg>
+      </div>
+    </div>
+    <div class="ddgrid">
+      <div class="doscard">
+        <div class="dos-h">✓ Do's</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar sempre em monocromático quando não há garantia de reprodução fiel de cor.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar a versão a cor (sálvia + terracota) como upgrade visual quando o suporte o permite.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Manter sempre a proporção dos arcos e das barras — nunca distorcer o símbolo.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Usar a versão "box" (com borda retangular) para contextos de carimbo ou bordado.</div>
+        <div class="ruleitem"><span style="color:#1E6B35;font-weight:700;flex:none;">✓</span> Manter "pausa" sempre em Bricolage Grotesque Bold e "para dentro" em Space Grotesk Light.</div>
+      </div>
+      <div class="dontcard">
+        <div class="dont-h">✕ Don'ts</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar o símbolo sem o wordmark — ao contrário de P01, este símbolo não funciona isolado.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar os arcos sem as barras verticais — o símbolo de pausa é parte integrante da forma.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não colocar o logótipo em modo vertical — a força da proposta é o lockup horizontal.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não usar cores saturadas ou brilhantes nas barras — a paleta é sempre suave e orgânica.</div>
+        <div class="ruleitem"><span style="color:#922B1A;font-weight:700;flex:none;">✕</span> Não substituir Bricolage Grotesque por outra fonte — o peso visual foi calibrado para esta.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">03</span><span class="brand-sec-ttl">Paleta de Cores</span></div>
+    <div class="ptable">
+      <div class="ptable-hdr"><div class="ph">Cor</div><div class="ph">Nome · Hex</div><div class="ph">O que transmite</div><div class="ph">Aplicação no evento</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#232220;"></div><div><div class="pn">Carvão</div><div class="px">#232220</div></div><div class="pc">Solidez, presença, autoridade discreta. A cor que ancora tudo sem dominar — é a base do sistema monocromático.</div><div class="pc">Texto principal do wordmark, símbolo em versão padrão, corpo de texto, fundos de crachá.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#8F9B8A;"></div><div><div class="pn">Verde Sálvia</div><div class="px">#8F9B8A</div></div><div class="pc">Quietude, equilíbrio, natureza interior. A cor que "respira" — traz orgânico ao sistema geométrico.</div><div class="pc">Barras do símbolo na versão a cor, fundos de secção alternativos, badges e labels.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#C58B72;"></div><div><div class="pn">Terracota Suave</div><div class="px">#C58B72</div></div><div class="pc">Calor humano, proximidade, acolhimento. Contraste suave com a sálvia — juntas comunicam cuidado.</div><div class="pc">Arcos do símbolo na versão a cor, call-to-action, accent em títulos, save-the-date.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#F6F2EC;border:1px solid #e0d8ce;"></div><div><div class="pn">Creme</div><div class="px">#F6F2EC</div></div><div class="pc">Leveza, espaço branco quente. A base neutra que potencia todos os outros tons do sistema.</div><div class="pc">Fundo primário de toda a comunicação, logótipo versão negativa, interior de crachás e cartões.</div></div>
+      <div class="ptable-row"><div style="width:44px;height:44px;border-radius:8px;background:#D9D1C7;"></div><div><div class="pn">Bege Cinza</div><div class="px">#D9D1C7</div></div><div class="pc">Transição, subtileza, espaço neutro. Complementa o creme sem o substituir — é o "quase branco" do sistema.</div><div class="pc">Linhas divisórias, bordas de secção, fundo de tabelas, elementos decorativos de baixo contraste.</div></div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">04</span><span class="brand-sec-ttl">Fontes</span></div>
+    <div class="b3col">
+      <div class="fcard">
+        <div class="ftag">Fonte principal · Wordmark "pausa"</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#232220;letter-spacing:-0.04em;line-height:1;margin-bottom:6px;">pausa</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:18px;color:#6f6a62;letter-spacing:-0.02em;margin-bottom:4px;">Um evento. Uma pausa.</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:12px;color:#a09a8f;letter-spacing:0.08em;text-transform:uppercase;">PAUSA PARA DENTRO 2026</div>
+        <div class="fwts"><span class="fwt">Regular 400</span><span class="fwt">SemiBold 600</span><span class="fwt">ExtraBold 800</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Bricolage Grotesque · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte cursiva · Contraste e leveza</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:700;font-size:32px;color:#C58B72;line-height:1.2;margin-bottom:6px;">uma pausa<br>bem merecida</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:400;font-size:16px;color:#6f6a62;margin-bottom:4px;">de dentro para fora</div>
+        <div style="font-family:'Dancing Script',cursive;font-weight:600;font-size:13px;color:#a09a8f;">24 out · 10h–16h</div>
+        <div class="fwts"><span class="fwt">Regular 400</span><span class="fwt">Bold 700</span><span class="fwt">Cursiva</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Dancing Script · Google Fonts</div>
+      </div>
+      <div class="fcard">
+        <div class="ftag">Fonte corpo · "para dentro" &amp; programa</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:22px;color:#6f6a62;letter-spacing:0.01em;margin-bottom:4px;">para dentro</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#232220;margin-bottom:6px;">PROGRAMA · 24 OUTUBRO</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:12px;color:#6f6a62;line-height:1.85;margin-bottom:4px;">09h30 — Abertura<br>10h00 — Respiração<br>11h30 — Partilha<br>14h00 — Encerramento</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:11px;color:#a09a8f;font-style:italic;">Entrada livre. Inscrição obrigatória.</div>
+        <div class="fwts"><span class="fwt">Light 300</span><span class="fwt">Regular 400</span><span class="fwt">Medium 500</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;color:#a09a8f;">Space Grotesk · Google Fonts</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-section">
+    <div class="brand-sec-hdr"><span class="brand-sec-num">05</span><span class="brand-sec-ttl">Aplicações</span></div>
+    <div class="mockup-grid-6">
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#F6F2EC;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#F6F2EC"/>
+            <rect x="0" y="0" width="280" height="5" fill="#232220"/>
+            <g transform="translate(76,28)">
+              <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#232220"/>
+            </g>
+            <text x="140" y="164" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="38" fill="#232220" text-anchor="middle" letter-spacing="-1.5">pausa</text>
+            <text x="140" y="190" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="22" fill="#6f6a62" text-anchor="middle" letter-spacing="0.3">para dentro</text>
+            <line x1="44" y1="208" x2="236" y2="208" stroke="#D9D1C7" stroke-width="0.7"/>
+            <rect x="44" y="224" width="192" height="52" fill="#232220" rx="4"/>
+            <text x="140" y="245" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.5)" letter-spacing="2.5" text-anchor="middle">SAVE THE DATE</text>
+            <text x="140" y="264" font-family="Space Grotesk,sans-serif" font-weight="500" font-size="15" fill="#F6F2EC" text-anchor="middle">24 de Outubro 2026</text>
+            <text x="140" y="300" font-family="Inter,sans-serif" font-size="7.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">UM ENCONTRO PARA CUIDAR DE QUEM CUIDA</text>
+            <line x1="44" y1="320" x2="236" y2="320" stroke="#D9D1C7" stroke-width="0.6"/>
+            <text x="140" y="336" font-family="Inter,sans-serif" font-size="7" fill="#a09a8f" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+            <rect x="0" y="355" width="280" height="5" fill="#8F9B8A"/>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Post / Cartaz</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#232220;padding:0;overflow:hidden;">
+          <svg viewBox="0 0 280 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="360" fill="#232220"/>
+            <rect x="0" y="0" width="280" height="4" fill="#8F9B8A"/>
+            <text x="140" y="52" font-family="Dancing Script,cursive" font-weight="700" font-size="30" fill="#F6F2EC" text-anchor="middle">save the date</text>
+            <line x1="44" y1="66" x2="236" y2="66" stroke="rgba(255,255,255,.12)" stroke-width="0.7"/>
+            <g transform="translate(98,82)">
+              <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#F6F2EC" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#F6F2EC" stroke-width="2.6" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#F6F2EC"/>
+            </g>
+            <text x="140" y="202" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="32" fill="#F6F2EC" text-anchor="middle" letter-spacing="-1">pausa</text>
+            <text x="140" y="224" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="18" fill="rgba(246,242,236,.45)" text-anchor="middle" letter-spacing="0.3">para dentro</text>
+            <line x1="80" y1="242" x2="200" y2="242" stroke="rgba(255,255,255,.15)" stroke-width="0.7"/>
+            <text x="140" y="278" font-family="Space Grotesk,sans-serif" font-weight="600" font-size="26" fill="#F6F2EC" text-anchor="middle">24 Out 2026</text>
+            <text x="140" y="300" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.4)" text-anchor="middle" letter-spacing="1.5">FUNDAÇÃO MARIA DROSTE · 10H–16H</text>
+            <rect x="44" y="320" width="192" height="24" fill="rgba(255,255,255,.07)" rx="3"/>
+            <text x="140" y="335" font-family="Dancing Script,cursive" font-weight="600" font-size="13" fill="#D9D1C7" text-anchor="middle">uma pausa bem merecida</text>
+            <text x="140" y="356" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.22)" text-anchor="middle">EAC · COLO DI MAMÁ · MENTALKS</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Save the Date</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#e4e4e4;padding:28px;min-height:360px;">
+          <svg viewBox="0 0 200 270" width="200" height="270" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="18" width="200" height="252" fill="#fff" rx="8" stroke="#D9D1C7" stroke-width="1"/>
+            <rect x="0" y="18" width="200" height="60" fill="#232220" rx="8"/>
+            <rect x="0" y="58" width="200" height="20" fill="#232220"/>
+            <circle cx="100" cy="9" r="7" fill="#D9D1C7"/>
+            <rect x="68" y="9" width="64" height="1.5" fill="#D9D1C7"/>
+            <g transform="translate(66,26)">
+              <path d="M7 20 A28 28 0 0 0 7 50" fill="none" stroke="#F6F2EC" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M41 20 A28 28 0 0 1 41 50" fill="none" stroke="#F6F2EC" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="14" y="4" width="6" height="28" rx="3" fill="#8F9B8A"/>
+              <rect x="28" y="4" width="6" height="28" rx="3" fill="#8F9B8A"/>
+            </g>
+            <text x="100" y="104" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="2">PARTICIPANTE</text>
+            <text x="100" y="136" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="18" fill="#232220" text-anchor="middle" letter-spacing="-0.5">Nome Apelido</text>
+            <line x1="28" y1="148" x2="172" y2="148" stroke="#D9D1C7" stroke-width="0.7"/>
+            <text x="100" y="170" font-family="Space Grotesk,sans-serif" font-size="9" fill="#6f6a62" text-anchor="middle">Organização</text>
+            <rect x="0" y="234" width="200" height="36" fill="#F6F2EC"/>
+            <text x="100" y="252" font-family="Inter,sans-serif" font-size="6.5" fill="#a09a8f" text-anchor="middle" letter-spacing="1.5">PAUSA PARA DENTRO · 24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Crachá / Credencial</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#dcdcdc;padding:20px;min-height:360px;">
+          <svg viewBox="0 0 130 320" width="130" height="320" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42 56C28 66 22 88 22 118L22 268C22 292 32 308 65 308C98 308 108 292 108 268L108 118C108 88 102 66 88 56Z" fill="#E8E4DF"/>
+            <rect x="50" y="18" width="30" height="40" rx="8" fill="#D9D5CF"/>
+            <rect x="52" y="10" width="26" height="12" rx="4" fill="#232220"/>
+            <rect x="24" y="120" width="82" height="108" fill="#F6F2EC" rx="3"/>
+            <rect x="24" y="120" width="82" height="5" fill="#232220"/>
+            <rect x="24" y="223" width="82" height="5" fill="#232220"/>
+            <g transform="translate(34,142)">
+              <path d="M5 14 A20 20 0 0 0 5 34" fill="none" stroke="#232220" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 14 A20 20 0 0 1 28 34" fill="none" stroke="#232220" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="10" y="2" width="5" height="20" rx="2.5" fill="#8F9B8A"/>
+              <rect x="18" y="2" width="5" height="20" rx="2.5" fill="#8F9B8A"/>
+            </g>
+            <text x="65" y="178" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="12" fill="#232220" text-anchor="middle" letter-spacing="-0.5">pausa</text>
+            <text x="65" y="192" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="7.5" fill="#6f6a62" text-anchor="middle">para dentro</text>
+            <text x="65" y="210" font-family="Inter,sans-serif" font-size="6" fill="#a09a8f" text-anchor="middle" letter-spacing="1">24 OUT 2026</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">Garrafa de água</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#ececec;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#ffffff" stroke="#D9D1C7" stroke-width="1.2"/>
+            <g transform="translate(84,68)">
+              <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#232220" stroke-width="2.6" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#8F9B8A"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#8F9B8A"/>
+            </g>
+            <text x="148" y="102" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="22" fill="#232220" text-anchor="middle" letter-spacing="-0.5">pausa</text>
+            <text x="148" y="122" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="13" fill="#6f6a62" text-anchor="middle">para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt branca</div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-inner" style="background:#2a2a2a;padding:16px;min-height:260px;">
+          <svg viewBox="0 0 240 200" width="240" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80 8L38 38L18 78L54 88L54 190L186 190L186 88L222 78L202 38L160 8C150 16 130 16 120 8Z" fill="#232220" stroke="#3a3836" stroke-width="1.2"/>
+            <g transform="translate(84,68)">
+              <path d="M14 42 A58 58 0 0 0 14 104" fill="none" stroke="#F6F2EC" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M86 42 A58 58 0 0 1 86 104" fill="none" stroke="#F6F2EC" stroke-width="2.6" stroke-linecap="round"/>
+              <rect x="30" y="6" width="13" height="58" rx="6.5" fill="#C58B72"/>
+              <rect x="57" y="6" width="13" height="58" rx="6.5" fill="#C58B72"/>
+            </g>
+            <text x="148" y="102" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="22" fill="#F6F2EC" text-anchor="middle" letter-spacing="-0.5">pausa</text>
+            <text x="148" y="122" font-family="Space Grotesk,sans-serif" font-weight="300" font-size="13" fill="rgba(246,242,236,.5)" text-anchor="middle">para dentro</text>
+          </svg>
+        </div>
+        <div class="mcard-lbl">T-shirt preta</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <!-- ═══════════════════════════════════════════════════════
      COMPARAÇÃO
 ════════════════════════════════════════════════════════════ -->
