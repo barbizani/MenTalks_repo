@@ -1043,21 +1043,63 @@
     <!-- spacing -->
     <div style="background:#fff;border-radius:10px;padding:32px 40px;box-shadow:0 1px 6px rgba(0,0,0,.07);">
       <div style="font-family:var(--body);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:20px;">Grid de Espaçamento · Zona de Exclusão</div>
-      <div style="display:flex;justify-content:center;">
-        <svg viewBox="0 0 500 160" width="500" height="160" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="10" width="480" height="140" fill="#fdfbf8" rx="6"/>
-          <rect x="40" y="22" width="220" height="116" fill="none" stroke="#C58B72" stroke-width="1" stroke-dasharray="4 3" rx="2"/>
-          <circle cx="100" cy="80" r="36" fill="#8F9B8A" opacity="0.82""/>
-          <circle cx="130" cy="92" r="36" fill="#C58B72" opacity="0.82""/>
-          <circle cx="160" cy="80" r="36" fill="#2E6473" opacity="0.82""/>
-          <text x="220" y="72" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="18" fill="#232220">pausa para dentro</text>
-          <text x="255" y="18" font-family="Inter,sans-serif" font-size="8" fill="#C58B72" text-anchor="middle">← zona de exclusão = 1× diâmetro do conjunto →</text>
-          <text x="40" y="84" font-family="Inter,sans-serif" font-size="8" fill="#C58B72" text-anchor="middle" transform="rotate(-90,40,84)">1×</text>
-          <text x="310" y="76" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">Espaçamento mín. texto:</text>
-          <text x="310" y="92" font-family="Inter,sans-serif" font-size="9" fill="#a09a8f">= ½ × diâmetro de 1 círculo</text>
-          <text x="310" y="116" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">Nunca compactar os 3 círculos</text>
-          <text x="310" y="130" font-family="Inter,sans-serif" font-size="8" fill="#c9c2b8">abaixo de 24px de diâmetro</text>
-        </svg>
+      <!-- spacing guide: HTML layout for precision -->
+      <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
+
+        <!-- LEFT: annotated logo unit -->
+        <div style="position:relative;padding:0 0 0 28px;flex-shrink:0;">
+
+          <!-- left bracket: 1× -->
+          <div style="position:absolute;left:0;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;">
+            <div style="width:8px;height:1px;background:#C58B72;"></div>
+            <div style="flex:1;width:1px;background:#C58B72;"></div>
+            <div style="width:8px;height:1px;background:#C58B72;"></div>
+          </div>
+          <div style="position:absolute;left:-4px;top:50%;transform:translateY(-50%) rotate(-90deg);font-family:var(--body);font-size:7px;letter-spacing:.1em;color:#C58B72;white-space:nowrap;">1× diâm.</div>
+
+          <!-- top annotation -->
+          <div style="font-family:var(--body);font-size:7.5px;color:#C58B72;text-align:center;margin-bottom:6px;letter-spacing:.03em;">← zona de exclusão = 1× diâmetro do conjunto →</div>
+
+          <!-- dashed exclusion zone containing circles + wordmark -->
+          <div style="border:1px dashed #C58B72;border-radius:4px;padding:16px 20px;display:inline-flex;align-items:center;gap:0;">
+
+            <!-- 3 overlapping circles -->
+            <div style="position:relative;width:96px;height:72px;flex-shrink:0;">
+              <div style="position:absolute;left:0;top:14px;width:52px;height:52px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:22px;top:24px;width:52px;height:52px;border-radius:50%;background:#C58B72;mix-blend-mode:multiply;"></div>
+              <div style="position:absolute;left:44px;top:14px;width:52px;height:52px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
+            </div>
+
+            <!-- gap label: ½× -->
+            <div style="display:flex;flex-direction:column;align-items:center;padding:0 12px;gap:3px;">
+              <div style="height:1px;width:24px;border-top:1px dashed #C58B72;opacity:.5;"></div>
+              <div style="font-family:var(--body);font-size:6.5px;color:#C58B72;letter-spacing:.05em;">½×</div>
+              <div style="height:1px;width:24px;border-top:1px dashed #C58B72;opacity:.5;"></div>
+            </div>
+
+            <!-- wordmark -->
+            <div style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:20px;color:#232220;white-space:nowrap;">pausa para dentro</div>
+          </div>
+
+          <!-- bottom annotation -->
+          <div style="font-family:var(--body);font-size:7px;color:#c9c2b8;text-align:center;margin-top:6px;">Escalar os 3 círculos sempre como conjunto indivisível</div>
+        </div>
+
+        <!-- RIGHT: rules -->
+        <div style="flex:1;min-width:200px;">
+          <div style="font-family:var(--body);font-size:9px;font-weight:600;color:#2E6473;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;">Regras de espaçamento</div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Zona de exclusão = 1× diâmetro do conjunto em todos os lados</div>
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Espaço mínimo conjunto → texto = ½× diâmetro de 1 círculo</div>
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Manter sempre a sobreposição parcial dos 3 círculos</div>
+            <div style="font-family:var(--body);font-size:8.5px;color:#6f6a62;line-height:1.5;">· Diâmetro mínimo por círculo: 24px</div>
+          </div>
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--bone);display:flex;flex-direction:column;gap:5px;">
+            <div style="font-family:var(--body);font-size:7.5px;color:#c9c2b8;">Nunca separar os círculos do wordmark</div>
+            <div style="font-family:var(--body);font-size:7.5px;color:#c9c2b8;">Nunca alterar a ordem sálvia · terracota · petróleo</div>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="ddgrid">
