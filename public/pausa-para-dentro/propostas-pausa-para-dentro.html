@@ -195,7 +195,7 @@
 
   /* side-by-side logos */
   .comp-logos {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
     margin-bottom: 64px;
   }
   .comp-logo-col { display: flex; flex-direction: column; gap: 8px; }
@@ -414,17 +414,19 @@
     <div class="tab active" data-tab="p01">
       <span class="tab-num">01</span>Círculo · Cuidado
     </div>
+    <!-- Proposta 02 guardada por enquanto
     <div class="tab-sep"></div>
     <div class="tab" data-tab="p02">
       <span class="tab-num">02</span>Vibração · Sobreposição
     </div>
+    -->
     <div class="tab-sep"></div>
     <div class="tab" data-tab="p6b">
       <span class="tab-num">6B</span>Abraço · Distribuído
     </div>
     <div class="tab-sep"></div>
     <div class="tab" data-tab="p6c">
-      <span class="tab-num">6C</span>Linha · Horizontal
+      <span class="tab-num">6C</span>Sorriso
     </div>
     <div class="tab-sep"></div>
     <div class="tab" data-tab="comp" style="margin-left:auto;">
@@ -866,8 +868,9 @@
 </div>
 </div>
 <!-- ═══════════════════════════════════════════════════════
-     PROPOSTA 02 — VIBRAÇÃO · SOBREPOSIÇÃO
+     PROPOSTA 02 — VIBRAÇÃO · SOBREPOSIÇÃO  (GUARDADA POR ENQUANTO)
 ════════════════════════════════════════════════════════════ -->
+<template id="saved-p02">
 <div class="panel" id="panel-p02">
   <div class="proposal">
 
@@ -1348,6 +1351,7 @@
 
 </div>
 </div>
+</template>
 <!-- ═══════════════════════════════════════════════════════
      PROPOSTA 6B — ABRAÇO · DISTRIBUÍDO
 ════════════════════════════════════════════════════════════ -->
@@ -1834,7 +1838,7 @@
 </div>
 </div>
 <!-- ═══════════════════════════════════════════════════════
-     PROPOSTA 6C — LINHA · HORIZONTAL
+     PROPOSTA 6C — SORRISO
 ════════════════════════════════════════════════════════════ -->
 <div class="panel" id="panel-p6c">
   <div class="proposal">
@@ -1846,7 +1850,7 @@
         Proposta
       </div>
       <div class="proposal-num" style="color:var(--charcoal);opacity:.15;font-size:clamp(60px,7vw,100px);">6C</div>
-      <div class="proposal-name" style="margin-top:-16px;">Linha<br>Horizontal</div>
+      <div class="proposal-name" style="margin-top:-16px;">Sorriso</div>
       <p class="proposal-desc">
         O símbolo-sorriso à esquerda, o wordmark em duas linhas à direita — tudo numa linha horizontal. Completamente monocromático: funciona a uma tinta, em carimbo, em bordado, em gravação a laser.
       </p>
@@ -2331,10 +2335,10 @@
 <div class="panel" id="panel-comp">
   <div class="comparison">
     <div class="comp-header">
-      <div style="font-family:var(--body);font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;">Comparação · Quatro propostas</div>
-      <div class="comp-title">01 × 02 × 6B × 6C</div>
+      <div style="font-family:var(--body);font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;">Comparação · Três propostas</div>
+      <div class="comp-title">01 × 6B × 6C</div>
       <div class="comp-sub">uma identidade. qual é a vossa?</div>
-      <p class="comp-lead">Quatro propostas, um propósito comum. Cada uma tem uma personalidade distinta — da mais figurativa e emocional à mais tipográfica e minimalista. O objetivo desta página é escolher uma — a que melhor representa o evento Pausa para Dentro.</p>
+      <p class="comp-lead">Três propostas, um propósito comum. Cada uma tem uma personalidade distinta — da mais figurativa e emocional à mais tipográfica e minimalista. O objetivo desta página é escolher uma — a que melhor representa o evento Pausa para Dentro.</p>
     </div>
 
     <!-- Side-by-side logos at same size -->
@@ -2358,32 +2362,6 @@
               <span style="font-family:var(--serif);font-style:italic;font-weight:600;font-size:16px;color:#F5F1EA;line-height:1.05;">pausa</span>
               <span style="font-family:var(--serif);font-style:italic;font-weight:400;font-size:10px;color:#b8b2a7;">para dentro</span>
             </div>
-          </div>
-          <div class="stage-label dark">Fundo escuro</div>
-        </div>
-      </div>
-
-      <div class="comp-logo-col">
-        <div class="comp-logo-label">02 · Sobreposição</div>
-        <div class="stage-card" style="flex:1;">
-          <div class="comp-art" style="gap:18px;">
-            <div style="position:relative;width:110px;height:84px;isolation:isolate;">
-              <div style="position:absolute;left:26px;top:0;width:58px;height:58px;border-radius:50%;background:#8F9B8A;mix-blend-mode:multiply;"></div>
-              <div style="position:absolute;left:0;top:26px;width:58px;height:58px;border-radius:50%;background:#C9805F;mix-blend-mode:multiply;"></div>
-              <div style="position:absolute;left:52px;top:26px;width:58px;height:58px;border-radius:50%;background:#2E6473;mix-blend-mode:multiply;"></div>
-            </div>
-            <div style="font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:0.04em;text-transform:uppercase;color:var(--mid);text-align:center;">pausa para dentro</div>
-          </div>
-          <div class="stage-label">Fundo claro</div>
-        </div>
-        <div class="stage-card dark">
-          <div class="comp-art sm" style="gap:12px;">
-            <div style="position:relative;width:70px;height:54px;isolation:isolate;">
-              <div style="position:absolute;left:16px;top:0;width:37px;height:37px;border-radius:50%;background:#aeb9a6;mix-blend-mode:screen;"></div>
-              <div style="position:absolute;left:0;top:16px;width:37px;height:37px;border-radius:50%;background:#d39072;mix-blend-mode:screen;"></div>
-              <div style="position:absolute;left:33px;top:16px;width:37px;height:37px;border-radius:50%;background:#4f8b9c;mix-blend-mode:screen;"></div>
-            </div>
-            <span style="font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:0.05em;text-transform:uppercase;color:#F5F1EA;text-align:center;">pausa para dentro</span>
           </div>
           <div class="stage-label dark">Fundo escuro</div>
         </div>
@@ -2418,7 +2396,7 @@
       </div>
 
       <div class="comp-logo-col">
-        <div class="comp-logo-label">6C · Linha</div>
+        <div class="comp-logo-label">6C · Sorriso</div>
         <div class="stage-card" style="flex:1;">
           <div class="comp-art" style="flex-direction:row;gap:16px;">
             <svg viewBox="0 0 100 110" width="46" height="50" style="flex:none;">
@@ -2459,72 +2437,62 @@
         <tr>
           <th>Critério</th>
           <th>01 · Círculo</th>
-          <th>02 · Sobreposição</th>
           <th>6B · Abraço</th>
-          <th>6C · Linha</th>
+          <th>6C · Sorriso</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Reconhecimento rápido</td>
           <td><span class="check">●</span> <strong>Símbolo universal de cuidado</strong></td>
-          <td><span class="half">◑</span> Símbolo forte, texto genérico</td>
           <td><span class="check">●</span> <strong>Símbolo e tipografia únicos</strong></td>
           <td><span class="check">●</span> <strong>Sorriso imediato</strong></td>
         </tr>
         <tr>
           <td>Escalabilidade</td>
           <td><span class="half">◑</span> Detalhe das mãos perde-se abaixo de 24px</td>
-          <td><span class="cross">○</span> Blend modes perdem-se em pequeno</td>
           <td><span class="half">◑</span> Funciona, perde detalhe abaixo de 20px</td>
           <td><span class="check">●</span> <strong>Perfeito a qualquer tamanho</strong></td>
         </tr>
         <tr>
           <td>Fundo escuro</td>
           <td><span class="check">●</span> <strong>Excelente — paleta sálvia e creme</strong></td>
-          <td><span class="half">◑</span> Screen mode — funciona mas muda</td>
           <td><span class="check">●</span> <strong>Excelente, muda paleta</strong></td>
           <td><span class="check">●</span> <strong>Simples e limpo</strong></td>
         </tr>
         <tr>
           <td>1 tinta / carimbo</td>
           <td><span class="half">◑</span> Possível — perde o acento de cor</td>
-          <td><span class="cross">○</span> Impossível sem blend</td>
           <td><span class="half">◑</span> Possível mas perde profundidade</td>
           <td><span class="check">●</span> <strong>Desenhado para isso</strong></td>
         </tr>
         <tr>
           <td>Riqueza do símbolo</td>
           <td><span class="check">●</span> <strong>Figurativo, emocional e narrativo</strong></td>
-          <td><span class="check">●</span> <strong>Cor e profundidade pela sobreposição</strong></td>
           <td><span class="check">●</span> <strong>Símbolo integrado na tipografia</strong></td>
           <td><span class="half">◑</span> Símbolo simples, força na tipografia</td>
         </tr>
         <tr>
           <td>Impacto em cartaz grande</td>
           <td><span class="check">●</span> <strong>Forte ligação emocional imediata</strong></td>
-          <td><span class="check">●</span> <strong>Visual rico e quente</strong></td>
           <td><span class="check">●</span> <strong>Tipografia imponente</strong></td>
           <td><span class="half">◑</span> Elegante, menos impactante</td>
         </tr>
         <tr>
           <td>Versatilidade de cor</td>
           <td><span class="check">●</span> <strong>3 variantes de cor validadas</strong></td>
-          <td><span class="half">◑</span> Depende do suporte (blend modes)</td>
           <td><span class="check">●</span> <strong>4 combinações de cor validadas</strong></td>
           <td><span class="check">●</span> <strong>Mono + cor como opção</strong></td>
         </tr>
         <tr>
           <td>Diferenciação no mercado</td>
           <td><span class="half">◑</span> Símbolo de cuidado comum, círculo distinto</td>
-          <td><span class="half">◑</span> Venn diagram comum neste espaço</td>
           <td><span class="check">●</span> <strong>Tipografia integrada — raro</strong></td>
           <td><span class="half">◑</span> Claro e distinto, menos ousado</td>
         </tr>
         <tr>
           <td>Personalidade</td>
           <td><strong>Empática · Humana · Calorosa</strong></td>
-          <td>Clássica · Quente · Orgânica</td>
           <td><strong>Contemporânea · Memorável · Diferenciada</strong></td>
           <td>Sóbria · Versátil · Funcional</td>
         </tr>
@@ -2535,18 +2503,12 @@
     <!-- Recommendation -->
     <div style="margin-top:64px;">
       <div style="font-family:var(--body);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--faint);margin-bottom:28px;">Leitura · o que distingue cada proposta</div>
-      <div class="rec-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="rec-grid" style="grid-template-columns:repeat(3,1fr);">
         <div class="rec-card" style="background:rgba(46,85,100,.07);border:1px solid rgba(46,85,100,.18);">
           <div class="rec-num" style="color:#2E5564;">01</div>
           <div class="rec-title" style="color:#2E5564;">Empática e calorosa</div>
           <p class="rec-body">A proposta mais figurativa e emocional. O círculo imperfeito com mãos e coração traduz imediatamente o conceito do evento. Forte ligação afetiva — ideal para públicos de parentalidade, educação e cuidado.</p>
           <div class="rec-use" style="color:#2E5564;border-top-color:rgba(46,85,100,.12);">Símbolo narrativo · Círculo imperfeito · Paleta terra e petróleo</div>
-        </div>
-        <div class="rec-card" style="background:#F0ECE4;">
-          <div class="rec-num">02</div>
-          <div class="rec-title">Clássica e quente</div>
-          <p class="rec-body">O registo mais orgânico e editorial. O símbolo de círculos sobrepostos tem presença e calor. Adequada para quem quer uma identidade serena, com raízes no design de conferências de referência.</p>
-          <div class="rec-use" style="color:var(--sage);">Tipografia clássica · Símbolo rico em cor · Paleta orgânica</div>
         </div>
         <div class="rec-card" style="background:rgba(30,126,140,.08);border:1px solid rgba(30,126,140,.2);">
           <div class="rec-num" style="color:var(--teal);">6B</div>
@@ -2574,7 +2536,7 @@
 
 <script>
   const tabs = document.querySelectorAll('.tab[data-tab]');
-  const panels = { p01: 'panel-p01', p02: 'panel-p02', p6b: 'panel-p6b', p6c: 'panel-p6c', comp: 'panel-comp' };
+  const panels = { p01: 'panel-p01', p6b: 'panel-p6b', p6c: 'panel-p6c', comp: 'panel-comp' };
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
